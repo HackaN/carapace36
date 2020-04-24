@@ -1,0 +1,17 @@
+// Overview
+
+/* överblicken */
+#panel:overview #panelBox {
+  box-shadow:inset 0px .5px .5px rgba(245,245,250,.0);
+  }
+
+//Kör storlekar för objekt med text, t ex paneler i "em" så att vi stödjer skalningsfaktor för teckensnitt
+
+// Gradient funkar inte på bakgrunden, den bråkar med box-shadow
+#overview {
+  background-color: rgba(140,145,150,.4);
+  border: 2em solid $overViewFrame;
+  border-radius: 3em;
+  box-shadow: 0 0 0 1.5em $overViewFrame;
+  padding: -2em;
+}

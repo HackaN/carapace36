@@ -1,0 +1,29 @@
+// Panel
+
+// kombinerar dynamic panel transparency med detta hack som lägger in skugga och kant-effekten i lådan bakom panelen :-) Det här hacket ska funka med andra transparency tillägg också. Fan vad fet jag är på detta, haha! :-D
+
+#panelBox {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(5,10,15,.35);
+  background-gradient-end: rgba(60,65,70,.0);
+  /*border: .5px none rgba(0,0,0,.0);
+  border-top: .5px solid rgba(240,245,250,.15);
+  border-radius: 2px;*/
+  box-shadow:inset 0px .5px .5px rgba(245,245,250,.15);
+}
+
+#panel,
+#panel .panel-button,
+#panel .system-status-icon,
+#panel .app-menu-icon > StIcon,
+#panel .popup-menu-arrow {
+  font-size: .95em;
+  font-weight: $fontWeight;
+  color: $textIconDefaultColor;
+  text-shadow: $textIconDefaultShadow;
+  icon-shadow: $textIconDefaultShadow;
+}
+#panel .power-status.panel-status-indicators-box {
+  spacing: 0;
+  font-size: 1.1em;
+ }

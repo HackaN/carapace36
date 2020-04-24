@@ -1,0 +1,65 @@
+/* ************ Ny Carapace för Gnome 36 **************** */
+// Använd "@import 'filnamn';" för att inkludera dom i outputfilen. Dock då måste dom ligga efter eventeuellt definierade variabler, annars importeras dom innan variabeln existerar och det blir error.
+
+// Dessa kommentarer tas bort ifrån outputfilen
+
+/* Copyright 2009, 2015 Red Hat, Inc.
+ *
+ * Portions adapted from Mx's data/style/default.css
+ *   Copyright 2009 Intel Corporation
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms and conditions of the GNU Lesser General Public License,
+ * version 2.1, as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+/* ******
+Theme by HackaN ( hackan301@gmail.com )
+****** */
+
+// Globala variabler
+$fontStack: Lato, NimbusSans, Cantarell;
+$hoverColor: grey;
+$primaryColor: #eee;
+$fontWeight: 400;
+$borderWidth: .5px;
+$menuBG: rgba(35,40,45,.95);
+$borderColor: rgba(15,20,25,.95);
+$boxShadow: 0 0 2px 5px rgba(0,0,0,.7);
+$overViewFrame: rgba(25,30,35,1);
+$overViewFrameTS: rgba(25,30,35,.7);
+$textIconDefaultColor: #fff;
+$textIconDefaultShadow: 0 1px 4px 2px black;
+
+
+stage {
+  font: 1em $fontStack;
+  color: $primaryColor;
+ }
+
+.button {
+   min-height: 20px;
+   padding: 5px 32px;
+   transition-duration: 100ms;
+   border-radiu: 2px 2px 2px 2px;
+   box-shadow: 0 1px 5px rgba(0,0,0,.8);
+   font-weight: bold;
+  }
+
+
+
+@import 'panel';
+@import 'dock';
+@import 'menusAndPops';
+@import 'overview';
+@import 'apps';
+@import 'search';

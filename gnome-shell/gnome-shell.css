@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* ************ Ny Carapace för Gnome 36 **************** */
+/* Copyright 2009, 2015 Red Hat, Inc.
+ *
+ * Portions adapted from Mx's data/style/default.css
+ *   Copyright 2009 Intel Corporation
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms and conditions of the GNU Lesser General Public License,
+ * version 2.1, as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+/* ******
+Theme by HackaN ( hackan301@gmail.com )
+****** */
+stage {
+  font: 1em Lato, NimbusSans, Cantarell;
+  color: #eee; }
+
+.button {
+  min-height: 20px;
+  padding: 5px 32px;
+  transition-duration: 100ms;
+  border-radiu: 2px 2px 2px 2px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  font-weight: bold; }
+
+#panelBox {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(5, 10, 15, 0.35);
+  background-gradient-end: rgba(60, 65, 70, 0);
+  /*border: .5px none rgba(0,0,0,.0);
+  border-top: .5px solid rgba(240,245,250,.15);
+  border-radius: 2px;*/
+  box-shadow: inset 0px 0.5px 0.5px rgba(245, 245, 250, 0.15); }
+
+#panel,
+#panel .panel-button,
+#panel .system-status-icon,
+#panel .app-menu-icon > StIcon,
+#panel .popup-menu-arrow {
+  font-size: .95em;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 0 1px 4px 2px black;
+  icon-shadow: 0 1px 4px 2px black; }
+
+#panel .power-status.panel-status-indicators-box {
+  spacing: 0;
+  font-size: 1.1em; }
+
+/* ::: menyer ::: */
+.popup-menu-boxpointer,
+.candidate-popup-boxpointer {
+  /*  -arrow-border-radius: 6px;
+     -arrow-background-color: rgba(45,50,55,95);
+     -arrow-border-width: 4.5px;
+     -arrow-border-color: rgba(35,40,45,.45);
+     -arrow-base: 24px;
+     -arrow-rise: 8px;
+     -arrow-box-shadow: 0 0 10px rgba(250,0,0,1) !important;*/
+  -arrow-border-radius: 10px;
+  -arrow-background-color: rgba(35, 40, 45, 0.95);
+  -arrow-border-width: 1px;
+  -arrow-border-color: rgba(15, 20, 25, 0.95);
+  -arrow-base: 20px;
+  -arrow-rise: 10px;
+  -arrow-box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.7) !important; }
+
+/* överblicken */
+#panel:overview #panelBox {
+  box-shadow: inset 0px 0.5px 0.5px rgba(245, 245, 250, 0); }
+
+#overview {
+  background-color: rgba(140, 145, 150, 0.4);
+  border: 2em solid #191e23;
+  border-radius: 3em;
+  box-shadow: 0 0 0 1.5em #191e23;
+  padding: -2em; }
