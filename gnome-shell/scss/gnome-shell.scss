@@ -35,16 +35,25 @@ $borderWidth: .5px;
 $menuBG: rgba(35,40,45,.95);
 $borderColor: rgba(15,20,25,.95);
 $boxShadow: 0 0 2px 5px rgba(0,0,0,.7);
+
 $overViewFrame: rgba(25,30,35,1);
 $overViewFrameTS: rgba(25,30,35,.7);
+
 $textIconDefaultColor: #fff;
-$textIconDefaultShadow: 0 1px 4px 2px black;
+$textIconDefaultShadow: 0 1px 2px .5px black;
 
 
 stage {
   font: 1em $fontStack;
   color: $primaryColor;
  }
+
+MetaStage {
+  border: 3px red solid !important;
+}
+#uiGroup Gjs_ui_layout_UiActor {
+  border: 3px red solid !important;
+}
 
 .button {
    min-height: 20px;

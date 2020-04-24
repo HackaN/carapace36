@@ -9,14 +9,16 @@
   /*border: .5px none rgba(0,0,0,.0);
   border-top: .5px solid rgba(240,245,250,.15);
   border-radius: 2px;*/
-  box-shadow:inset 0px .5px .5px rgba(245,245,250,.15);
+  box-shadow:inset 0px .5px .5px rgba(245,245,250,.25);
+  border-radius: 1px;
 }
 
 #panel,
 #panel .panel-button,
 #panel .system-status-icon,
 #panel .app-menu-icon > StIcon,
-#panel .popup-menu-arrow {
+#panel .popup-menu-arrow,
+#panel Gjs_ui_dateMenu_MessagesIndicator {
   font-size: .95em;
   font-weight: $fontWeight;
   color: $textIconDefaultColor;
