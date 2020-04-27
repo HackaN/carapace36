@@ -18,7 +18,8 @@
 
 //background-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%), linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
 
-// Gradient funkar inte på bakgrunden, den bråkar med box-shadow
+// ::: Översitk generellt :::
+
 #overview {
   background-color: rgba(140,145,150,.4);
 
@@ -61,19 +62,33 @@
 
 }
 
-// Här ligger skrivborden
-.overview-controls { }
 
-// Skrivbordstumnaglar
+// ::: Arbetsytor :::
+
+.overview-controls {
+  //padding: 5px 0 5px 5px; // dom går medsols med början i övre vänstra hörnet eller övre kant.
+}
+
+
 .workspace-thumbnails {
   spacing: 15px;  //kan behövas fixas mer
   padding: 10px;
-  box-shadow: inset .5px 0 1px .5px rgba(0,0,0,.2);
-  border: .5px solid rgba(240,240,240,.0);
-  border-right: none;
   border-radius: 3px 0 0 3px;
   overflow: visible;
-  background-color: rgba(25,30,35,0);
+
+  // Kurvar stil
+  border: .5px solid rgba(240,240,240,.2);
+  border-right: none;
+  box-shadow: inset .5px 0 1px .5px rgba(0,0,0,.2);
+  background-color: rgba(25,30,35,.2);
+
+  // Dock
+  /*
+  border: .5px solid rgba(0,0,0,.7);
+  border-right: none;
+  background-color: rgba(35,40,45,.7);
+  box-shadow: 0 0 5px 2px black;*/
+  // Dock:en behöver .overview-controls {padding: 5px 0 5px 5px;} och #overview {padding-right: 0em;}
 }
 
 .workspace-thumbnails .placeholder {
@@ -97,3 +112,17 @@
   padding: 6px; /* typ samma avstånd som från skärmkanten*/
   margin-left: 3px;
 }
+
+
+// ::: Ikonnät :::
+
+.icon-grid {
+  // spacing: 100px; - denna är onödig
+  -shell-grid-horizontal-item-size: 136px;
+  -shell-grid-vertical-item-size: 136px; // 136 verkar vara det största vi kan få dom till.
+ }
+
+
+
+
+// Sök
