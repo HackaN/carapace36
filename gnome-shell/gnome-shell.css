@@ -137,11 +137,6 @@ MetaStage {
   border-radius: 5px;
   box-shadow: inset 0 0 0.5px 0.5px rgba(255, 255, 255, 0.25); }
 
-.workspace-thumbnail {
-  border: 2px red solid !important;
-  background: yellow !important;
-  padding: 5px !important; }
-
 .workspace-thumbnail-indicator {
   border: 4px solid rgba(230, 235, 240, 0.6);
   border-top: none;
@@ -151,6 +146,46 @@ MetaStage {
   padding: 6px;
   /* typ samma avstånd som från skärmkanten*/
   margin-left: 3px; }
+
+.window-picker {
+  /*-horizontal-spacing: 32px;
+  -vertical-spacing: 40px;
+  padding-left: 52px;
+  padding-right: 12px;
+  padding-bottom: 15px;*/ }
+
+.window-picker.external-monitor {
+  /*padding: 32px;*/ }
+
+.window-clone-border {
+  border: 3px #32373c;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.7);
+  background-color: rgba(140, 145, 150, 0.1); }
+
+.window-caption {
+  background: transparent;
+  text-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.7);
+  margin-top: 2em;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.1em;
+  border: none; }
+
+.window-close {
+  background-image: url("common-assets/misc/close.svg");
+  background-size: 26px;
+  height: 26px;
+  width: 26px;
+  border: 0px;
+  box-shadow: none;
+  background-color: transparent;
+  color: transparent; }
+
+.window-close:hover {
+  background-image: url("common-assets/misc/close-hover.svg"); }
+
+.window-close:active {
+  background-image: url("common-assets/misc/close-active.svg"); }
 
 .icon-grid {
   -shell-grid-horizontal-item-size: 136px;

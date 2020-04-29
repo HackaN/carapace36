@@ -99,12 +99,10 @@
   box-shadow:inset 0 0 .5px .5px rgba(255,255,255,.25);
 }
 .workspace-thumbnail {
-  border: 2px red solid !important;
-  background: yellow !important;
-  padding: 5px !important;
+  //finns inte något här som jag lyckats tweak:a
 }
 .workspace-thumbnail-indicator {
-  border: 4px solid rgba(230,235,240,.6);
+  border: 4px solid $markingColor;
   border-top: none;
   border-right: none;
   border-bottom: none;
@@ -112,7 +110,47 @@
   padding: 6px; /* typ samma avstånd som från skärmkanten*/
   margin-left: 3px;
 }
-
+.window-picker { // låter picker vara
+  /*-horizontal-spacing: 32px;
+  -vertical-spacing: 40px;
+  padding-left: 52px;
+  padding-right: 12px;
+  padding-bottom: 15px;*/
+}
+.window-picker.external-monitor {
+  /*padding: 32px;*/
+}
+.window-clone-border {
+  border: 3px rgba(50,55,60,1);
+  //border-radius: 5px;
+  box-shadow: $boxShadow2;
+  background-color: rgba(140,145,150,.1);
+}
+.window-clone {
+  // finns inget att göra här
+}
+.window-caption {
+  background: transparent;
+  text-shadow: $boxShadow2;
+  margin-top: 2em;
+  color: $brightHoverColor;
+  font-weight: $fontWeight;
+  font-size: $largeFontSize;
+  border: none;
+}
+.window-close {
+  background-image: url("common-assets/misc/close.svg");
+  background-size: 26px;
+  height: 26px;
+  width: 26px;
+  border: 0px;
+  box-shadow: none;
+  background-color: transparent;
+  color: transparent; }
+  .window-close:hover {
+    background-image: url("common-assets/misc/close-hover.svg"); }
+  .window-close:active {
+    background-image: url("common-assets/misc/close-active.svg"); }
 
 // ::: Ikonnät :::
 
