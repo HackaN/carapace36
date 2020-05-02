@@ -38,7 +38,10 @@ $borderWidth: .5px;
 $menuBG: rgba(35,40,45,.95);
 $borderColor: rgba(15,20,25,.95);
 $boxShadow: 0 0 2px 5px rgba(0,0,0,.7);
-$boxShadow2: 0 0 4px 2px rgba(0,0,0,.7);
+$boxShadowLess: 0 0 2px 5px rgba(0,0,0,.2);
+$boxShadow2: 0 0 4px 2px rgba(0,0,0,1);
+$overviewGlass: rgba(140,145,150,.4);
+
 
 $overViewFrame: rgba(25,30,35,1);
 $overViewFrameTS: rgba(25,30,35,.7);
@@ -48,6 +51,14 @@ $textIconDefaultShadow: 0 1px 2px .5px black;
 
 $markingColor: rgba(230,235,240,.6);
 
+// ----- Extend/Inheritance
+// Hämta med "{@extend %<namn>}"
+
+%sunkinglass {
+  box-shadow: inset .5px 0 1px .5px rgba(0,0,0,.7);
+  border: .5px solid rgba(240,240,240,.2);
+  background-color: rgba(25,30,35,.2);
+}
 
 stage {
   font: 1em $fontStack;

@@ -21,7 +21,7 @@
 // ::: Översitk generellt :::
 
 #overview {
-  background-color: rgba(140,145,150,.4);
+  background-color: $overviewGlass;
 
   // Enkel rundad, lite för platt
   /*
@@ -71,16 +71,17 @@
 
 
 .workspace-thumbnails {
+  @extend %sunkinglass;
   spacing: 15px;  //kan behövas fixas mer
   padding: 10px;
   border-radius: 3px 0 0 3px;
   overflow: visible;
 
   // Kurvar stil
-  border: .5px solid rgba(240,240,240,.2);
+  //border: .5px solid rgba(240,240,240,.2);
   border-right: none;
-  box-shadow: inset .5px 0 1px .5px rgba(0,0,0,.2);
-  background-color: rgba(25,30,35,.2);
+  //box-shadow: inset .5px 0 1px .5px rgba(0,0,0,.2);
+  //background-color: rgba(25,30,35,.2);
 
   // Dock
   /*
@@ -121,8 +122,8 @@
   /*padding: 32px;*/
 }
 .window-clone-border {
-  border: 3px rgba(50,55,60,1);
-  //border-radius: 5px;
+  border: 1px rgba(50,55,60,1);
+  border-radius: 2px;
   box-shadow: $boxShadow2;
   background-color: rgba(140,145,150,.1);
 }
@@ -133,6 +134,7 @@
   background: transparent;
   text-shadow: $boxShadow2;
   margin-top: 2em;
+  padding-bottom: .5em;
   color: $brightHoverColor;
   font-weight: $fontWeight;
   font-size: $largeFontSize;
@@ -144,13 +146,36 @@
   height: 26px;
   width: 26px;
   border: 0px;
-  box-shadow: none;
+  border-radius: 26px;
+  box-shadow: $boxShadowLess;
   background-color: transparent;
   color: transparent; }
   .window-close:hover {
     background-image: url("common-assets/misc/close-hover.svg"); }
   .window-close:active {
-    background-image: url("common-assets/misc/close-active.svg"); }
+    background-image: url("common-assets/misc/close-active.svg");}
+
+
+// Sök
+/* ::: Dash sök ::: */
+.search-entry {
+  @extend %sunkinglass;
+ //width: 320px;
+ //padding: 7px 9px;
+ //border: .5px rgba(200,200,200,.0);
+
+ //border-radius: 0px;
+ //background-color: rgba(80,85,90,.4);
+ //font-weight: 400;
+ font-size: 1em;
+ color: rgba(175,180,185,1); //vilande färg
+ text-shadow: 0 1px 3px rgba(0,0,0,.5) !important; /* äntligen! */
+ /*box-shadow: 0 0 0 rgba(220,220,220,0);*/
+ transition-duration: 800ms;
+ text-align: justify; // den här... Jag vill att texten ska vara centrerad när den vilar, sedan åka till vänster när fokus
+}
+
+
 
 // ::: Ikonnät :::
 
@@ -159,8 +184,3 @@
   -shell-grid-horizontal-item-size: 136px;
   -shell-grid-vertical-item-size: 136px; // 136 verkar vara det största vi kan få dom till.
  }
-
-
-
-
-// Sök

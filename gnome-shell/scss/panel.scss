@@ -19,7 +19,7 @@
 #panel .app-menu-icon > StIcon,
 #panel .popup-menu-arrow,
 #panel Gjs_ui_dateMenu_MessagesIndicator {
-  font-size: .95em;
+  font-size: 1em;
   font-weight: $fontWeight;
   color: $textIconDefaultColor;
   text-shadow: $textIconDefaultShadow;
@@ -27,5 +27,19 @@
 }
 #panel .power-status.panel-status-indicators-box {
   spacing: 0;
-  font-size: 1.1em;
+  //font-size: 1.2em; //
  }
+
+#panel .transparent {
+  // kan inte göra så mycket, men du kan kanske länka menyer hit om du vill ha ljus vid omaximerat eller tomt skrivbord och mörka vid maximerat...
+}
+ // Tray Icons Reloaded Extension
+
+ .TrayIndicator StButton {
+	padding: 0 0px !important;
+  margin: 0px !important;
+}
+.TrayIndicator {
+  border: 1px solid red !important;
+  padding: 0px !important;
+}
