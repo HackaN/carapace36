@@ -158,23 +158,67 @@
 
 // Sök
 /* ::: Dash sök ::: */
-.search-entry {
-  @extend %sunkinglass;
- //width: 320px;
- //padding: 7px 9px;
- //border: .5px rgba(200,200,200,.0);
-
- //border-radius: 0px;
- //background-color: rgba(80,85,90,.4);
- //font-weight: 400;
- font-size: 1em;
- color: rgba(175,180,185,1); //vilande färg
- text-shadow: 0 1px 3px rgba(0,0,0,.5) !important; /* äntligen! */
- /*box-shadow: 0 0 0 rgba(220,220,220,0);*/
+.search-entry,
+.search-entry:hover,
+.search-entry:focus {
  transition-duration: 800ms;
- text-align: justify; // den här... Jag vill att texten ska vara centrerad när den vilar, sedan åka till vänster när fokus
+ padding: 5px !important;
+ //text-align: justify; // den här... Jag vill att texten ska vara centrerad när den vilar, sedan åka till vänster när fokus
+}
+.search-entry,
+.search-entry:hover {
+  @extend %transparentglass;
+}
+.search-entry:focus,
+.search-entry:focus:hover {
+  @extend %sunkinglass;
 }
 
+.search-entry,
+.search-entry .search-entry-icon,
+.search-entry .hint-text {
+  color: $textIconRestingColor;
+}
+
+.search-entry:hover,
+.search-entry:hover .search-entry-icon,
+.search-entry:hover .hint-text {
+  color: $textIconHoverColor;
+}
+.search-entry:focus,
+.search-entry:focus:hover,
+.search-entry:focus .search-entry-icon,
+.search-entry:focus:hover .search-entry-icon,
+.search-entry:focus .hint-text,
+.search-entry:focus:hover .hint-text {
+  color: $textIconFocusColor;
+}
+
+// ::: Results :::
+
+.search-section-content {
+  @extend %searchResultEdge;
+}
+.list-search-result {}
+
+.list-search-result:hover,
+.list-search-result:focus,
+.list-search-result:focus:hover {
+  background-color: rgba(250,250,250,.7);
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.4);
+}
+.list-search-result:hover .list-search-result-content,
+.list-search-result:focus .list-search-result-content,
+.list-search-result:focus:hover .list-search-result-content {
+  color: rgba(0,0,0,.75);
+  text-shadow: 0 .5px 0 0 white;
+}
+.list-search-result:hover .list-search-result-description,
+.list-search-result:focus .list-search-result-description,
+.list-search-result:focus:hover .list-search-result-description {
+  color: rgba(30,30,30,.7);
+  text-shadow: 0 .5px 0 0 white;
+}
 
 
 // ::: Ikonnät :::

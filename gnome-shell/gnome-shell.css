@@ -21,10 +21,23 @@
 /* ******
 Theme by HackaN ( hackan301@gmail.com )
 ****** */
-.search-entry, .workspace-thumbnails {
+.search-entry:focus,
+.search-entry:focus:hover, .workspace-thumbnails {
   box-shadow: inset 0.5px 0 1px 0.5px rgba(0, 0, 0, 0.7);
   border: 0.5px solid rgba(240, 240, 240, 0.2);
   background-color: rgba(25, 30, 35, 0.2); }
+
+.search-entry,
+.search-entry:hover, .search-section-content {
+  box-shadow: inset 0.5px 0 1px 0.5px rgba(0, 0, 0, 0);
+  border: 0.5px solid rgba(240, 240, 240, 0);
+  background-color: rgba(25, 30, 35, 0); }
+
+.search-section-content {
+  border: .5px none;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.95);
+  margin: 2px; }
 
 stage {
   font: 1em Lato, NimbusSans, Cantarell;
@@ -63,8 +76,8 @@ MetaStage {
   font-size: 1em;
   font-weight: 400;
   color: #fff;
-  text-shadow: 0 1px 2px 0.5px black;
-  icon-shadow: 0 1px 2px 0.5px black; }
+  text-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6);
+  icon-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6); }
 
 #panel .power-status.panel-status-indicators-box {
   spacing: 0; }
@@ -200,14 +213,50 @@ MetaStage {
   background-image: url("common-assets/misc/close-active.svg"); }
 
 /* ::: Dash sök ::: */
-.search-entry {
-  font-size: 1em;
-  color: #afb4b9;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
-  /* äntligen! */
-  /*box-shadow: 0 0 0 rgba(220,220,220,0);*/
+.search-entry,
+.search-entry:hover,
+.search-entry:focus {
   transition-duration: 800ms;
-  text-align: justify; }
+  padding: 5px !important; }
+
+.search-entry,
+.search-entry .search-entry-icon,
+.search-entry .hint-text {
+  color: #afb4b9; }
+
+.search-entry:hover,
+.search-entry:hover .search-entry-icon,
+.search-entry:hover .hint-text {
+  color: #e6e6e6; }
+
+.search-entry:focus,
+.search-entry:focus:hover,
+.search-entry:focus .search-entry-icon,
+.search-entry:focus:hover .search-entry-icon,
+.search-entry:focus .hint-text,
+.search-entry:focus:hover .hint-text {
+  color: white; }
+
+.list-search-result:hover,
+.list-search-result:focus,
+.list-search-result:focus:hover {
+  background-color: rgba(250, 250, 250, 0.7);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4); }
+
+.list-search-result:hover .list-search-result-content,
+.list-search-result:focus .list-search-result-content,
+.list-search-result:focus:hover .list-search-result-content {
+  color: rgba(0, 0, 0, 0.75);
+  text-shadow: 0 .5px 0 0 white; }
+
+.list-search-result:hover .list-search-result-description,
+.list-search-result:focus .list-search-result-description,
+.list-search-result:focus:hover .list-search-result-description {
+  color: rgba(30, 30, 30, 0.7);
+  text-shadow: 0 .5px 0 0 white; }
+
+.list-search-result .list-search-result-description:hover {
+  color: rgba(0, 0, 0, 0.9); }
 
 .icon-grid {
   -shell-grid-horizontal-item-size: 136px;

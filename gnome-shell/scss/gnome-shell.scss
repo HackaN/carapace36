@@ -47,17 +47,62 @@ $overViewFrame: rgba(25,30,35,1);
 $overViewFrameTS: rgba(25,30,35,.7);
 
 $textIconDefaultColor: #fff;
-$textIconDefaultShadow: 0 1px 2px .5px black;
+$textIconDefaultShadow: 0 1px 2px .5px rgba(0,0,0,.6);
+
+$textIconRestingColor: rgba(175,180,185,1);
+$textIconHoverColor: rgba(230,230,230,1);
+$textIconFocusColor: rgba(255,255,255,1);
 
 $markingColor: rgba(230,235,240,.6);
 
+
 // ----- Extend/Inheritance
 // Hämta med "{@extend %<namn>}"
-
+%gradientDarkTop {
+  background-gradient-start: rgba(0,0,0,.4);
+  background-gradient-end: rgba(120,120,120,0);
+  background-gradient-direction: vertical;
+}
+%gradientLightTop {
+  background-gradient-start: rgba(240,240,240,.4);
+  background-gradient-end: rgba(0,0,0,0);
+  background-gradient-direction: vertical;
+}
 %sunkinglass {
   box-shadow: inset .5px 0 1px .5px rgba(0,0,0,.7);
   border: .5px solid rgba(240,240,240,.2);
   background-color: rgba(25,30,35,.2);
+}
+%transparentglass {
+  box-shadow: inset .5px 0 1px .5px rgba(0,0,0,.0);
+  border: .5px solid rgba(240,240,240,.0);
+  background-color: rgba(25,30,35,.0);
+}
+%floatingglass {
+  background-color: $overviewGlass;
+  border: .5px solid rgba(255,255,255,.25);
+  box-shadow: 0 0 5px 0 black;
+  margin: 5px;
+}
+%searchResultTransparent {
+  @extend %transparentglass;
+  border: 0 none;
+  border-top: .5px solid rgba(255,255,255,.25);
+}
+%searchResultEdge {
+  @extend %transparentglass;
+  border: .5px none;
+  border-top: .5px solid rgba(255,255,255,.15);
+  box-shadow: 0 -1px 0 0 rgba(0,0,0,.95);
+  margin: 2px;
+}
+%searchResultDarkShade {
+  @extend %transparentglass;
+  background-gradient-start: rgba(0,0,0,.25);
+  background-gradient-end: rgba(120,120,120,0);
+  background-gradient-direction: vertical;
+  border: 0 none;
+  border-top: .5px solid rgba(255,255,255,.25);
 }
 
 stage {
@@ -80,6 +125,13 @@ MetaStage {
    box-shadow: 0 1px 5px rgba(0,0,0,.8);
    font-weight: bold;
   }
+
+StEntry,
+StEntry:focus,
+StEntry:active,
+.lock-screen-entry {
+  // globala entry
+}
 
 
 
