@@ -2,6 +2,8 @@
 
 // kombinerar dynamic panel transparency med detta hack som lägger in skugga och kant-effekten i lådan bakom panelen :-) Det här hacket ska funka med andra transparency tillägg också. Fan vad fet jag är på detta, haha! :-D
 
+//Kör storlekar för objekt med text, t ex paneler i "em" så att vi stödjer skalningsfaktor för teckensnitt
+
 #panelBox {
   background-gradient-direction: vertical;
   background-gradient-start: rgba(5,10,15,.35);
@@ -31,8 +33,30 @@
  }
 
 #panel .transparent {
+  color: yellow !important;
   // kan inte göra så mycket, men du kan kanske länka menyer hit om du vill ha ljus vid omaximerat eller tomt skrivbord och mörka vid maximerat...
 }
+
+#panel:overview {
+  //box-shadow: 0 0 0 2px rgba(250,0,0,1) !important;
+  // för att täcka ljusa kanten
+  border-top: 1px solid $overViewFrame;
+  border-left: 0px solid $overViewFrame;
+  border-bottom: 0px solid $overViewFrame;
+  border-right: 0px solid $overViewFrame;
+  color: red !important;
+  }
+
+  .transparent #overview {
+    color: red !important;
+  }
+// Försöker reda ut paneler:
+// solid = "panel" = #panel
+// .transparent:overview #panel
+// .transparent #panel
+
+
+
  // Tray Icons Reloaded Extension
 
  .TrayIndicator StButton {
