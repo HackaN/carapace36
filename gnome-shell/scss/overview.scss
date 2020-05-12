@@ -1,18 +1,7 @@
 // Overview
 
 /* överblicken */
-#panel:overview {
-  //box-shadow: 0 0 0 2px rgba(250,0,0,1) !important;
-  // för att täcka ljusa kanten
-  border-top: 1px solid $overViewFrame;
-  border-left: 0px solid $overViewFrame;
-  border-bottom: 0px solid $overViewFrame;
-  border-right: 0px solid $overViewFrame;
-  }
 
-
-
-//Kör storlekar för objekt med text, t ex paneler i "em" så att vi stödjer skalningsfaktor för teckensnitt
 
 // Gjs_ui_overview_OverviewActor verkar vara samma som #overview
 
@@ -175,13 +164,16 @@
 }
 
 .search-entry {
+  @extend %searchEntryFlatEdgeTransparent;
   margin-left: 2em; // centrera lådan
+  border-radius: 0;
 }
 
 .search-entry,
 .search-entry .search-entry-icon,
 .search-entry .hint-text {
-  color: $textIconRestingColor;
+  //color: $textIconRestingColor;
+  @extend %searchEntryTextIconDefault;
 }
 
 .search-entry:hover,
@@ -196,6 +188,7 @@
 .search-entry:focus .hint-text,
 .search-entry:focus:hover .hint-text {
   color: $textIconFocusColor;
+  border-radius: 10px;
 }
 
 // ::: Results :::

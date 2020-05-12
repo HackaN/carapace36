@@ -23,18 +23,18 @@
 #panel Gjs_ui_dateMenu_MessagesIndicator {
   font-size: 1em;
   font-weight: $fontWeight;
-  color: $textIconDefaultColor;
+  color: darken($textIconDefaultColor, 15%);
   text-shadow: $textIconDefaultShadow;
   icon-shadow: $textIconDefaultShadow;
+  //text-shadow: $textIconDefaultShine;
+  //icon-shadow: $textIconDefaultShine;
 }
 #panel .power-status.panel-status-indicators-box {
   spacing: 0;
   //font-size: 1.2em; //
  }
 
-#panel .transparent {
-  color: yellow !important;
-  // kan inte göra så mycket, men du kan kanske länka menyer hit om du vill ha ljus vid omaximerat eller tomt skrivbord och mörka vid maximerat...
+#panel.transparent {
 }
 
 #panel:overview {
@@ -44,12 +44,28 @@
   border-left: 0px solid $overViewFrame;
   border-bottom: 0px solid $overViewFrame;
   border-right: 0px solid $overViewFrame;
-  color: red !important;
+  }
+  #panel.transparent,
+  #panel.transparent .panel-button,
+  #panel.transparent .system-status-icon,
+  #panel.transparent .app-menu-icon > StIcon,
+  #panel.transparent .popup-menu-arrow,
+  #panel.transparent Gjs_ui_dateMenu_MessagesIndicator {
+    color: $textIconDefaultColor;
   }
 
-  .transparent #overview {
-    color: red !important;
+  #panel:overview,
+  #panel:overview .panel-button,
+  #panel:overview .system-status-icon,
+  #panel:overview .app-menu-icon > StIcon,
+  #panel:overview .popup-menu-arrow,
+  #panel:overview Gjs_ui_dateMenu_MessagesIndicator {
+    //color: darken($textIconDefaultColor, 30%);
+    color: $textIconOverviewPanelColor;
   }
+
+
+
 // Försöker reda ut paneler:
 // solid = "panel" = #panel
 // .transparent:overview #panel

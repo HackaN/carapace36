@@ -48,6 +48,9 @@ $overViewFrameTS: rgba(25,30,35,.7);
 
 $textIconDefaultColor: #fff;
 $textIconDefaultShadow: 0 1px 2px .5px rgba(0,0,0,.6);
+$textIconDefaultShine: 0 .5px 0 0 rgba(255,255,255,1);
+
+$textIconOverviewPanelColor: rgba(255,255,255,.7);
 
 $textIconRestingColor: rgba(175,180,185,1);
 $textIconHoverColor: rgba(230,230,230,1);
@@ -84,6 +87,20 @@ $markingColor: rgba(230,235,240,.6);
   border: .5px solid rgba(255,255,255,.25);
   box-shadow: 0 0 5px 0 black;
   margin: 5px;
+}
+%searchEntryFlatEdgeTransparent {
+  @extend %transparentglass;
+  border: .5px solid rgba(255,255,255,.15);
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow:inset 0 -.5px 0 0 rgba(0,0,0,.25);
+}
+%searchEntryTextIconDefault {
+  color: rgba(0,0,0,.6);
+  text-shadow: 0 .5px 0 0 rgba(255,255,255,.5);
+  icon-shadow: 0 .5px 0 0 rgba(255,255,255,.5);
+  // skuggornas styrka påverkas av color
 }
 %searchResultFlatTransparent {
   @extend %transparentglass;

@@ -34,6 +34,20 @@ Theme by HackaN ( hackan301@gmail.com )
   border: 0.5px solid rgba(240, 240, 240, 0);
   background-color: rgba(25, 30, 35, 0); }
 
+.search-entry {
+  border: 0.5px solid rgba(255, 255, 255, 0.15);
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.25); }
+
+.search-entry,
+.search-entry .search-entry-icon,
+.search-entry .hint-text {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5);
+  icon-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5); }
+
 .search-section-content,
 .search-provider-icon {
   border: 0 none; }
@@ -79,25 +93,34 @@ MetaStage {
 #panel Gjs_ui_dateMenu_MessagesIndicator {
   font-size: 1em;
   font-weight: 400;
-  color: #fff;
+  color: #d9d9d9;
   text-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6);
   icon-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6); }
 
 #panel .power-status.panel-status-indicators-box {
   spacing: 0; }
 
-#panel .transparent {
-  color: yellow !important; }
-
 #panel:overview {
   border-top: 1px solid #191e23;
   border-left: 0px solid #191e23;
   border-bottom: 0px solid #191e23;
-  border-right: 0px solid #191e23;
-  color: red !important; }
+  border-right: 0px solid #191e23; }
 
-.transparent #overview {
-  color: red !important; }
+#panel.transparent,
+#panel.transparent .panel-button,
+#panel.transparent .system-status-icon,
+#panel.transparent .app-menu-icon > StIcon,
+#panel.transparent .popup-menu-arrow,
+#panel.transparent Gjs_ui_dateMenu_MessagesIndicator {
+  color: #fff; }
+
+#panel:overview,
+#panel:overview .panel-button,
+#panel:overview .system-status-icon,
+#panel:overview .app-menu-icon > StIcon,
+#panel:overview .popup-menu-arrow,
+#panel:overview Gjs_ui_dateMenu_MessagesIndicator {
+  color: rgba(255, 255, 255, 0.7); }
 
 .TrayIndicator StButton {
   padding: 0 0px !important;
@@ -126,12 +149,6 @@ MetaStage {
   -arrow-box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.7) !important; }
 
 /* överblicken */
-#panel:overview {
-  border-top: 1px solid #191e23;
-  border-left: 0px solid #191e23;
-  border-bottom: 0px solid #191e23;
-  border-right: 0px solid #191e23; }
-
 #overview {
   background-color: rgba(140, 145, 150, 0.4);
   /*
@@ -237,12 +254,8 @@ MetaStage {
   padding: 5px !important; }
 
 .search-entry {
-  margin-left: 2em; }
-
-.search-entry,
-.search-entry .search-entry-icon,
-.search-entry .hint-text {
-  color: #afb4b9; }
+  margin-left: 2em;
+  border-radius: 0; }
 
 .search-entry:hover,
 .search-entry:hover .search-entry-icon,
@@ -255,7 +268,8 @@ MetaStage {
 .search-entry:focus:hover .search-entry-icon,
 .search-entry:focus .hint-text,
 .search-entry:focus:hover .hint-text {
-  color: white; }
+  color: white;
+  border-radius: 10px; }
 
 .list-search-results {
   padding: 10px; }
