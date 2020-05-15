@@ -21,25 +21,28 @@
 /* ******
 Theme by HackaN ( hackan301@gmail.com )
 ****** */
-.search-entry:focus,
+.list-search-results, .search-entry:focus,
 .search-entry:focus:hover, .workspace-thumbnails {
-  box-shadow: inset 0.5px 0 1px 0.5px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 0 1px 0.5px rgba(0, 0, 0, 0.7);
   border: 0.5px solid rgba(240, 240, 240, 0.2);
   background-color: rgba(25, 30, 35, 0.2); }
 
-.search-entry,
-.search-entry:hover, .list-search-results, .search-section-content,
-.search-provider-icon {
+.search-section-content,
+.search-provider-icon, .search-entry, .search-entry:hover {
   box-shadow: inset 0.5px 0 1px 0.5px rgba(0, 0, 0, 0);
   border: 0.5px solid rgba(240, 240, 240, 0);
   background-color: rgba(25, 30, 35, 0); }
 
-.search-entry {
-  border: 0.5px solid rgba(255, 255, 255, 0.15);
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important;
+.search-entry, .search-entry:hover {
+  border: 0.5px solid rgba(255, 255, 255, 0.05);
+  border-top: none;
+  border-left: none;
+  border-right: none;
   box-shadow: inset 0 -0.5px 0 0 rgba(0, 0, 0, 0.25); }
+
+.search-entry:hover {
+  border: rgba(255, 255, 255, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.45); }
 
 .search-entry,
 .search-entry .search-entry-icon,
@@ -48,14 +51,26 @@ Theme by HackaN ( hackan301@gmail.com )
   text-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5);
   icon-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5); }
 
+.search-entry:hover,
+.search-entry:hover .search-entry-icon,
+.search-entry:hover .hint-text {
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5);
+  icon-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5); }
+
+.search-entry:focus,
+.search-entry:focus:hover,
+.search-entry:focus .search-entry-icon,
+.search-entry:focus:hover .search-entry-icon,
+.search-entry:focus .hint-text,
+.search-entry:focus:hover .hint-text {
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6);
+  icon-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6); }
+
 .search-section-content,
 .search-provider-icon {
   border: 0 none; }
-
-.list-search-results {
-  border: 0 none;
-  border-top: 0.5px solid rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.15); }
 
 stage {
   font: 1em Lato, NimbusSans, Cantarell;
@@ -254,24 +269,10 @@ MetaStage {
   padding: 5px !important; }
 
 .search-entry {
-  margin-left: 2em;
-  border-radius: 0; }
-
-.search-entry:hover,
-.search-entry:hover .search-entry-icon,
-.search-entry:hover .hint-text {
-  color: #e6e6e6; }
-
-.search-entry:focus,
-.search-entry:focus:hover,
-.search-entry:focus .search-entry-icon,
-.search-entry:focus:hover .search-entry-icon,
-.search-entry:focus .hint-text,
-.search-entry:focus:hover .hint-text {
-  color: white;
-  border-radius: 10px; }
+  margin-left: 2em; }
 
 .list-search-results {
+  border-radius: 10px;
   padding: 10px; }
 
 .list-search-result StIcon,
@@ -281,29 +282,29 @@ MetaStage {
 .list-search-result:hover,
 .list-search-result:focus,
 .list-search-result:focus:hover,
+.list-search-result:selected,
 .search-provider-icon:hover,
 .search-provider-icon:focus,
 .search-provider-icon:focus:hover {
-  background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.4); }
 
-.list-search-result:hover .list-search-result-content,
-.list-search-result:focus .list-search-result-content,
-.list-search-result:focus:hover .list-search-result-content,
-.search-provider-icon:hover .list-search-provider-content,
-.search-provider-icon:focus .list-search-provider-content,
-.search-provider-icon:focus:hover .list-search-provider-content {
-  color: rgba(0, 0, 0, 0.75);
-  text-shadow: 0 .5px 0 0 white; }
+.search-provider-icon .list-search-provider-content {
+  border-radius: 5px;
+  padding: 5px; }
 
-.list-search-result:hover .list-search-result-description,
-.list-search-result:focus .list-search-result-description,
-.list-search-result:focus:hover .list-search-result-description,
+.search-provider-icon .list-search-provider-details {
+  color: rgba(255, 255, 255, 0.7); }
+
 .search-provider-icon:hover .list-search-provider-details,
-.search-provider-icon:focus .list-search-provider-details,
+.search-provider-icon:focus .list-search-provider-details {
+  color: rgba(255, 255, 255, 0.9); }
+
 .search-provider-icon:focus:hover .list-search-provider-details {
-  color: rgba(30, 30, 30, 0.7);
-  text-shadow: 0 .5px 0 0 white; }
+  color: white; }
+
+.search-provider-icon:focus .list-search-provider-content {
+  background-color: rgba(200, 200, 200, 0.3);
+  border: 0.5px solid rgba(15, 20, 25, 0.95); }
 
 .icon-grid {
   spacing: 20px;

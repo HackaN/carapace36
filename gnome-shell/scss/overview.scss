@@ -154,19 +154,19 @@
  padding: 5px !important;
  //text-align: justify; // den här... Jag vill att texten ska vara centrerad när den vilar, sedan åka till vänster när fokus
 }
-.search-entry,
+.search-entry {
+  @extend %searchEntryFlatEdgeTransparent;
+  margin-left: 2em; // centrera lådan
+  //border-radius: 0;
+}
 .search-entry:hover {
-  @extend %transparentglass;
+  //@extend %transparentglass;
+  @extend %searchEntryFlatEdgeTransparentHover;
 }
 .search-entry:focus,
 .search-entry:focus:hover {
   @extend %sunkinglass;
-}
-
-.search-entry {
-  @extend %searchEntryFlatEdgeTransparent;
-  margin-left: 2em; // centrera lådan
-  border-radius: 0;
+  //@extend %searchEntryFlatEdgeTransparentFocus;
 }
 
 .search-entry,
@@ -179,7 +179,9 @@
 .search-entry:hover,
 .search-entry:hover .search-entry-icon,
 .search-entry:hover .hint-text {
-  color: $textIconHoverColor;
+  //color: $textIconHoverColor;
+  //color: $textIconOverviewPanelColor;
+  @extend %searchEntryTextIconDefaultHover;
 }
 .search-entry:focus,
 .search-entry:focus:hover,
@@ -187,8 +189,9 @@
 .search-entry:focus:hover .search-entry-icon,
 .search-entry:focus .hint-text,
 .search-entry:focus:hover .hint-text {
-  color: $textIconFocusColor;
-  border-radius: 10px;
+  //color: $textIconFocusColor;
+  //color: $textIconOverviewPanelColor;
+  @extend %searchEntryTextIconDefaultFocus;
 }
 
 // ::: Results :::
@@ -202,8 +205,10 @@
 }
 .list-search-results {
   //@extend %searchResultFlatTransparent;
-  @extend %searchResultsFlatEdgeTransparent;
-  //border-radius: 10px;
+  //@extend %searchResultsFlatEdgeTransparent;
+  //@extend %searchResultsDarkBox;
+  @extend %sunkinglass;
+  border-radius: 10px;
   padding: 10px;
 }
 
@@ -213,24 +218,51 @@
 .list-search-provider-content StIcon {
   icon-shadow: $textIconDefaultShadow;
 }
+.search-provider-icon {
 
+}
 .list-search-result:hover,
 .list-search-result:focus,
 .list-search-result:focus:hover,
+.list-search-result:selected,
 .search-provider-icon:hover,
 .search-provider-icon:focus,
 .search-provider-icon:focus:hover {
-  background-color: $backgroundHoverFocusColor;
+  //background-color: $backgroundHoverFocusColor;
+  //border: .5px solid rgba(0,0,0,.2);
+  //@extend %sunkinglass;
   box-shadow: 0 0 2px 0 rgba(0,0,0,.4);
 }
+
+.search-provider-icon .list-search-provider-content {
+  //finns ingen text här
+  border-radius: 5px;
+  padding: 5px;
+}
+.search-provider-icon .list-search-provider-details {
+  color: $textIconColorBrightMedium;
+}
+.search-provider-icon:hover .list-search-provider-details,
+.search-provider-icon:focus .list-search-provider-details {
+  color: $textIconColorBrightStrong;
+}
+.search-provider-icon:focus:hover .list-search-provider-details {
+  color: $textIconColorBrightSolid;
+}
+
+.search-provider-icon:focus .list-search-provider-content {
+  background-color: rgba(200,200,200,.3);
+  border: .5px solid $borderColor;
+}
+
 .list-search-result:hover .list-search-result-content,
 .list-search-result:focus .list-search-result-content,
 .list-search-result:focus:hover .list-search-result-content,
 .search-provider-icon:hover .list-search-provider-content,
 .search-provider-icon:focus .list-search-provider-content,
 .search-provider-icon:focus:hover .list-search-provider-content {
-  color: rgba(0,0,0,.75);
-  text-shadow: 0 .5px 0 0 white;
+  //color: rgba(0,0,0,.75);
+  //text-shadow: 0 .5px 0 0 white;
 }
 .list-search-result:hover .list-search-result-description,
 .list-search-result:focus .list-search-result-description,
@@ -238,8 +270,8 @@
 .search-provider-icon:hover .list-search-provider-details,
 .search-provider-icon:focus .list-search-provider-details,
 .search-provider-icon:focus:hover .list-search-provider-details {
-  color: rgba(30,30,30,.7);
-  text-shadow: 0 .5px 0 0 white;
+  //color: rgba(30,30,30,.7);
+  //text-shadow: 0 .5px 0 0 white;
 }
 
 
