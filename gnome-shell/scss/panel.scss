@@ -23,7 +23,7 @@
 #panel Gjs_ui_dateMenu_MessagesIndicator {
   font-size: 1em;
   font-weight: $fontWeight;
-  color: darken($textIconDefaultColor, 15%);
+  color: darken($textIconColorBrightSolid, 15%);
   text-shadow: $textIconDefaultShadow;
   icon-shadow: $textIconDefaultShadow;
   //text-shadow: $textIconDefaultShine;
@@ -51,9 +51,10 @@
   #panel.transparent .app-menu-icon > StIcon,
   #panel.transparent .popup-menu-arrow,
   #panel.transparent Gjs_ui_dateMenu_MessagesIndicator {
-    color: $textIconDefaultColor;
+    color: $textIconColorBrightStrong;
   }
 
+// nOTERING, .PANEL-BUTTON INKLUDERAR INTE STATUSITEMS
   #panel:overview,
   #panel:overview .panel-button,
   #panel:overview .system-status-icon,
@@ -61,7 +62,34 @@
   #panel:overview .popup-menu-arrow,
   #panel:overview Gjs_ui_dateMenu_MessagesIndicator {
     //color: darken($textIconDefaultColor, 30%);
-    color: $textIconOverviewPanelColor;
+    color: $textIconColorBrightMedium;
+  }
+
+    //börjar med solid panel
+    #panel :hover,
+    #panel .panel-button:hover,
+    #panel :hover .system-status-icon,
+    #panel .app-menu-icon:hover > StIcon,
+    #panel :hover .popup-menu-arrow,
+    #panel Gjs_ui_dateMenu_MessagesIndicator:hover,
+    //nästa är overview
+  #panel:overview :hover,
+  #panel:overview .panel-button:hover,
+  #panel:overview :hover .system-status-icon,
+  #panel:overview .app-menu-icon:hover > StIcon,
+  #panel:overview :hover .popup-menu-arrow,
+  #panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover {
+    //color: darken($textIconDefaultColor, 30%);
+    color: $textIconColorBrightSolid;
+  }
+  // fortsätter med transparent
+  #panel.transparent :hover,
+  #panel.transparent .panel-button:hover,
+  #panel.transparent :hover .system-status-icon,
+  #panel.transparent .app-menu-icon:hover > StIcon,
+  #panel.transparent :hover .popup-menu-arrow,
+  #panel.transparent Gjs_ui_dateMenu_MessagesIndicator:hover {
+    color: $textIconColorBrightSolid;
   }
 
 

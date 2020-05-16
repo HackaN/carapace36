@@ -65,8 +65,8 @@ Theme by HackaN ( hackan301@gmail.com )
 .search-entry:focus .hint-text,
 .search-entry:focus:hover .hint-text {
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6);
-  icon-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6); }
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7); }
 
 .search-section-content,
 .search-provider-icon {
@@ -109,8 +109,8 @@ MetaStage {
   font-size: 1em;
   font-weight: 400;
   color: #d9d9d9;
-  text-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6);
-  icon-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6); }
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7); }
 
 #panel .power-status.panel-status-indicators-box {
   spacing: 0; }
@@ -127,7 +127,7 @@ MetaStage {
 #panel.transparent .app-menu-icon > StIcon,
 #panel.transparent .popup-menu-arrow,
 #panel.transparent Gjs_ui_dateMenu_MessagesIndicator {
-  color: #fff; }
+  color: rgba(255, 255, 255, 0.9); }
 
 #panel:overview,
 #panel:overview .panel-button,
@@ -136,6 +136,28 @@ MetaStage {
 #panel:overview .popup-menu-arrow,
 #panel:overview Gjs_ui_dateMenu_MessagesIndicator {
   color: rgba(255, 255, 255, 0.7); }
+
+#panel :hover,
+#panel .panel-button:hover,
+#panel :hover .system-status-icon,
+#panel .app-menu-icon:hover > StIcon,
+#panel :hover .popup-menu-arrow,
+#panel Gjs_ui_dateMenu_MessagesIndicator:hover,
+#panel:overview :hover,
+#panel:overview .panel-button:hover,
+#panel:overview :hover .system-status-icon,
+#panel:overview .app-menu-icon:hover > StIcon,
+#panel:overview :hover .popup-menu-arrow,
+#panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover {
+  color: white; }
+
+#panel.transparent :hover,
+#panel.transparent .panel-button:hover,
+#panel.transparent :hover .system-status-icon,
+#panel.transparent .app-menu-icon:hover > StIcon,
+#panel.transparent :hover .popup-menu-arrow,
+#panel.transparent Gjs_ui_dateMenu_MessagesIndicator:hover {
+  color: white; }
 
 .TrayIndicator StButton {
   padding: 0 0px !important;
@@ -277,7 +299,7 @@ MetaStage {
 
 .list-search-result StIcon,
 .list-search-provider-content StIcon {
-  icon-shadow: 0 1px 2px 0.5px rgba(0, 0, 0, 0.6); }
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7); }
 
 .list-search-result:hover,
 .list-search-result:focus,
