@@ -47,7 +47,10 @@ Theme by HackaN ( hackan301@gmail.com )
 .search-entry,
 .search-entry .search-entry-icon,
 .search-entry .hint-text {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
+  /*text-shadow: $textIconDefaultShadow;
+  icon-shadow: $textIconSolidShadow;
+  color: rgba(0,0,0,.6);*/
   text-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5);
   icon-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5); }
 
@@ -100,6 +103,40 @@ MetaStage {
   box-shadow: inset 0px 0.5px 0.5px rgba(245, 245, 250, 0.25);
   border-radius: 1px; }
 
+#panel #panelActivities.panel-button > *,
+#panel #panelActivities.panel-button > *,
+#panel:overview #panelActivities.panel-button > * {
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7);
+  width: 24px !important;
+  height: 24px !important;
+  background-color: transparent !important;
+  background-gradient-direction: none !important;
+  border: 0 none transparent !important;
+  text-shadow: 0 0 transparent !important;
+  transition-duration: 0ms !important;
+  box-shadow: none !important;
+  color: transparent;
+  background-image: none; }
+
+#panel #panelActivities.panel-button > * {
+  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg"); }
+
+#panel.transparent #panelActivities.panel-button > * {
+  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg"); }
+
+#panel:overview #panelActivities.panel-button > * {
+  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.7.svg"); }
+
+#panel :hover #panelActivities.panel-button > * {
+  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7.svg"); }
+
+#panel.transparent :hover #panelActivities.panel-button > * {
+  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7.svg"); }
+
+#panel:overview :hover #panelActivities.panel-button > * {
+  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg"); }
+
 #panel,
 #panel .panel-button,
 #panel .system-status-icon,
@@ -108,7 +145,7 @@ MetaStage {
 #panel Gjs_ui_dateMenu_MessagesIndicator {
   font-size: 1em;
   font-weight: 400;
-  color: #d9d9d9;
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7);
   icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7); }
 
@@ -142,13 +179,7 @@ MetaStage {
 #panel :hover .system-status-icon,
 #panel .app-menu-icon:hover > StIcon,
 #panel :hover .popup-menu-arrow,
-#panel Gjs_ui_dateMenu_MessagesIndicator:hover,
-#panel:overview :hover,
-#panel:overview .panel-button:hover,
-#panel:overview :hover .system-status-icon,
-#panel:overview .app-menu-icon:hover > StIcon,
-#panel:overview :hover .popup-menu-arrow,
-#panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover {
+#panel Gjs_ui_dateMenu_MessagesIndicator:hover {
   color: white; }
 
 #panel.transparent :hover,
@@ -158,6 +189,14 @@ MetaStage {
 #panel.transparent :hover .popup-menu-arrow,
 #panel.transparent Gjs_ui_dateMenu_MessagesIndicator:hover {
   color: white; }
+
+#panel:overview :hover,
+#panel:overview .panel-button:hover,
+#panel:overview :hover .system-status-icon,
+#panel:overview .app-menu-icon:hover > StIcon,
+#panel:overview :hover .popup-menu-arrow,
+#panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover {
+  color: rgba(255, 255, 255, 0.9); }
 
 .TrayIndicator StButton {
   padding: 0 0px !important;

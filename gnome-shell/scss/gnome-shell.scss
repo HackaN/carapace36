@@ -59,10 +59,18 @@ $textIconHoverColor: rgba(230,230,230,1);
 $textIconFocusColor: rgba(255,255,255,1);
 $backgroundHoverFocusColor: rgba(255,255,255,.6);
 
+// ljus färg
+$textIconColorBrightSub: rgba(255,255,255,.3);
 $textIconColorBrightWeak: rgba(255,255,255,.5);
 $textIconColorBrightMedium: rgba(255,255,255,.7);
 $textIconColorBrightStrong: rgba(255,255,255,.9);
 $textIconColorBrightSolid: rgba(255,255,255,1);
+// mörk färg
+$textIconColorDarkSub: rgba(0,0,0,.3);
+$textIconColorDarkWeak: rgba(0,0,0,.5);
+$textIconColorDarkMedium: rgba(0,0,0,.7);
+$textIconColorDarkStrong: rgba(0,0,0,.9);
+$textIconColorDarkSolid: rgba(0,0,0,1);
 
 $markingColor: rgba(230,235,240,.6);
 
@@ -115,7 +123,10 @@ $markingColor: rgba(230,235,240,.6);
   box-shadow: outset;
 }
 %searchEntryTextIconDefault {
-  color: rgba(0,0,0,.6);
+  color: $textIconColorDarkWeak;
+  /*text-shadow: $textIconDefaultShadow;
+  icon-shadow: $textIconSolidShadow;
+  color: rgba(0,0,0,.6);*/
   text-shadow: $textIconLessShine;
   icon-shadow: $textIconLessShine;
   // skuggornas styrka påverkas av color

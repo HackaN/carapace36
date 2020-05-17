@@ -15,6 +15,45 @@
   border-radius: 1px;
 }
 
+#panel #panelActivities.panel-button > *,
+#panel #panelActivities.panel-button > *,
+#panel:overview #panelActivities.panel-button > * {
+icon-shadow: $textIconDefaultShadow;
+text-shadow: $textIconDefaultShadow;
+width: 24px !important;
+height: 24px !important;
+background-color: transparent !important;
+background-gradient-direction: none !important;
+border: 0 none transparent !important;
+text-shadow: 0 0 transparent !important;
+transition-duration: 0ms !important;
+box-shadow: none !important;
+color: transparent;
+background-image: none;
+}
+// fot default
+#panel #panelActivities.panel-button > * {
+background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
+}
+#panel.transparent #panelActivities.panel-button > * {
+background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
+}
+#panel:overview #panelActivities.panel-button > * {
+background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.7.svg");
+}
+// fot hover
+#panel :hover #panelActivities.panel-button > * {
+background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7.svg");
+}
+#panel.transparent :hover #panelActivities.panel-button > * {
+background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7.svg");
+}
+#panel:overview :hover #panelActivities.panel-button > * {
+background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
+}
+
+// lägg till :hover effekter på foten
+
 #panel,
 #panel .panel-button,
 #panel .system-status-icon,
@@ -23,7 +62,8 @@
 #panel Gjs_ui_dateMenu_MessagesIndicator {
   font-size: 1em;
   font-weight: $fontWeight;
-  color: darken($textIconColorBrightSolid, 15%);
+  //color: darken($textIconColorBrightSolid, 15%);
+  color: $textIconColorBrightStrong;
   text-shadow: $textIconDefaultShadow;
   icon-shadow: $textIconDefaultShadow;
   //text-shadow: $textIconDefaultShine;
@@ -71,17 +111,10 @@
     #panel :hover .system-status-icon,
     #panel .app-menu-icon:hover > StIcon,
     #panel :hover .popup-menu-arrow,
-    #panel Gjs_ui_dateMenu_MessagesIndicator:hover,
-    //nästa är overview
-  #panel:overview :hover,
-  #panel:overview .panel-button:hover,
-  #panel:overview :hover .system-status-icon,
-  #panel:overview .app-menu-icon:hover > StIcon,
-  #panel:overview :hover .popup-menu-arrow,
-  #panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover {
-    //color: darken($textIconDefaultColor, 30%);
-    color: $textIconColorBrightSolid;
-  }
+    #panel Gjs_ui_dateMenu_MessagesIndicator:hover {
+      color: $textIconColorBrightSolid;
+    }
+
   // fortsätter med transparent
   #panel.transparent :hover,
   #panel.transparent .panel-button:hover,
@@ -91,7 +124,16 @@
   #panel.transparent Gjs_ui_dateMenu_MessagesIndicator:hover {
     color: $textIconColorBrightSolid;
   }
-
+  //nästa är overview
+#panel:overview :hover,
+#panel:overview .panel-button:hover,
+#panel:overview :hover .system-status-icon,
+#panel:overview .app-menu-icon:hover > StIcon,
+#panel:overview :hover .popup-menu-arrow,
+#panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover {
+  //color: darken($textIconDefaultColor, 30%);
+  color: $textIconColorBrightStrong;
+}
 
 
 // Försöker reda ut paneler:
