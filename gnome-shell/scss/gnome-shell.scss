@@ -2,6 +2,7 @@
 // Använd "@import 'filnamn';" för att inkludera dom i outputfilen. Dock då måste dom ligga efter eventeuellt definierade variabler, annars importeras dom innan variabeln existerar och det blir error.
 
 // Dessa kommentarer tas bort ifrån outputfilen
+// På tal om outputfil... $ sassc scss/gnome-shell.scss gnome-shell.css
 
 /* Copyright 2009, 2015 Red Hat, Inc.
  *
@@ -77,6 +78,19 @@ $markingColor: rgba(230,235,240,.6);
 
 // ----- Extend/Inheritance
 // Hämta med "{@extend %<namn>;}"
+
+%panelActive {
+  border: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  //-panel-corner-radius: 0px;
+  //-panel-corner-background-color: rgba(15,20,30,0);
+  //-panel-corner-border-width: 0px;
+  -panel-corner-border-color: transparent;
+}
+
 %gradientDarkTop {
   background-gradient-start: rgba(0,0,0,.4);
   background-gradient-end: rgba(120,120,120,0);
@@ -235,6 +249,22 @@ StEntry:focus,
 StEntry:active,
 .lock-screen-entry {
   // globala entry
+}
+
+// ::: Dash :::
+
+
+// 1 (SLIM)
+%dash1 {
+  border-image: url("common-assets/dash/CarapaceDockSlim_v2.svg") 9 9 9 9;
+}
+// 2 (PANTHEON)
+%dash2 {
+    border-image: url("common-assets/dash/CarapaceDockPantheon_v1.svg") 9 9 9 9;
+}
+// 3 (3D)
+%dash3 {
+    border-image: url("common-assets/dash/CarapaceDock3D_v5.svg") 10 10 10 10;
 }
 
 

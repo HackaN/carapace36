@@ -58,6 +58,8 @@ background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7.svg");
 #panel:overview :hover #panelActivities.panel-button > * {
 background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
 }
+#panel .popup-menu-arrow {
+  width: 0; }
 
 // lägg till :hover effekter på foten
 
@@ -140,11 +142,12 @@ background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
       color: $textIconColorBrightSolid;
     }
     #panel .panel-button:active,
-    #panel .clock-display-box:active,
-    #panel .panel-button clock-display:active {
-      border: 1px solid red !important;
-      box-shadow: none !important;
-      //vcafan, klock-kuk
+    #panel .panel-corner:active {
+      //box-shadow: inset 0 -2px 0 0 $textIconColorBrightSolid;
+      @extend %panelActive;
+    }
+    #panel .panel-button:active StLabel.clock {
+      box-shadow: none; // den har BS by default, blir dubbel vid :active, tar bort, kör panel-button ovan som standard istället
     }
 
   // fortsätter med transparent
@@ -162,6 +165,10 @@ background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
   #panel.transparent Gjs_ui_dateMenu_MessagesIndicator:active {
     color: $textIconColorBrightSolid;
   }
+  #panel.transparent .panel-button:active {
+    //box-shadow: inset 0 -2px 0 0 $textIconColorBrightSolid;
+    @extend %panelActive;
+  }
   //nästa är overview
 #panel:overview :hover,
 #panel:overview .panel-button:hover,
@@ -178,12 +185,17 @@ background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
   //color: darken($textIconDefaultColor, 30%);
   color: $textIconColorBrightStrong;
 }
+#panel:overview .panel-button:active,
+#panel:overview #panelActivities.panel-button,
+#panel:overview :active StBin {
+  //box-shadow: inset 0 -2px 0 0 $textIconColorBrightStrong;
+  @extend %panelActive;
+}
 
-
-// Försöker reda ut paneler:
-// solid = "panel" = #panel
-// .transparent:overview #panel
-// .transparent #panel
+/*#panel:overview #panelActivities.panel-button {
+  //border: red 1px solid;
+  box-shadow: inset 0 -1px 0 0 rgba(0,255,0,1);
+}*/
 
 
 
