@@ -15,6 +15,13 @@
   border-radius: 1px;
 }
 
+#panel .panel-button .app-menu-icon { /* program-ikoner, ligger framför namnet i panelen, men dom är inte alltid så vackra... */
+  width: 0px;
+  height: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 #panel #panelActivities.panel-button > *,
 #panel #panelActivities.panel-button > *,
 #panel:overview #panelActivities.panel-button > * {
@@ -93,6 +100,12 @@ background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
   #panel.transparent Gjs_ui_dateMenu_MessagesIndicator {
     color: $textIconColorBrightStrong;
   }
+  #panel.transparent .panel-corner {
+    -panel-corner-radius: 0px;
+    -panel-corner-background-color: rgba(15,20,30,0);
+    -panel-corner-border-width: 0px;
+    -panel-corner-border-color: transparent;
+  }
 
 // nOTERING, .PANEL-BUTTON INKLUDERAR INTE STATUSITEMS
   #panel:overview,
@@ -104,6 +117,12 @@ background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
     //color: darken($textIconDefaultColor, 30%);
     color: $textIconColorBrightMedium;
   }
+  #panel:overview .panel-corner {
+    -panel-corner-radius: 0px;
+    -panel-corner-background-color: rgba(15,20,30,0);
+    -panel-corner-border-width: 0px;
+    -panel-corner-border-color: transparent;
+  }
 
     //börjar med solid panel
     #panel :hover,
@@ -111,8 +130,21 @@ background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
     #panel :hover .system-status-icon,
     #panel .app-menu-icon:hover > StIcon,
     #panel :hover .popup-menu-arrow,
-    #panel Gjs_ui_dateMenu_MessagesIndicator:hover {
+    #panel Gjs_ui_dateMenu_MessagesIndicator:hover,
+    #panel :active,
+    #panel .panel-button:active,
+    #panel :active .system-status-icon,
+    #panel .app-menu-icon:active > StIcon,
+    #panel :active .popup-menu-arrow,
+    #panel Gjs_ui_dateMenu_MessagesIndicator:active {
       color: $textIconColorBrightSolid;
+    }
+    #panel .panel-button:active,
+    #panel .clock-display-box:active,
+    #panel .panel-button clock-display:active {
+      border: 1px solid red !important;
+      box-shadow: none !important;
+      //vcafan, klock-kuk
     }
 
   // fortsätter med transparent
@@ -121,7 +153,13 @@ background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
   #panel.transparent :hover .system-status-icon,
   #panel.transparent .app-menu-icon:hover > StIcon,
   #panel.transparent :hover .popup-menu-arrow,
-  #panel.transparent Gjs_ui_dateMenu_MessagesIndicator:hover {
+  #panel.transparent Gjs_ui_dateMenu_MessagesIndicator:hover,
+  #panel.transparent :active,
+  #panel.transparent .panel-button:active,
+  #panel.transparent :active .system-status-icon,
+  #panel.transparent .app-menu-icon:active > StIcon,
+  #panel.transparent :active .popup-menu-arrow,
+  #panel.transparent Gjs_ui_dateMenu_MessagesIndicator:active {
     color: $textIconColorBrightSolid;
   }
   //nästa är overview
@@ -130,7 +168,13 @@ background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
 #panel:overview :hover .system-status-icon,
 #panel:overview .app-menu-icon:hover > StIcon,
 #panel:overview :hover .popup-menu-arrow,
-#panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover {
+#panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover,
+#panel:overview :active,
+#panel:overview .panel-button:active,
+#panel:overview :active .system-status-icon,
+#panel:overview .app-menu-icon:active > StIcon,
+#panel:overview :active .popup-menu-arrow,
+#panel:overview Gjs_ui_dateMenu_MessagesIndicator:active {
   //color: darken($textIconDefaultColor, 30%);
   color: $textIconColorBrightStrong;
 }
