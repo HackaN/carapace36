@@ -21,6 +21,21 @@
 /* ******
 Theme by HackaN ( hackan301@gmail.com )
 ****** */
+.icon-grid .app-well-app:focus .overview-icon {
+  background-gradient-start: rgba(200, 200, 205, 0.6);
+  background-gradient-end: rgba(255, 255, 255, 0.05);
+  background-gradient-direction: radial; }
+
+.icon-grid .app-well-app:selected .overview-icon {
+  background-gradient-start: rgba(190, 0, 5, 0.6);
+  background-gradient-end: rgba(235, 245, 235, 0.05);
+  background-gradient-direction: radial; }
+
+.icon-grid .app-well-app:hover .overview-icon {
+  background-gradient-start: rgba(210, 210, 210, 0.6);
+  background-gradient-end: rgba(255, 220, 220, 0.05);
+  background-gradient-direction: radial; }
+
 #panel:overview .panel-button:active,
 #panel:overview #panelActivities.panel-button,
 #panel:overview :active StBin, #panel.transparent .panel-button:active, #panel .panel-button:active,
@@ -79,8 +94,8 @@ Theme by HackaN ( hackan301@gmail.com )
 .search-entry:focus .hint-text,
 .search-entry:focus:hover .hint-text {
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7); }
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
 
 .search-section-content,
 .search-provider-icon {
@@ -100,9 +115,12 @@ MetaStage {
   min-height: 20px;
   padding: 5px 32px;
   transition-duration: 100ms;
-  border-radiu: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
   font-weight: bold; }
+
+#dash {
+  border-image: url("common-assets/dash/CarapaceDockPantheon_v1.svg") 9 9 9 9; }
 
 #panelBox {
   background-gradient-direction: vertical;
@@ -124,8 +142,8 @@ MetaStage {
 #panel #panelActivities.panel-button > *,
 #panel #panelActivities.panel-button > *,
 #panel:overview #panelActivities.panel-button > * {
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
   width: 24px !important;
   height: 24px !important;
   background-color: transparent !important;
@@ -167,8 +185,8 @@ MetaStage {
   font-size: 1em;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7); }
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
 
 #panel .power-status.panel-status-indicators-box {
   spacing: 0; }
@@ -265,16 +283,10 @@ MetaStage {
   padding: 0px !important; }
 
 #dash {
-  /*color: rgba(255,255,255,1);
+  color: white;
   font-size: 1.2em;
   padding: 4px 0;
-  background: none;
-  @extend %dash2;*/
-  background-color: red; }
-
-#dashtodockBox {
-  background-color: blue;
-  padding: 3px; }
+  background: none; }
 
 /* ::: menyer ::: */
 .popup-menu-boxpointer,
@@ -287,9 +299,9 @@ MetaStage {
      -arrow-rise: 8px;
      -arrow-box-shadow: 0 0 10px rgba(250,0,0,1) !important;*/
   -arrow-border-radius: 10px;
-  -arrow-background-color: rgba(35, 40, 45, 0.95);
+  -arrow-background-color: rgba(35, 40, 45, 0.9);
   -arrow-border-width: 1px;
-  -arrow-border-color: rgba(15, 20, 25, 0.95);
+  -arrow-border-color: rgba(15, 20, 25, 0.9);
   -arrow-base: 20px;
   -arrow-rise: 10px;
   -arrow-box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.7) !important; }
@@ -408,7 +420,7 @@ MetaStage {
 
 .list-search-result StIcon,
 .list-search-provider-content StIcon {
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.7); }
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
 
 .list-search-result:hover,
 .list-search-result:focus,
@@ -435,7 +447,7 @@ MetaStage {
 
 .search-provider-icon:focus .list-search-provider-content {
   background-color: rgba(200, 200, 200, 0.3);
-  border: 0.5px solid rgba(15, 20, 25, 0.95); }
+  border: 0.5px solid rgba(15, 20, 25, 0.9); }
 
 .icon-grid {
   spacing: 20px;
@@ -446,9 +458,21 @@ MetaStage {
   margin-left: 2em; }
 
 .icon-grid .app-well-app .overview-icon {
-  background-gradient-direction: none; }
+  background-gradient-direction: none;
+  border-radius: 120px; }
 
-.icon-grid .app-well-app:hover .overview-icon {
-  background-gradient-start: rgba(250, 250, 250, 0.7);
-  background-gradient-end: rgba(150, 150, 150, 0.5);
-  background-gradient-direction: radial; }
+.icon-grid .app-well-app .overview-icon StLabel,
+.icon-grid .app-well-app .overview-icon StIcon {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
+
+.icon-grid .app-well-app:hover .overview-icon StLabel,
+.icon-grid .app-well-app:selected .overview-icon StLabel,
+.icon-grid .app-well-app:focus .overview-icon StLabel,
+.icon-grid .app-well-app:hover .overview-icon StIcon,
+.icon-grid .app-well-app:selected .overview-icon StIcon,
+.icon-grid .app-well-app:focus .overview-icon StIcon {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 1px 3.5px 2px rgba(0, 0, 0, 0.8); }

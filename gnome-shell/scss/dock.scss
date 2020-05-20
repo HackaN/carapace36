@@ -1,14 +1,13 @@
 // Dock
 
 #dash {
-  /*color: rgba(255,255,255,1);
+  color: rgba(255,255,255,1);
   font-size: 1.2em;
   padding: 4px 0;
   background: none;
-  @extend %dash2;*/
-  background-color: red;
+  @extend %dashSVG2;
+  //@extend %dashPureCode;
 }
 #dashtodockBox {
-  background-color: blue;
-  padding: 3px;
+  //@extend %dashBoxPureCode;
 }

@@ -288,9 +288,30 @@
 
  .icon-grid .app-well-app .overview-icon {
    background-gradient-direction: none;
+   border-radius: 120px;
+ }
+ .icon-grid .app-well-app .overview-icon StLabel,
+ .icon-grid .app-well-app .overview-icon StIcon {
+   color: $textIconColorBrightWeak;
+   text-shadow: $textIconMediumShadow;
+   icon-shadow: $textIconMediumShadow;
  }
  .icon-grid .app-well-app:hover .overview-icon {
-   background-gradient-start: rgba(250,250,250,.7);
-   background-gradient-end: rgba(150,150,150,.5);
-   background-gradient-direction: radial;
+   @extend %flashLightHover;
+ }
+ .icon-grid .app-well-app:hover .overview-icon StLabel,
+ .icon-grid .app-well-app:selected .overview-icon StLabel,
+ .icon-grid .app-well-app:focus .overview-icon StLabel,
+ .icon-grid .app-well-app:hover .overview-icon StIcon,
+ .icon-grid .app-well-app:selected .overview-icon StIcon,
+ .icon-grid .app-well-app:focus .overview-icon StIcon {
+   color: $textIconColorBrightStrong;
+   text-shadow: $textIconDefaultShadow;
+   icon-shadow: $textIconDefaultShadowBig;
+ }
+ .icon-grid .app-well-app:selected .overview-icon {
+   @extend %flashLightSelected;
+ }
+ .icon-grid .app-well-app:focus .overview-icon {
+   @extend %flashLightFocus;
  }

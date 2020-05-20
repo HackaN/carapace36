@@ -36,8 +36,8 @@ $fontWeight: 400;
 $normalFontSize: 1em;
 $largeFontSize: 1.1em;
 $borderWidth: .5px;
-$menuBG: rgba(35,40,45,.95);
-$borderColor: rgba(15,20,25,.95);
+$menuBG: rgba(35,40,45,.9);
+$borderColor: rgba(15,20,25,.9);
 $boxShadow: 0 0 2px 5px rgba(0,0,0,.7);
 $boxShadowLess: 0 0 2px 5px rgba(0,0,0,.2);
 $boxShadow2: 0 0 4px 2px rgba(0,0,0,1);
@@ -48,8 +48,10 @@ $overViewFrame: rgba(25,30,35,1);
 $overViewFrameTS: rgba(25,30,35,.7);
 
 $textIconDefaultColor: #fff;
-$textIconDefaultShadow: 0 1px 2.5px 1px rgba(0,0,0,.7);
-$textIconSolidShadow: 0 1px 2px 2px rgba(0,0,0,0);
+$textIconDefaultShadow: 0 1px 2.5px 1px rgba(0,0,0,.8);
+$textIconMediumShadow: 0 1px 2.5px 1px rgba(0,0,0,.4);
+$textIconSolidShadow: 0 1px 2px 2px rgba(0,0,0,1);
+$textIconDefaultShadowBig: 0 1px 3.5px 2px rgba(0,0,0,.8);
 $textIconDefaultShine: 0 .5px 0 0 rgba(255,255,255,1);
 $textIconLessShine: 0 .5px 0 0 rgba(255,255,255,.5);
 
@@ -78,6 +80,22 @@ $markingColor: rgba(230,235,240,.6);
 
 // ----- Extend/Inheritance
 // Hämta med "{@extend %<namn>;}"
+
+%flashLightFocus {
+  background-gradient-start: rgba(200,200,205,.6);
+  background-gradient-end: rgba(255,255,255,.05);
+  background-gradient-direction: radial;
+}
+%flashLightSelected {
+  background-gradient-start: rgba(190,0,5,.6);
+  background-gradient-end: rgba(235,245,235,.05);
+  background-gradient-direction: radial;
+}
+%flashLightHover {
+background-gradient-start: rgba(210,210,210,.6);
+background-gradient-end: rgba(2200,220,220,.05);
+background-gradient-direction: radial;
+}
 
 %panelActive {
   border: none;
@@ -239,7 +257,7 @@ MetaStage {
    min-height: 20px;
    padding: 5px 32px;
    transition-duration: 100ms;
-   border-radiu: 2px 2px 2px 2px;
+   border-radius: 2px 2px 2px 2px;
    box-shadow: 0 1px 5px rgba(0,0,0,.8);
    font-weight: bold;
   }
@@ -255,17 +273,29 @@ StEntry:active,
 
 
 // 1 (SLIM)
-%dash1 {
+%dashSVG1 {
   border-image: url("common-assets/dash/CarapaceDockSlim_v2.svg") 9 9 9 9;
 }
 // 2 (PANTHEON)
-%dash2 {
+%dashSVG2 {
     border-image: url("common-assets/dash/CarapaceDockPantheon_v1.svg") 9 9 9 9;
 }
 // 3 (3D)
-%dash3 {
+%dashSVG3 {
     border-image: url("common-assets/dash/CarapaceDock3D_v5.svg") 10 10 10 10;
 }
+// Pure Code
+%dashBoxPureCode {
+  padding: 1px 1px 0px 1px; //bara sidorna
+  border: 0px none transparent;
+  background-clip: padding-box;
+}
+%dashPureCode {
+  background-color: rgba(35,45,50,.0);
+  border: 0px none transparent;
+  box-shadow: inset 0 -2em 0 0 rgba(35,45,50,1);
+}
+
 
 
 
