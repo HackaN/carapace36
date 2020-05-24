@@ -22,7 +22,7 @@
 Theme by HackaN ( hackan301@gmail.com )
 ****** */
 .icon-grid .app-well-app:focus .overview-icon {
-  background-gradient-start: rgba(200, 200, 205, 0.6);
+  background-gradient-start: rgba(220, 220, 225, 0.5);
   background-gradient-end: rgba(255, 255, 255, 0.05);
   background-gradient-direction: radial; }
 
@@ -32,8 +32,8 @@ Theme by HackaN ( hackan301@gmail.com )
   background-gradient-direction: radial; }
 
 .icon-grid .app-well-app:hover .overview-icon {
-  background-gradient-start: rgba(210, 210, 210, 0.6);
-  background-gradient-end: rgba(255, 220, 220, 0.05);
+  background-gradient-start: rgba(255, 255, 255, 0.5);
+  background-gradient-end: rgba(255, 255, 255, 0.05);
   background-gradient-direction: radial; }
 
 #panel:overview .panel-button:active,
@@ -47,11 +47,23 @@ Theme by HackaN ( hackan301@gmail.com )
   box-shadow: none;
   -panel-corner-border-color: transparent; }
 
-.list-search-results, .search-entry:focus,
+.icon-grid .app-well-app.app-folder > .overview-icon StBoxLayout, .icon-grid .app-well-app-running-dot, .list-search-results, .search-entry:focus,
 .search-entry:focus:hover, .workspace-thumbnails {
   box-shadow: inset 0 0 1px 0.5px rgba(0, 0, 0, 0.7);
   border: 0.5px solid rgba(240, 240, 240, 0.2);
   background-color: rgba(25, 30, 35, 0.2); }
+
+.icon-grid .app-well-app.app-folder:hover > .overview-icon StBoxLayout {
+  box-shadow: inset 0 0 1px 0.5px black;
+  border: 0.5px solid rgba(240, 240, 240, 0.4);
+  background-color: rgba(25, 30, 35, 0.4); }
+
+.icon-grid .app-well-app:hover .app-well-app-running-dot,
+.icon-grid .app-well-app:focus .app-well-app-running-dot,
+.icon-grid .app-well-app:selected .app-well-app-running-dot {
+  background-color: gainsboro;
+  box-shadow: outset 0 0 4px 1px rgba(0, 0, 0, 0.8);
+  border: 0.5px solid rgba(0, 0, 0, 0); }
 
 .search-section-content,
 .search-provider-icon, .search-entry, .search-entry:hover {
@@ -122,6 +134,9 @@ MetaStage {
 #dash {
   border-image: url("common-assets/dash/CarapaceDockPantheon_v1.svg") 9 9 9 9; }
 
+#dash {
+  border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v3_.8saneShadow.svg") 9 9 9 9; }
+
 #panelBox {
   background-gradient-direction: vertical;
   background-gradient-start: rgba(5, 10, 15, 0.35);
@@ -144,34 +159,33 @@ MetaStage {
 #panel:overview #panelActivities.panel-button > * {
   icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
   text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  width: 24px !important;
-  height: 24px !important;
+  width: 1em;
+  height: 1em;
   background-color: transparent !important;
   background-gradient-direction: none !important;
   border: 0 none transparent !important;
   text-shadow: 0 0 transparent !important;
   transition-duration: 0ms !important;
   box-shadow: none !important;
-  color: transparent;
-  background-image: none; }
+  color: transparent; }
 
 #panel #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg"); }
+  background-image: url("common-assets/panel/GnomeFootVit.95_v2.svg"); }
 
 #panel.transparent #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg"); }
+  background-image: url("common-assets/panel/GnomeFootVit.9.svg"); }
 
 #panel:overview #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.7.svg"); }
+  background-image: url("common-assets/panel/GnomeFootVit.7.svg"); }
 
 #panel :hover #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7.svg"); }
+  background-image: url("common-assets/panel/GnomeFootVit.svg"); }
 
 #panel.transparent :hover #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7.svg"); }
+  background-image: url("common-assets/panel/GnomeFootVit.svg"); }
 
 #panel:overview :hover #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg"); }
+  background-image: url("common-assets/panel/GnomeFootVit.95.svg"); }
 
 #panel .popup-menu-arrow {
   width: 0; }
@@ -287,6 +301,14 @@ MetaStage {
   font-size: 1.2em;
   padding: 4px 0;
   background: none; }
+
+#dash .app-well-app .overview-icon > * StIcon {
+  icon-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.55);
+  background-color: rgba(100, 200, 255, 0); }
+
+#dash .app-well-app:hover .overview-icon > * StIcon {
+  icon-shadow: 0 0 3.5px 2px rgba(0, 0, 0, 0);
+  background-color: rgba(100, 200, 255, 0); }
 
 /* ::: menyer ::: */
 .popup-menu-boxpointer,
@@ -449,10 +471,15 @@ MetaStage {
   background-color: rgba(200, 200, 200, 0.3);
   border: 0.5px solid rgba(15, 20, 25, 0.9); }
 
-.icon-grid {
+.icon-grid,
+.app-folder-popup,
+.app-folder-popup-bin {
   spacing: 20px;
-  -shell-grid-horizontal-item-size: 136px;
-  -shell-grid-vertical-item-size: 136px; }
+  -shell-grid-horizontal-item-size: 122px;
+  -shell-grid-vertical-item-size: 122px; }
+
+.icon-grid .overview-icon {
+  icon-size: 96px; }
 
 .app-display {
   margin-left: 2em; }
@@ -467,6 +494,13 @@ MetaStage {
   text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
   icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
 
+.icon-grid .app-well-app-running-dot {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  /* kan ej vara negativ, försvinner då*/
+  border-radius: 3px; }
+
 .icon-grid .app-well-app:hover .overview-icon StLabel,
 .icon-grid .app-well-app:selected .overview-icon StLabel,
 .icon-grid .app-well-app:focus .overview-icon StLabel,
@@ -476,3 +510,46 @@ MetaStage {
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
   icon-shadow: 0 1px 3.5px 2px rgba(0, 0, 0, 0.8); }
+
+.icon-grid .app-well-app:hover .app-well-app-running-dot,
+.icon-grid .app-well-app:focus .app-well-app-running-dot,
+.icon-grid .app-well-app:selected .app-well-app-running-dot {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px;
+  /* kan ej vara negativ, försvinner då*/
+  border-radius: 3px; }
+
+.icon-grid .app-well-app.app-folder,
+.icon-grid .app-well-app.app-folder > .overview-icon {
+  background-color: transparent !important;
+  background-gradient-direction: none !important; }
+
+.icon-grid .app-well-app.app-folder > .overview-icon StBoxLayout {
+  border-radius: 5px; }
+
+.icon-grid .app-well-app.app-folder:hover > .overview-icon StBoxLayout {
+  border-radius: 5px; }
+
+.app-folder-popup {
+  -arrow-border-radius: 6px;
+  -arrow-background-color: rgba(25, 30, 235, 0);
+  -arrow-border-color: rgba(40, 40, 240, 0);
+  -arrow-border-width: .5px;
+  -arrow-base: 0;
+  -arrow-rise: 0; }
+
+.app-folder-dialog {
+  background-color: #c80000; }
+
+.app-folder-popup-bin {
+  padding: 300px !important;
+  /*annars så får vi en scrollbar på vissa*/
+  background-color: #c80000 !important; }
+
+StScrollView.all-apps {
+  border: 1px solid yellow; }
+
+StWidget.app-view-controls {
+  border: green solid 1px;
+  padding: .5em; }

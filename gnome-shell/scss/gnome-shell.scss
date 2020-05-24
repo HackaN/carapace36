@@ -55,6 +55,9 @@ $textIconDefaultShadowBig: 0 1px 3.5px 2px rgba(0,0,0,.8);
 $textIconDefaultShine: 0 .5px 0 0 rgba(255,255,255,1);
 $textIconLessShine: 0 .5px 0 0 rgba(255,255,255,.5);
 
+$dockDefaultIconShadow: 0 0 2.5px 1px rgba(0,0,0,.55);
+$dockHoverIconShadow: 0 0 3.5px 2px rgba(0,0,0,.0);
+
 $textIconOverviewPanelColor: rgba(255,255,255,.7);
 
 $textIconRestingColor: rgba(175,180,185,1);
@@ -82,7 +85,7 @@ $markingColor: rgba(230,235,240,.6);
 // Hämta med "{@extend %<namn>;}"
 
 %flashLightFocus {
-  background-gradient-start: rgba(200,200,205,.6);
+  background-gradient-start: rgba(220,220,225,.5);
   background-gradient-end: rgba(255,255,255,.05);
   background-gradient-direction: radial;
 }
@@ -92,8 +95,8 @@ $markingColor: rgba(230,235,240,.6);
   background-gradient-direction: radial;
 }
 %flashLightHover {
-background-gradient-start: rgba(210,210,210,.6);
-background-gradient-end: rgba(2200,220,220,.05);
+background-gradient-start: rgba(255,255,255,.5);
+background-gradient-end: rgba(255,255,255,.05);
 background-gradient-direction: radial;
 }
 
@@ -123,6 +126,16 @@ background-gradient-direction: radial;
   box-shadow: inset 0 0 1px .5px rgba(0,0,0,.7);
   border: .5px solid rgba(240,240,240,.2);
   background-color: rgba(25,30,35,.2);
+}
+%sunkinglassHover {
+  box-shadow: inset 0 0 1px .5px rgba(0,0,0,1);
+  border: .5px solid rgba(240,240,240,.4);
+  background-color: rgba(25,30,35,.4);
+}
+%plugged {
+  background-color: rgba(220,220,220,1);
+  box-shadow:outset 0 0 4px 1px rgba(0,0,0,.8);
+  border: .5px solid rgba(0,0,0,.0);
 }
 %transparentglass {
   box-shadow: inset .5px 0 1px .5px rgba(0,0,0,.0);
@@ -279,6 +292,10 @@ StEntry:active,
 // 2 (PANTHEON)
 %dashSVG2 {
     border-image: url("common-assets/dash/CarapaceDockPantheon_v1.svg") 9 9 9 9;
+}
+// 2 (Adwaita)
+%dashSVG2 {
+    border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v3_.8saneShadow.svg") 9 9 9 9;
 }
 // 3 (3D)
 %dashSVG3 {

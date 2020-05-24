@@ -11,3 +11,13 @@
 #dashtodockBox {
   //@extend %dashBoxPureCode;
 }
+
+#dash .app-well-app .overview-icon > * StIcon {
+  icon-shadow: $dockDefaultIconShadow;
+  background-color: rgba(100,200,255,0);
+  //av någon anledning så behöver dom en definerad bakgrund plus stjärnan för att skuggan ska ritas... :-/
+}
+#dash .app-well-app:hover .overview-icon > * StIcon {
+  icon-shadow: $dockHoverIconShadow;
+  background-color: rgba(100,200,255,0);
+}

@@ -27,8 +27,8 @@
 #panel:overview #panelActivities.panel-button > * {
 icon-shadow: $textIconDefaultShadow;
 text-shadow: $textIconDefaultShadow;
-width: 24px !important;
-height: 24px !important;
+width: 1em;
+height: 1em;
 background-color: transparent !important;
 background-gradient-direction: none !important;
 border: 0 none transparent !important;
@@ -36,27 +36,27 @@ text-shadow: 0 0 transparent !important;
 transition-duration: 0ms !important;
 box-shadow: none !important;
 color: transparent;
-background-image: none;
+//background-image: none;
 }
 // fot default
 #panel #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
+background-image: url("common-assets/panel/GnomeFootVit.95_v2.svg");
 }
 #panel.transparent #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
+background-image: url("common-assets/panel/GnomeFootVit.9.svg");
 }
 #panel:overview #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.7.svg");
+background-image: url("common-assets/panel/GnomeFootVit.7.svg");
 }
 // fot hover
 #panel :hover #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7.svg");
+background-image: url("common-assets/panel/GnomeFootVit.svg");
 }
 #panel.transparent :hover #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7.svg");
+background-image: url("common-assets/panel/GnomeFootVit.svg");
 }
 #panel:overview :hover #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit_merSkugga_v7_a.9.svg");
+background-image: url("common-assets/panel/GnomeFootVit.95.svg");
 }
 #panel .popup-menu-arrow {
   width: 0; }

@@ -277,11 +277,15 @@
 
 // ::: Ikonnät :::
 
-.icon-grid {
+.icon-grid,
+.app-folder-popup,
+.app-folder-popup-bin {
   spacing: 20px; // lägre värde = större ikoner
-  -shell-grid-horizontal-item-size: 136px;
-  -shell-grid-vertical-item-size: 136px;
+  -shell-grid-horizontal-item-size: 122px;
+  -shell-grid-vertical-item-size: 122px;
  }
+ .icon-grid .overview-icon {
+   icon-size: 96px; }
  .app-display {
    margin-left: 2em; // så att ikoner blir centerade
  }
@@ -289,13 +293,23 @@
  .icon-grid .app-well-app .overview-icon {
    background-gradient-direction: none;
    border-radius: 120px;
+   //border: .5px solid rgba(240,240,240,.0);
  }
  .icon-grid .app-well-app .overview-icon StLabel,
  .icon-grid .app-well-app .overview-icon StIcon {
    color: $textIconColorBrightWeak;
    text-shadow: $textIconMediumShadow;
+   //font-size: 1em;
    icon-shadow: $textIconMediumShadow;
  }
+.icon-grid .app-well-app-running-dot {
+  width: 30px;
+  height: 3px;
+  margin-bottom: 5px; /* kan ej vara negativ, försvinner då*/
+  border-radius: 3px;
+  @extend %sunkinglass;
+}
+
  .icon-grid .app-well-app:hover .overview-icon {
    @extend %flashLightHover;
  }
@@ -306,6 +320,8 @@
  .icon-grid .app-well-app:selected .overview-icon StIcon,
  .icon-grid .app-well-app:focus .overview-icon StIcon {
    color: $textIconColorBrightStrong;
+   //font-size: 1.1em;
+   //font-weight: bold;
    text-shadow: $textIconDefaultShadow;
    icon-shadow: $textIconDefaultShadowBig;
  }
@@ -315,3 +331,58 @@
  .icon-grid .app-well-app:focus .overview-icon {
    @extend %flashLightFocus;
  }
+ .icon-grid .app-well-app:hover .app-well-app-running-dot,
+ .icon-grid .app-well-app:focus .app-well-app-running-dot,
+ .icon-grid .app-well-app:selected .app-well-app-running-dot {
+   width: 30px;
+   height: 3px;
+   margin-bottom: 5px; /* kan ej vara negativ, försvinner då*/
+   border-radius: 3px;
+   @extend %plugged;
+ }
+
+.icon-grid .app-well-app.app-folder,
+.icon-grid .app-well-app.app-folder > .overview-icon {
+  // börja med att neutralisera .overview-icon
+  background-color: transparent !important;
+  background-gradient-direction: none !important;
+}
+ .icon-grid .app-well-app.app-folder > .overview-icon StBoxLayout {
+   @extend %sunkinglass;
+   border-radius: 5px;
+   //padding: 15px;
+ }
+ .app-folder-icon {} // kan köra med denna istället för den ovan
+ .icon-grid .app-well-app.app-folder:hover > .overview-icon StBoxLayout {
+   @extend %sunkinglassHover;
+   border-radius: 5px;
+   //padding: 15px;
+ }
+
+ .app-folder-popup {
+   -arrow-border-radius: 6px;
+   -arrow-background-color: rgba(25,30,235,.0);
+   -arrow-border-color: rgba(40,40,240,.0);
+   -arrow-border-width: .5px;
+   -arrow-base: 0;
+   -arrow-rise: 0;
+ }
+
+ .app-folder-dialog {
+   background-color: rgba(200,0,0,1);
+ }
+
+ .app-folder-popup-bin {
+   padding: 300px !important; /*annars så får vi en scrollbar på vissa*/
+   background-color: rgba(200,0,0,1) !important;
+ }
+// Försöker fixa stroleksförändring i nätet när en mapp öppnas. app-view-controls åker ner när mappen öppnas, ska försöka att omplacera den så att all-apps alltid är "rätt" storlek.
+
+StScrollView.all-apps {
+  border: 1px solid yellow;
+}
+
+StWidget.app-view-controls {
+  border: green solid 1px;
+  padding: .5em;
+}
