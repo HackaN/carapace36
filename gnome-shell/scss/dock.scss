@@ -21,3 +21,69 @@
   icon-shadow: $dockHoverIconShadow;
   background-color: rgba(100,200,255,0);
 }
+/*#dash .dash-item-container {
+  @extend %gradientVagueShadow;
+}*/
+#dash .app-well-app .overview-icon {
+  //@extend %flashLightOff;
+  //border-radius: 96px;
+  background-color: transparent;
+  border-radius: 0px;
+}
+#dash .app-well-app:hover .overview-icon {
+  //@extend %flashLightHover;
+  box-shadow: inset 0 -.9em 0 0 rgba(255,255,255,.1);
+}
+#dash .app-well-app:selected .overview-icon,
+#dash .app-well-app:active .overview-icon {
+  //@extend %flashLightSelected;
+  box-shadow: inset 0 -.9em 0 0 rgba(255,255,255,.4);
+}
+#dash .app-well-app:focus .overview-icon {
+  //@extend %flashLightFocus;
+  box-shadow: inset 0 -.9em 0 0 rgba(255,255,255,.9);
+}
+// gör visa program här
+
+#dash .app-well-app-running-dot {
+  width: 32px;
+  height: 2px;
+  border-radius: 2.5px;
+  //margin-bottom: 0px; /*sänker indikatorn iom att vi gjorde lådorna mindre*/
+  background: none;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.8);
+  //@extend %sunkingDock;
+}
+#dash .running1 .app-well-app-running-dot {
+  width: 6px;
+  height: 2.5px;
+  background: rgb(215,220,225);
+}
+#dash .running1:hover .app-well-app-running-dot {
+  background: rgb(245,250,255);
+}
+
+#dash .running2 .app-well-app-running-dot {
+  width: 12px;
+  height: 2.5px;
+  background: rgb(215,220,225);
+}
+#dash .running2:hover .app-well-app-running-dot {
+  background: rgb(245,250,255);
+}
+#dash .running3 .app-well-app-running-dot {
+  width: 24px;
+  height: 2.5px;
+  background: rgb(215,220,225);
+}
+#dash .running3:hover .app-well-app-running-dot {
+  background: rgb(245,250,255);
+}
+#dash .running4 .app-well-app-running-dot {
+  width: 32px;
+  height: 2.5px;
+  background: rgb(215,220,225);
+}
+#dash .running4:hover .app-well-app-running-dot {
+  background: rgb(245,250,255);
+}

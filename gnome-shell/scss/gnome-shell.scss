@@ -99,6 +99,16 @@ background-gradient-start: rgba(255,255,255,.5);
 background-gradient-end: rgba(255,255,255,.05);
 background-gradient-direction: radial;
 }
+%flashLightOff {
+background-gradient-start: rgba(255,255,255,.0);
+background-gradient-end: rgba(255,255,255,.00);
+background-gradient-direction: radial;
+}
+%flashLightPlate {
+background-gradient-start: rgba(43,43,43,1);
+background-gradient-end: rgba(38,38,38,1);
+background-gradient-direction: radial;
+}
 
 %panelActive {
   border: none;
@@ -122,6 +132,11 @@ background-gradient-direction: radial;
   background-gradient-end: rgba(0,0,0,0);
   background-gradient-direction: vertical;
 }
+%gradientVagueShadow {
+  background-gradient-start: rgba(0,0,0,.4);
+  background-gradient-end: rgba(140,145,150,0);
+  background-gradient-direction: radial;
+}
 %sunkinglass {
   box-shadow: inset 0 0 1px .5px rgba(0,0,0,.7);
   border: .5px solid rgba(240,240,240,.2);
@@ -131,6 +146,11 @@ background-gradient-direction: radial;
   box-shadow: inset 0 0 1px .5px rgba(0,0,0,1);
   border: .5px solid rgba(240,240,240,.4);
   background-color: rgba(25,30,35,.4);
+}
+%sunkingDock {
+ box-shadow: inset 0 0 1px .5px rgba(0,0,0,.7);
+ border: .5px solid rgba(76,76,76,.1);
+ background-color: rgba(25,30,35,.2);
 }
 %plugged {
   background-color: rgba(220,220,220,1);
@@ -295,7 +315,7 @@ StEntry:active,
 }
 // 2 (Adwaita)
 %dashSVG2 {
-    border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v3_.8saneShadow.svg") 9 9 9 9;
+    border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 9 9 9 9;
 }
 // 3 (3D)
 %dashSVG3 {
