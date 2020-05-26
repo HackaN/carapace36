@@ -71,12 +71,24 @@ $textIconColorBrightWeak: rgba(255,255,255,.5);
 $textIconColorBrightMedium: rgba(255,255,255,.7);
 $textIconColorBrightStrong: rgba(255,255,255,.9);
 $textIconColorBrightSolid: rgba(255,255,255,1);
+
+$adwaitaBrightButton: rgba(243,242,241,1);
+$adwaitaBrightBorder: rgba(205,200,195,1);
+$adwaitaBrightBorderShadow: rgba(205,200,195,1);
+
 // mörk färg
 $textIconColorDarkSub: rgba(0,0,0,.3);
 $textIconColorDarkWeak: rgba(0,0,0,.5);
 $textIconColorDarkMedium: rgba(0,0,0,.7);
 $textIconColorDarkStrong: rgba(0,0,0,.9);
 $textIconColorDarkSolid: rgba(0,0,0,1);
+
+$adwaitaDark1: rgba(38,38,38,.75);
+$adwaitaDark2: rgba(43,43,43,.75);
+$adwaitaDarkButton: rgba(52,52,52,1);
+$adwaitaDarkButtonHover: rgba(57,57,57,1);
+$adwaitaDarkBorder: rgba(13,14,16,.9);
+$adwaitaDarkBorderShadow:rgba(76,76,76,1);
 
 $markingColor: rgba(230,235,240,.6);
 
@@ -136,6 +148,20 @@ background-gradient-direction: radial;
   background-gradient-start: rgba(0,0,0,.4);
   background-gradient-end: rgba(140,145,150,0);
   background-gradient-direction: radial;
+}
+%gradientFullShadow {
+  background-gradient-start: rgba(0,0,0,.4);
+  background-gradient-end: rgba(70,70,70,0);
+  background-gradient-direction: radial;
+}
+%gradientHalfShadow {
+  background-gradient-start: rgba(0,0,0,.2);
+  background-gradient-end: rgba(100,100,100,0);
+  background-gradient-direction: radial;
+}
+%adwaitaDarkSolidShadeNoDirection {
+  background-gradient-start: rgba(43,43,43,.1);
+  background-gradient-end: rgba(38,38,38,1);
 }
 %sunkinglass {
   box-shadow: inset 0 0 1px .5px rgba(0,0,0,.7);
