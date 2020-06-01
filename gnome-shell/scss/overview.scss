@@ -155,13 +155,16 @@
  //text-align: justify; // den här... Jag vill att texten ska vara centrerad när den vilar, sedan åka till vänster när fokus
 }
 .search-entry {
-  @extend %searchEntryFlatEdgeTransparent;
+  //@extend %searchEntryFlatEdgeTransparent;
+  @extend %searchEntryFlatEdgesTransparent;
+  //@extend %sunkinglass;
   margin-left: 2em; // centrera lådan
   //border-radius: 0;
 }
 .search-entry:hover {
   //@extend %transparentglass;
-  @extend %searchEntryFlatEdgeTransparentHover;
+  //@extend %searchEntryFlatEdgeTransparentHover;
+  //@extend %sunkinglass;
 }
 .search-entry:focus,
 .search-entry:focus:hover {
@@ -283,11 +286,13 @@
   spacing: 20px; // lägre värde = större ikoner
   -shell-grid-horizontal-item-size: 122px;
   -shell-grid-vertical-item-size: 122px;
+  //border: 1px solid green;
  }
  .icon-grid .overview-icon {
    icon-size: 96px; }
  .app-display {
    margin-left: 2em; // så att ikoner blir centerade
+   //border: 1px solid green;
  }
 
  .icon-grid .app-well-app .overview-icon {
@@ -361,28 +366,95 @@
 
  .app-folder-popup {
    -arrow-border-radius: 6px;
-   -arrow-background-color: rgba(25,30,235,.0);
-   -arrow-border-color: rgba(40,40,240,.0);
+   -arrow-background-color: rgba(25,30,235,1);
+   -arrow-border-color: rgba(40,40,240,1);
    -arrow-border-width: .5px;
    -arrow-base: 0;
    -arrow-rise: 0;
  }
 
  .app-folder-dialog {
-   background-color: rgba(200,0,0,1);
+   /*background-color: rgba(200,0,0,1);
+   padding: 0px !important;
+   spacing: 40px !important;
+   margin: 0px !important;*/
+   //@extend %floatingglassFolder;
+   @extend %pluggedDark;
+ }
+ .app-folder-dialog .app-well-app .overview-icon StLabel,
+ .app-folder-dialog .app-well-app .overview-icon StIcon {
+   color: $textIconColorBrightMedium;
+   text-shadow: $textIconMediumShadow;
+   //font-size: 1em;
+   icon-shadow: $textIconMediumShadow;
+ }
+ .app-folder-dialog .app-well-app .overview-icon {
+   icon-size: 24px !important;
+   spacing: 0px !important;
+ }
+ .app-folder-dialog-container {
+   //border: 1px solid green;
+  // padding: 0px !important;
+   margin: 0px !important;
+   margin-top: 0px !important;
+ }
+
+ .app-folder-dialog .folder-name-container .folder-name-label {
+   color: $textIconColorBrightMedium;
  }
 
  .app-folder-popup-bin {
-   padding: 300px !important; /*annars så får vi en scrollbar på vissa*/
+   //padding: 300px !important; /*annars så får vi en scrollbar på vissa*/
    background-color: rgba(200,0,0,1) !important;
  }
 // Försöker fixa stroleksförändring i nätet när en mapp öppnas. app-view-controls åker ner när mappen öppnas, ska försöka att omplacera den så att all-apps alltid är "rätt" storlek.
 
 StScrollView.all-apps {
-  border: 1px solid yellow;
+  //border: 1px solid yellow;
 }
 
-StWidget.app-view-controls {
-  border: green solid 1px;
-  padding: .5em;
+.app-view-controls {
+  //border: green solid 1px;
+  //padding: .5em;
+  margin-top: 1em;
+  padding: 0px;
+  padding-bottom: 0px;
+  //@extend %sunkinglass;
+  @extend %searchEntryFlatEdgesTransparent;
+  border-radius: 20px;
+}
+
+.app-view-control:first-child,
+.app-view-control:last-child {
+  //@extend %sunkinglass;
+  @extend %transparentglass;
+  color: $textIconColorBrightWeak;
+  border-radius: 20px;
+  margin: 0px;
+  padding: 2px 12px;
+  font-size: .9em;
+}
+.app-view-control:first-child:hover,
+.app-view-control:last-child:hover {
+  color: $textIconColorBrightStrong;
+}
+.app-view-control:first-child:checked,
+.app-view-control:last-child:checked {
+  @extend %pluggedDark;
+  color: $textIconColorBrightMedium;
+  //color: $textIconColorBrightStrong;
+}
+.app-view-control:first-child:checked:hover,
+.app-view-control:last-child:checked:hover {
+  //color: $textIconColorBrightWeak;
+  //@extend %plugged;
+}
+.page-indicator {}
+
+.page-indicator .page-indicator-icon {
+  //@extend %sunkinglass;
+  @extend %plugged;
+}
+.page-indicator .page-indicator-icon:focus {
+  @extend %plugged; // finns ingen matchning ":"
 }
