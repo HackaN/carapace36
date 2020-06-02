@@ -97,13 +97,7 @@
   width: 48px;
 }
 .dash-label {
-  background-color: $adwaitaDark2;
-  border: 1px solid $adwaitaDarkBorder;
-  box-shadow: 0 0 2px black;
-  //@extend %adwaitaDarkSolidShadeNoDirection;
-  //background-gradient-direction: vertical;
-  color: $textIconFocusColor;
-  text-shadow: $textIconSolidShadow;
+  @extend %dashLabelAdwaitaDark;
   -x-offset: -3px; // :-)
 }
 

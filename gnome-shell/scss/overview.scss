@@ -345,6 +345,10 @@
    border-radius: 3px;
    @extend %plugged;
  }
+.icon-grid .app-well-app:drop .overview-icon {
+  border-radius: 10px;
+  @extend %sunkinglass;
+}
 
 .icon-grid .app-well-app.app-folder,
 .icon-grid .app-well-app.app-folder > .overview-icon {
@@ -362,6 +366,15 @@
    @extend %sunkinglassHover;
    border-radius: 5px;
    //padding: 15px;
+ }
+ .icon-grid .app-well-app.app-folder:drop .overview-icon StLabel {
+   @extend %dashLabelAdwaitaNotSoDark;
+   // vet inte, vill nog ha etiketten lite mer neutral...
+   border-radius: 5px;
+
+ }
+ .icon-grid .app-well-app.app-folder:drop > .overview-icon StBoxLayout {
+   @extend %transparentglass;
  }
 
  .app-folder-popup {
