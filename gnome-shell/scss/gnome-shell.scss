@@ -48,6 +48,7 @@ $overViewFrame: rgba(25,30,35,1);
 $overViewFrameTS: rgba(25,30,35,.7);
 //$overViewSunkBackground: rgba(25,30,35,.2);
 $overViewSunkBackground: rgba(30,30,30,.2);
+$overViewSunkBackgroundLight: rgba(30,30,30,.1);
 
 $textIconDefaultColor: #fff;
 $textIconDefaultShadow: 0 1px 2.5px 1px rgba(0,0,0,.8);
@@ -176,6 +177,11 @@ background-gradient-direction: radial;
   border: .5px solid rgba(240,240,240,.2);
   background-color: $overViewSunkBackground;
 }
+%sunkinglassLight {
+  box-shadow: $sunkenShadow;
+  border: .5px solid rgba(240,240,240,.2);
+  background-color: $overViewSunkBackgroundLight;
+}
 %sunkinglassHover {
   box-shadow: inset 0 0 1px .5px rgba(0,0,0,1);
   border: .5px solid rgba(240,240,240,.4);
@@ -208,6 +214,17 @@ background-gradient-direction: radial;
   //border-bottom: none !important;
   //border-left: none;
   //border-right: none;
+  //background-color: $overViewSunkBackgroundLight;
+  box-shadow: inset 0 0 0 .5px rgba(0,0,0,.25);
+}
+%sunkinglassShallowContrast {
+  @extend %transparentglass;
+  border: .5px solid rgba(255,255,255,.05);
+  //border-top: none;
+  //border-bottom: none !important;
+  //border-left: none;
+  //border-right: none;
+  background-color: $overViewSunkBackgroundLight;
   box-shadow: inset 0 0 0 .5px rgba(0,0,0,.25);
 }
 
