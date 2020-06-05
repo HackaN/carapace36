@@ -46,7 +46,8 @@ $overviewGlass: rgba(140,145,150,.4);
 
 $overViewFrame: rgba(25,30,35,1);
 $overViewFrameTS: rgba(25,30,35,.7);
-$overViewSunkBackground: rgba(25,30,35,.2);
+//$overViewSunkBackground: rgba(25,30,35,.2);
+$overViewSunkBackground: rgba(30,30,30,.2);
 
 $textIconDefaultColor: #fff;
 $textIconDefaultShadow: 0 1px 2.5px 1px rgba(0,0,0,.8);
@@ -89,6 +90,7 @@ $textIconColorDarkSolid: rgba(0,0,0,1);
 
 $adwaitaDark1: rgba(38,38,38,.75);
 $adwaitaDark2: rgba(43,43,43,.75);
+$adwaitaDark1Sub: rgba(38,38,38,.3);
 $adwaitaDark1AlmostSolid: rgba(38,38,38,.9);
 $adwaitaDark2AlmostSolid: rgba(43,43,43,.9);
 $adwaitaDarkButton: rgba(52,52,52,1);
@@ -199,6 +201,41 @@ background-gradient-direction: radial;
   border: .5px solid rgba(240,240,240,.0);
   background-color: rgba(25,30,35,.0);
 }
+%sunkinglassShallow {
+  @extend %transparentglass;
+  border: .5px solid rgba(255,255,255,.05);
+  //border-top: none;
+  //border-bottom: none !important;
+  //border-left: none;
+  //border-right: none;
+  box-shadow: inset 0 0 0 .5px rgba(0,0,0,.25);
+}
+
+%floatinglassShallow {
+  @extend %transparentglass;
+  border: .5px solid rgba(255,255,255,.05);
+  background-color: $overviewGlass;
+  //border-top: none;
+  //border-bottom: none !important;
+  //border-left: none;
+  //border-right: none;
+  box-shadow: 0 0 0 .5px rgba(0,0,0,.25);
+}
+%floatinglassShallowMedium {
+  @extend %transparentglass;
+  border: .5px solid rgba(255,255,255,.05);
+  background-color: darken($overviewGlass, 10%);
+  //border-top: none;
+  //border-bottom: none !important;
+  //border-left: none;
+  //border-right: none;
+  box-shadow: 0 0 0 .5px rgba(0,0,0,.25);
+}
+%floatinglassShallowDark {
+  background-color: $overViewSunkBackground;
+  border: .5px solid darken($textIconColorBrightSub, 50%);
+  box-shadow: 0 0 0 .5px $textIconColorDarkMedium;
+}
 %floatingglass {
   background-color: $overviewGlass;
   border: .5px solid rgba(255,255,255,.25);
@@ -218,13 +255,14 @@ background-gradient-direction: radial;
   color: $textIconFocusColor;
   text-shadow: $textIconSolidShadow;
 }
-%dashLabelAdwaitaNotSoDark{
+%dashLabelAdwaitaNotSoDark {
  background-color: lighten($adwaitaDark2, 10%);
  border: 1px solid lighten($adwaitaDarkBorder, 10%);
  box-shadow: 0 0 2px black;
  color: $textIconFocusColor;
  text-shadow: $textIconSolidShadow;
 }
+
 %searchEntryFlatEdgeTransparent {
   @extend %transparentglass;
   border: .5px solid rgba(255,255,255,.05);
@@ -234,7 +272,7 @@ background-gradient-direction: radial;
   border-right: none;
   box-shadow:inset 0 -.5px 0 0 rgba(0,0,0,.25);
 }
-%searchEntryFlatEdgesTransparent {
+%sunkinglassShallow {
   @extend %transparentglass;
   border: .5px solid rgba(255,255,255,.05);
   //border-top: none;

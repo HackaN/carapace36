@@ -156,7 +156,7 @@
 }
 .search-entry {
   //@extend %searchEntryFlatEdgeTransparent;
-  @extend %searchEntryFlatEdgesTransparent;
+  @extend %sunkinglassShallow;
   //@extend %sunkinglass;
   margin-left: 2em; // centrera lådan
   //border-radius: 0;
@@ -211,36 +211,49 @@
   //@extend %searchResultsFlatEdgeTransparent;
   //@extend %searchResultsDarkBox;
   @extend %sunkinglass;
+  //@extend %sunkinglassShallow;
   border-radius: 10px;
   padding: 10px;
 }
 
-.list-search-result {}
+.list-search-result {
+  @extend %transparentglass;
+  border-radius: 5px;
+}
 
 .list-search-result StIcon,
 .list-search-provider-content StIcon {
   icon-shadow: $textIconDefaultShadow;
 }
-.search-provider-icon {
-
+.list-search-result:hover StIcon,
+.list-search-result:focus StIcon,
+.list-search-result:focus:hover StIcon,
+.list-search-result:selected StIcon {
+  //@extend %flashLightFocus;
 }
+
+.search-provider-icon {}
+
 .list-search-result:hover,
 .list-search-result:focus,
 .list-search-result:focus:hover,
 .list-search-result:selected,
-.search-provider-icon:hover,
+/*.search-provider-icon:hover,
 .search-provider-icon:focus,
-.search-provider-icon:focus:hover {
+.search-provider-icon:focus:hover*/ {
   //background-color: $backgroundHoverFocusColor;
-  //border: .5px solid rgba(0,0,0,.2);
+  //border: .5px solid rgba(0,0,0,.05);
+  //background-color: $adwaitaDark1Sub;
   //@extend %sunkinglass;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,.4);
+  //box-shadow: 0 0 2px 0 rgba(0,0,0,.4);
+  @extend %floatinglassShallow;
 }
 
 .search-provider-icon .list-search-provider-content {
   //finns ingen text här
   border-radius: 5px;
   padding: 5px;
+  @extend %transparentglass;
 }
 .search-provider-icon .list-search-provider-details {
   color: $textIconColorBrightMedium;
@@ -254,8 +267,16 @@
 }
 
 .search-provider-icon:focus .list-search-provider-content {
-  background-color: rgba(200,200,200,.3);
-  border: .5px solid $borderColor;
+  @extend %floatinglassShallow;
+}
+
+.list-search-result .list-search-result-content,
+.list-search-result .list-search-result-content,
+.list-search-result .list-search-result-content,
+.search-provider-icon .list-search-provider-content,
+.search-provider-icon .list-search-provider-content,
+.search-provider-icon .list-search-provider-content {
+  color: $textIconColorBrightMedium;
 }
 
 .list-search-result:hover .list-search-result-content,
@@ -266,6 +287,7 @@
 .search-provider-icon:focus:hover .list-search-provider-content {
   //color: rgba(0,0,0,.75);
   //text-shadow: 0 .5px 0 0 white;
+  color: $textIconColorBrightStrong;
 }
 .list-search-result:hover .list-search-result-description,
 .list-search-result:focus .list-search-result-description,
@@ -275,6 +297,7 @@
 .search-provider-icon:focus:hover .list-search-provider-details {
   //color: rgba(30,30,30,.7);
   //text-shadow: 0 .5px 0 0 white;
+  color: $textIconColorBrightSolid;
 }
 
 
@@ -368,13 +391,18 @@
    //padding: 15px;
  }
  .icon-grid .app-well-app.app-folder:drop .overview-icon StLabel {
-   @extend %dashLabelAdwaitaNotSoDark;
+   //@extend %dashLabelAdwaitaNotSoDark;
+   //@extend %plugged;
+   color: $textIconColorBrightStrong;
+   text-shadow: $textIconDefaultShadow;
    // vet inte, vill nog ha etiketten lite mer neutral...
    border-radius: 5px;
+   margin-top: .5em;
 
  }
  .icon-grid .app-well-app.app-folder:drop > .overview-icon StBoxLayout {
    @extend %transparentglass;
+   transition-duration: 200ms;
  }
 
  .app-folder-popup {
@@ -433,7 +461,7 @@ StScrollView.all-apps {
   padding: 0px;
   padding-bottom: 0px;
   //@extend %sunkinglass;
-  @extend %searchEntryFlatEdgesTransparent;
+  @extend %sunkinglassShallow;
   border-radius: 20px;
 }
 
