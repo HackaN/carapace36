@@ -1,1 +1,160 @@
 // Search
+/* ::: Dash sök ::: */
+.search-entry,
+.search-entry:hover,
+.search-entry:focus {
+ transition-duration: 800ms;
+ padding: 5px !important;
+ //text-align: justify; // den här... Jag vill att texten ska vara centrerad när den vilar, sedan åka till vänster när fokus
+}
+.search-entry {
+  //@extend %searchEntryFlatEdgeTransparent;
+  @extend %sunkinglassShallow;
+  //@extend %sunkinglass;
+  margin-left: 2em; // centrera lådan
+  //border-radius: 0;
+}
+.search-entry:hover {
+  //@extend %transparentglass;
+  //@extend %searchEntryFlatEdgeTransparentHover;
+  //@extend %sunkinglass;
+}
+.search-entry:focus,
+.search-entry:focus:hover {
+  @extend %sunkinglass;
+  //@extend %searchEntryFlatEdgeTransparentFocus;
+}
+
+.search-entry,
+.search-entry .search-entry-icon,
+.search-entry .hint-text {
+  //color: $textIconRestingColor;
+  @extend %searchEntryTextIconDefault;
+}
+
+.search-entry:hover,
+.search-entry:hover .search-entry-icon,
+.search-entry:hover .hint-text {
+  //color: $textIconHoverColor;
+  //color: $textIconOverviewPanelColor;
+  @extend %searchEntryTextIconDefaultHover;
+}
+.search-entry:focus,
+.search-entry:focus:hover,
+.search-entry:focus .search-entry-icon,
+.search-entry:focus:hover .search-entry-icon,
+.search-entry:focus .hint-text,
+.search-entry:focus:hover .hint-text {
+  //color: $textIconFocusColor;
+  //color: $textIconOverviewPanelColor;
+  @extend %searchEntryTextIconDefaultFocus;
+}
+
+// ::: Results :::
+
+.search-section .icon-grid {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.search-section-content,
+.search-provider-icon {
+  //@extend %searchResultEdge;
+  //@extend %searchResultDarkShade;
+  @extend %searchResultTransparent;
+}
+.list-search-results {
+  //@extend %searchResultFlatTransparent;
+  //@extend %searchResultsFlatEdgeTransparent;
+  //@extend %searchResultsDarkBox;
+  @extend %sunkinglassLight;
+  //@extend %sunkinglassShallow;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.list-search-result {
+  @extend %transparentglass;
+  border-radius: 5px;
+}
+
+.list-search-result StIcon,
+.list-search-provider-content StIcon {
+  icon-shadow: $textIconDefaultShadow;
+}
+.list-search-result:hover StIcon,
+.list-search-result:focus StIcon,
+.list-search-result:focus:hover StIcon,
+.list-search-result:selected StIcon {
+  //@extend %flashLightFocus;
+}
+
+.search-provider-icon {}
+
+.list-search-result:hover,
+.list-search-result:focus,
+.list-search-result:focus:hover,
+.list-search-result:selected,
+/*.search-provider-icon:hover,
+.search-provider-icon:focus,
+.search-provider-icon:focus:hover*/ {
+  //background-color: $backgroundHoverFocusColor;
+  //border: .5px solid rgba(0,0,0,.05);
+  //background-color: $adwaitaDark1Sub;
+  //@extend %sunkinglass;
+  //box-shadow: 0 0 2px 0 rgba(0,0,0,.4);
+  @extend %floatinglassShallow;
+}
+
+.search-provider-icon .list-search-provider-content {
+  //finns ingen text här
+  border-radius: 5px;
+  padding: 5px;
+  @extend %transparentglass;
+}
+.search-provider-icon .list-search-provider-details {
+  color: $textIconColorBrightMedium;
+}
+.search-provider-icon:hover .list-search-provider-details,
+.search-provider-icon:focus .list-search-provider-details {
+  color: $textIconColorBrightStrong;
+}
+.search-provider-icon:focus:hover .list-search-provider-details {
+  color: $textIconColorBrightSolid;
+}
+
+.search-provider-icon:focus .list-search-provider-content {
+  @extend %floatinglassShallow;
+}
+
+.list-search-result .list-search-result-content,
+.list-search-result .list-search-result-content,
+.list-search-result .list-search-result-content,
+.search-provider-icon .list-search-provider-content,
+.search-provider-icon .list-search-provider-content,
+.search-provider-icon .list-search-provider-content {
+  color: $textIconColorBrightMedium;
+  text-shadow: $textIconMediumShadow;
+}
+
+.list-search-result:hover .list-search-result-content,
+.list-search-result:focus .list-search-result-content,
+.list-search-result:focus:hover .list-search-result-content,
+.search-provider-icon:hover .list-search-provider-content,
+.search-provider-icon:focus .list-search-provider-content,
+.search-provider-icon:focus:hover .list-search-provider-content {
+  //color: rgba(0,0,0,.75);
+  //text-shadow: 0 .5px 0 0 white;
+  color: $textIconColorBrightSolid;
+  text-shadow: $textIconDefaultShadow;
+}
+.list-search-result:hover .list-search-result-description,
+.list-search-result:focus .list-search-result-description,
+.list-search-result:focus:hover .list-search-result-description,
+.search-provider-icon:hover .list-search-provider-details,
+.search-provider-icon:focus .list-search-provider-details,
+.search-provider-icon:focus:hover .list-search-provider-details {
+  //color: rgba(30,30,30,.7);
+  //text-shadow: 0 .5px 0 0 white;
+  color: $textIconColorBrightStrong;
+}

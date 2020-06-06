@@ -41,6 +41,7 @@ $borderColor: rgba(15,20,25,.9);
 $boxShadow: 0 0 2px 5px rgba(0,0,0,.7);
 $boxShadowLess: 0 0 2px 5px rgba(0,0,0,.2);
 $boxShadow2: 0 0 4px 2px rgba(0,0,0,1);
+$boxShadowMassive: 0 2px 10px rgba(0,0,0,.8);
 $overviewGlass: rgba(140,145,150,.4);
 
 
@@ -256,7 +257,7 @@ background-gradient-direction: radial;
 %floatingglass {
   background-color: $overviewGlass;
   border: .5px solid rgba(255,255,255,.25);
-  box-shadow: 0 0 5px 0 black;
+  box-shadow: $boxShadowMassive;
   margin: 5px;
 }
 %floatingglassFolder {
@@ -394,35 +395,26 @@ background-gradient-direction: radial;
   box-shadow: 0 0 5px .5px rgba(140,145,150,.4);
   border: .5px solid rgba(140,145,150,.05);
   background-color: rgba(140,145,150,.4);
-
 }
-
-stage {
-  font: 1em $fontStack;
-  color: $primaryColor;
- }
-
-MetaStage {
-  border: 3px red solid !important;
+%floatingDarkPlate {
+  background-color: $adwaitaDark1;
+  border: .5px solid $textIconColorBrightSub;
+  box-shadow: $boxShadowMassive;
 }
-#uiGroup Gjs_ui_layout_UiActor {
-  border: 3px red solid !important;
+%floatingplateSVG {
+    border-image: url("common-assets/misc/CarapaceAdwaitaOSD_v1_1px_.5pxBorder.svg") 9 9 9 9;
 }
-
-.button {
-   min-height: 20px;
-   padding: 5px 32px;
-   transition-duration: 100ms;
-   border-radius: 2px 2px 2px 2px;
-   box-shadow: 0 1px 5px rgba(0,0,0,.8);
-   font-weight: bold;
-  }
-
-StEntry,
-StEntry:focus,
-StEntry:active,
-.lock-screen-entry {
-  // globala entry
+%overviewSpaceRoundedGlass {
+  background-color: $overviewGlass;
+  border: 2em solid rgba(25,30,35,.0);
+  border-radius: 2.15em;
+  box-shadow:inset 0 0 .5px .5px rgba(255,255,255,.25);
+}
+%overviewSpaceFlatRound {
+  background-color: $overviewGlass;
+  border: 2em solid $overViewFrame;
+  border-radius: 3em;
+  box-shadow: 0 0 0 1.5em $overViewFrame;
 }
 
 // ::: Dash :::
@@ -457,7 +449,72 @@ StEntry:active,
 }
 
 
+// Globala inställningar
 
+stage {
+  font: 1em $fontStack;
+  color: $primaryColor;
+ }
+
+MetaStage {
+  border: 3px red solid !important;
+}
+#uiGroup Gjs_ui_layout_UiActor {
+  border: 3px red solid !important;
+}
+
+.button {
+   min-height: 20px;
+   padding: 5px 32px;
+   transition-duration: 100ms;
+   border-radius: 2px 2px 2px 2px;
+   box-shadow: 0 1px 5px rgba(0,0,0,.8);
+   font-weight: bold;
+  }
+
+StEntry,
+StEntry:focus,
+StEntry:active,
+.lock-screen-entry {
+  // globala entry
+}
+
+// ::: OSD fönster :::
+
+.osd-window {
+  box-shadow: $boxShadowMassive;
+  //border: .5px solid $textIconColorBrightSub;
+  //@extend %dashLabelAdwaitaDark;
+  //@extend %floatingDarkPlate;
+  //@extend %flashLightPlate;
+  //@extend %floatingplateSVG;
+}
+.osd-window .osd-monitor-label {}
+.osd-window .level {
+  //@extend %sunkinglassShallowContrast;
+  @extend %transparentglass;
+  border-radius: 3px;
+  -barlevel-height: 3px;
+  -barlevel-background-color: rgba(0,0,0,.8); // samma som defaultShadow
+  -barlevel-active-background-color: $textIconColorBrightSolid;
+}
+.osd-window StIcon {
+  icon-shadow: $textIconDefaultShadow;
+}
+  .osd-window .level-bar {}
+.resize-popup {}
+
+// Switcher ::: växla program / fönster :::
+
+.switcher-popup {
+  @extend %overviewSpaceFlatRound;
+}
+
+
+
+
+
+// importera resten...
 
 @import 'panel';
 @import 'dock';
