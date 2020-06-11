@@ -16,13 +16,16 @@
    //border: 1px solid green;
  }
 
- .icon-grid .app-well-app .overview-icon {
-   background-gradient-direction: none;
+ .icon-grid .app-well-app .overview-icon,
+ .switcher-list .item-box {
+   @extend %flashLightOff;
    border-radius: 120px;
    //border: .5px solid rgba(240,240,240,.0);
  }
  .icon-grid .app-well-app .overview-icon StLabel,
- .icon-grid .app-well-app .overview-icon StIcon {
+ .icon-grid .app-well-app .overview-icon StIcon,
+ .switcher-list .item-box,
+ .switcher-list .item-box StIcon {
    color: $textIconColorBrightWeak;
    text-shadow: $textIconMediumShadow;
    //font-size: 1em;
@@ -38,20 +41,26 @@
 
  .icon-grid .app-well-app:hover .overview-icon {
    @extend %flashLightHover;
+   //@extend %floatinglassShallow;
  }
  .icon-grid .app-well-app:hover .overview-icon StLabel,
  .icon-grid .app-well-app:selected .overview-icon StLabel,
  .icon-grid .app-well-app:focus .overview-icon StLabel,
  .icon-grid .app-well-app:hover .overview-icon StIcon,
  .icon-grid .app-well-app:selected .overview-icon StIcon,
- .icon-grid .app-well-app:focus .overview-icon StIcon {
+ .icon-grid .app-well-app:focus .overview-icon StIcon,
+ .switcher-list .item-box:selected,
+ .switcher-list .item-box:outlined,
+ .switcher-list .item-box:selected StIcon,
+ .switcher-list .item-box:outlined StIcon {
    color: $textIconColorBrightStrong;
    //font-size: 1.1em;
    //font-weight: bold;
    text-shadow: $textIconDefaultShadow;
    icon-shadow: $textIconDefaultShadowBig;
  }
- .icon-grid .app-well-app:selected .overview-icon {
+ .icon-grid .app-well-app:selected .overview-icon,
+ .switcher-list .item-box:selected {
    @extend %flashLightSelected;
  }
  .icon-grid .app-well-app:focus .overview-icon {

@@ -6,7 +6,67 @@
 }
 
 .popup-menu-content {
+  //background-color: darken($adwaitaDark1, 5%);
+  border-radius: 5px; // kör två lager liksom, denna och där nere för att skapa mindre genomskinlighet. Men det är lite för solidt nu.
+  color: $textIconColorBrightMediumStrong;
+  text-shadow: $textIconMediumShadow;
+  icon-shadow: $textIconMediumShadow;
+  //margin: .15em;
    }
+   .popup-menu-item {
+     background-color: transparent;
+     color: $textIconColorBrightMediumStrong;
+     text-shadow: $textIconMediumShadow;
+   }
+   .popup-menu-item .popup-menu-icon,
+   .popup-menu-item .system-switch-user-submenu-icon,
+   .popup-menu-item .popup-menu-arrow {
+     color: $textIconColorBrightMediumStrong;
+     icon-shadow: $textIconMediumShadow;
+   }
+
+   .popup-menu-item:hover {
+     background-color: darken($textIconColorBrightSub, 30%);
+   }
+   .popup-menu-item:checked,
+    {
+     //background-color: darken($textIconColorBrightMedium, 30%);
+     background-color: $textIconColorBrightWeak;
+     color: $textIconColorDarkMedium;
+     text-shadow: $textIconDefaultShine;
+     icon-shadow: $textIconDefaultShine;
+   }
+   .popup-menu-item:checked .popup-menu-icon,
+   .popup-menu-item:checked .system-switch-user-submenu-icon,
+   .popup-menu-item:checked .popup-menu-arrow {
+     color: $textIconColorDarkMedium;
+     icon-shadow: $textIconDefaultShine;
+   }
+   .popup-separator-menu-item {}
+   .popup-separator-menu-item .popup-separator-menu-item-separator {
+     @extend %separatorNone;
+   }
+
+   .popup-sub-menu .popup-menu-item {
+     //background-color: $adwaitaDark1;
+     color: $textIconColorBrightSolid;
+   }
+   .popup-sub-menu {
+     //background-color: $adwaitaDark2;
+     //border: none;
+     @extend %sunkinglassShallow;
+     border-radius: 5px;
+   }
+
+   .popup-sub-menu .popup-separator-menu-item {
+     //@extend %floatingglassClear;
+   }
+   .popup-sub-menu .popup-separator-menu-item .popup-separator-menu-item-separator {
+     @extend %separatorNone;
+   }
+
+
+
    .popup-menu-boxpointer,
    .candidate-popup-boxpointer {
    /*  -arrow-border-radius: 6px;
@@ -17,10 +77,76 @@
      -arrow-rise: 8px;
      -arrow-box-shadow: 0 0 10px rgba(250,0,0,1) !important;*/
      -arrow-border-radius: 10px;
-     -arrow-background-color: $menuBG;
+     //-arrow-background-color: $menuBG;
+     -arrow-background-color: lighten($adwaitaDark1AlmostSolid95, 0%);
      -arrow-border-width: 1px;
-     -arrow-border-color: $borderColor;
+     //-arrow-border-color: $borderColor;
+     -arrow-border-color: darken($textIconColorBrightSub, 40%);
      -arrow-base: 20px;
      -arrow-rise: 10px;
-     -arrow-box-shadow: $boxShadow !important;
+     //-arrow-box-shadow: $boxShadowMassive !important;
+     -arrow-box-shadow: 10px black;
+     box-shadow: $boxShadowMassive;
     }
+
+// GSConnect meny Tweaks
+.gsconnect-device-section {
+  border: 1px solid blue;
+  padding: 0px !important;
+  padding-right: 0px !important;
+}
+/* Title Bar */
+.gsconnect-device-name {
+    //margin-top: 1.5em;
+    margin: 0px !important;
+    border: solid 1px yellow;
+}
+PopupMenu.PopupMenuSection {
+  background-color: yellow;
+}
+.gsconnect-device-menu .popup-separator-menu-item {
+  margin: 0 auto;
+  margin-top: .5em;
+}
+.gsconnect-device-menu .popup-menu-ornament {
+  background-color: green;
+  width: 1px !important;
+  margin: 0px !important;
+}
+.gsconnect-list-box {
+  padding-bottom: 1em;
+  margin: 0 auto;
+}
+.gsconnect-device-battery {
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+
+// Kalender & Meddelanden
+
+#calendarArea {
+  // det här är hela menyområdet inlusive allt
+}
+
+#calendarArea .calendar,
+#calendarArea .world-clocks-button,
+#calendarArea .weather-button {
+  @extend %sunkinglassShallowContrastSolidBack;
+}
+
+#calendarArea .message {
+  background: transparent;
+  border: 1px solid transparent;
+  color: $textIconColorBrightSolid;
+}
+#calendarArea .message:hover,
+#calendarArea .message:focus:hover,
+#calendarArea .message:active:hover, {
+  @extend %sunkinglass;
+}
+#calendarArea .message:focus,
+#calendarArea .message:active {
+  //@extend %floatingglass;
+  @extend %sunkinglassShallowContrastSolidBack;
+}
