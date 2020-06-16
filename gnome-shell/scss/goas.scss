@@ -16,13 +16,16 @@ MetaStage {
 }
 
 .button {
-   min-height: 20px;
-   padding: 5px 32px;
-   transition-duration: 100ms;
-   border-radius: 2px 2px 2px 2px;
-   box-shadow: 0 1px 5px rgba(0,0,0,.8);
-   font-weight: bold;
+   @extend %standardButton;
+   //@extend %pluggedDark;
   }
+.button:hover {
+  @extend %standardButtonHover;
+}
+.button:active {
+  @extend %sunkinglass;
+}
+
 
 StEntry,
 .lock-screen-entry {
@@ -35,6 +38,61 @@ StEntry:active,
 .lock-screen-entry:active {
   @extend %sunkinglass;
 }
+
+/* Buttons */
+// FIXME:
+
+/* Check Boxes */
+// FIXME:
+
+/* Switches */
+// FIXME:
+
+/* Slider */
+.slider {
+  height: 15px;
+  -barlevel-height: 3px;
+  -barlevel-background-color: $textIconColorBrightSub;
+  -barlevel-border-width: 0px;
+  -barlevel-border-color: transparent;
+  -barlevel-active-background-color: $textIconColorBrightStrong;
+  -barlevel-active-border-color: green; // ?
+  -barlevel-overdrive-color: #e01b24;
+  -barlevel-overdrive-border-color: #ce1921;
+  -barlevel-overdrive-separator-width: 1px;
+  -slider-handle-radius: 7.5px;
+  -slider-handle-border-width: 1px;
+  -slider-handle-border-color: $textIconColorBrightSolid;
+  color: darken($textIconColorBrightSolid, 3%);
+}
+.slider > * StIcon {
+  icon-shadow: $boxShadowMassive;
+  // försöker skapa starkare skugga på knaoppen... inte lyckats än :-(
+}
+
+/* Scrollbars */
+StScrollView.vfade {
+  -st-vfade-offset: 68px; }
+
+StScrollView.hfade {
+  -st-hfade-offset: 68px; }
+
+StScrollBar {
+  padding: 0; }
+  StScrollView StScrollBar {
+    min-width: 14px;
+    min-height: 14px; }
+  StScrollBar StBin#trough {
+    border-radius: 0;
+    background-color: transparent; }
+  StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
+    border-radius: 8px;
+    background-color: #7e8182;
+    margin: 3px; }
+    StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
+      background-color: #565b5c; }
+    StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
+      background-color: #3584e4; }
 
 // ::: OSD fönster :::
 
@@ -78,3 +136,5 @@ StEntry:active,
   /*ställer padding till 6px så att alla ikoner får plats utan att pilarna försvinner */
   padding: 6px;
 }
+
+// Sliders & Scrollbars

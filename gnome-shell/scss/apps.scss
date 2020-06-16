@@ -18,7 +18,7 @@
 
  .icon-grid .app-well-app .overview-icon,
  .switcher-list .item-box {
-   @extend %flashLightOff;
+   @extend %flashLightOff; // FIXME: spök-cirkel-kant på inaktiva, bl.a mappar som nyss fått nya program tillagda. - Mappar får kanten av flashlight vid :hover också
    border-radius: 120px;
    //border: .5px solid rgba(240,240,240,.0);
  }
@@ -75,16 +75,15 @@
    border-radius: 3px;
    @extend %plugged;
  }
-.icon-grid .app-well-app:drop .overview-icon {
-  border-radius: 10px;
-  @extend %sunkinglass;
-}
 
 .icon-grid .app-well-app.app-folder,
 .icon-grid .app-well-app.app-folder > .overview-icon {
   // börja med att neutralisera .overview-icon
   background-color: transparent !important;
   background-gradient-direction: none !important;
+}
+.icon-grid .app-well-app.app-folder > .overview-icon {
+  @extend %transparentglass; // för att räta till spökritning av flashlight på mappar
 }
  .icon-grid .app-well-app.app-folder > .overview-icon StBoxLayout {
    @extend %sunkinglass;
@@ -97,6 +96,12 @@
    border-radius: 5px;
    //padding: 15px;
  }
+ .icon-grid .app-well-app:drop .overview-icon,
+ .icon-grid .app-well-app.app-folder:drop > .overview-icon {
+   // första när nya mappar kan skapas, andra när saker kan läggas till i existerande mappar
+   border-radius: 10px;
+   @extend %sunkinglass;
+ }
  .icon-grid .app-well-app.app-folder:drop .overview-icon StLabel {
    //@extend %dashLabelAdwaitaNotSoDark;
    //@extend %plugged;
@@ -105,7 +110,6 @@
    // vet inte, vill nog ha etiketten lite mer neutral...
    border-radius: 5px;
    margin-top: .5em;
-
  }
  .icon-grid .app-well-app.app-folder:drop > .overview-icon StBoxLayout {
    @extend %transparentglass;
@@ -127,7 +131,13 @@
    spacing: 40px !important;
    margin: 0px !important;*/
    //@extend %floatingglassFolder;
-   @extend %pluggedDark;
+
+   //@extend %pluggedDark;
+   @extend %popupStyle;
+ }
+ .app-folder-dialog .icon-grid {
+   //@extend %sunkinglassShallowContrastSolidBack;
+   // hade en tanke om att dekorera grid i mappen, men grid ädnrar storlek i takt med mängd ikoner... blir o-clean:t
  }
  .app-folder-dialog .app-well-app .overview-icon StLabel,
  .app-folder-dialog .app-well-app .overview-icon StIcon {

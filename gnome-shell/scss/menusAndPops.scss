@@ -13,49 +13,58 @@
   icon-shadow: $textIconMediumShadow;
   //margin: .15em;
    }
-   .popup-menu-item {
-     background-color: transparent;
-     color: $textIconColorBrightMediumStrong;
-     text-shadow: $textIconMediumShadow;
-   }
+   .popup-menu-item,
    .popup-menu-item .popup-menu-icon,
    .popup-menu-item .system-switch-user-submenu-icon,
    .popup-menu-item .popup-menu-arrow {
+     background-color: transparent; //ikoner kan vara med p.g.a transparent, dom förljer bakgrundsfärg
      color: $textIconColorBrightMediumStrong;
+     text-shadow: $textIconMediumShadow;
      icon-shadow: $textIconMediumShadow;
    }
 
+
    .popup-menu-item:hover {
      background-color: darken($textIconColorBrightSub, 30%);
+     color: $textIconColorBrightStrong;
    }
-   .popup-menu-item:checked,
+   .popup-menu-item:checked
     {
      //background-color: darken($textIconColorBrightMedium, 30%);
-     background-color: $textIconColorBrightWeak;
-     color: $textIconColorDarkMedium;
-     text-shadow: $textIconDefaultShine;
-     icon-shadow: $textIconDefaultShine;
+     //@extend %darkOnBright;
+     //@extend %brightOnDark;
+     background-color: darken($textIconColorBrightSub, 40%);
+     color: $textIconColorBrightMediumStrong;
    }
+
    .popup-menu-item:checked .popup-menu-icon,
    .popup-menu-item:checked .system-switch-user-submenu-icon,
    .popup-menu-item:checked .popup-menu-arrow {
-     color: $textIconColorDarkMedium;
-     icon-shadow: $textIconDefaultShine;
+     color: $textIconColorBrightMedium;
+     icon-shadow: $textIconDefaultShadow;
+   }
+   .popup-menu-item:checked:hover,
+   .popup-menu-item:checked:hover .popup-menu-icon,
+   .popup-menu-item:checked:hover .system-switch-user-submenu-icon,
+   .popup-menu-item:checked:hover .popup-menu-arrow {
+     color: $textIconColorBrightStrong;
    }
    .popup-separator-menu-item {}
    .popup-separator-menu-item .popup-separator-menu-item-separator {
      @extend %separatorNone;
    }
 
-   .popup-sub-menu .popup-menu-item {
-     //background-color: $adwaitaDark1;
-     color: $textIconColorBrightSolid;
-   }
    .popup-sub-menu {
      //background-color: $adwaitaDark2;
      //border: none;
-     @extend %sunkinglassShallow;
-     border-radius: 5px;
+     //@extend %sunkinglassShallow;
+     //border-radius: 5px;
+     @extend %brightOnDark;
+     //border: none;
+   }
+   .popup-sub-menu .popup-menu-item {
+     //background-color: $adwaitaDark1;
+     //color: $textIconColorBrightSolid;
    }
 
    .popup-sub-menu .popup-separator-menu-item {
@@ -68,7 +77,8 @@
 
 
    .popup-menu-boxpointer,
-   .candidate-popup-boxpointer {
+   .candidate-popup-boxpointer { // FIXME: kan du få till en skugga om du delar upp dom?
+
    /*  -arrow-border-radius: 6px;
      -arrow-background-color: rgba(45,50,55,95);
      -arrow-border-width: 4.5px;
@@ -86,10 +96,11 @@
      -arrow-rise: 10px;
      //-arrow-box-shadow: $boxShadowMassive !important;
      -arrow-box-shadow: 10px black;
-     box-shadow: $boxShadowMassive;
+     -box-shadow: $boxShadowMassive;
+     -arrow-shadow: $boxShadowMassive;
     }
 
-// GSConnect meny Tweaks
+// GSConnect meny Tweaks // FIXME
 .gsconnect-device-section {
   border: 1px solid blue;
   padding: 0px !important;
@@ -121,12 +132,33 @@ PopupMenu.PopupMenuSection {
     margin: 0 auto;
     border: 1px solid red;
 }
+// ---- GSConnect slut
 
+// Jag kör Sliders och Scrollbars i goas.scss
 
 // Kalender & Meddelanden
 
 #calendarArea {
   // det här är hela menyområdet inlusive allt
+}
+.datemenu-calendar-column {
+  border: none;
+}
+#calendarArea .world-clocks-header,
+#calendarArea .weather-header,
+#calendarArea .message-list-section-title {
+  @extend %brightTitleWeak;
+}
+#calendarArea .events-section-title {
+  @extend %brightTitleStrong;
+  font-size: 1.5em; // grymt!
+}
+#calendarArea .events-section-title:hover,
+#calendarArea .events-section-title:focus {
+  color: $textIconColorBrightStrong;
+}
+#calendarArea .events-section-title:focus:hover {
+  color: $textIconColorBrightSolid;
 }
 
 #calendarArea .calendar,
@@ -140,13 +172,43 @@ PopupMenu.PopupMenuSection {
   border: 1px solid transparent;
   color: $textIconColorBrightSolid;
 }
+#calendarArea .message .message-secondary-bin > .event-time {
+  color: transparent;
+  //margin-bottom: .1em;
+}
+#calendarArea .message:hover .message-secondary-bin > .event-time,
+#calendarArea .message:focus .message-secondary-bin > .event-time,
+#calendarArea .message:active .message-secondary-bin > .event-time {
+  color: $textIconColorBrightMediumStrong;
+}
+
+
 #calendarArea .message:hover,
 #calendarArea .message:focus:hover,
-#calendarArea .message:active:hover, {
+#calendarArea .message:active:hover,
+#calendarArea .world-clocks-button:hover,
+#calendarArea .world-clocks-button:focus:hover,
+#calendarArea .world-clocks-button:active:hover,
+#calendarArea .weather-button:hover,
+#calendarArea .weather-button:focus:hover,
+#calendarArea .weather-button:active:hover {
+  @extend %sunkinglassHover;
+}
+
+#calendarArea .message:focus,
+#calendarArea .message:active,
+#calendarArea .world-clocks-button:focus,
+#calendarArea .world-clocks-button:active,
+#calendarArea .weather-button:focus,
+#calendarArea .weather-button:active {
   @extend %sunkinglass;
 }
-#calendarArea .message:focus,
-#calendarArea .message:active {
-  //@extend %floatingglass;
-  @extend %sunkinglassShallowContrastSolidBack;
+
+#calendarArea .message-list-placeholder StIcon { /* ikon inga händelser */
+  width: 0px;
+  height: 0px; // den går inte att ändra färg på, så gömmer den
+ }
+#calendarArea .message-list-placeholder StLabel {
+  @extend %InvertedTitleMedium;
+  font-size: 2.5em;
 }

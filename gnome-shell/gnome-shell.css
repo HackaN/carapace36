@@ -21,6 +21,47 @@
 /* ******
 Theme by HackaN ( hackan301@gmail.com )
 ****** */
+.button {
+  border: 0.5px solid rgba(24, 26, 30, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  background-color: #343434;
+  box-shadow: #4c4c4c; }
+
+.button:hover {
+  border: 0.5px solid rgba(24, 26, 30, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  background-color: #393939;
+  box-shadow: #4c4c4c; }
+
+.popup-sub-menu {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+
+#calendarArea .events-section-title {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+  font-size: 1.05em; }
+
+#calendarArea .world-clocks-header,
+#calendarArea .weather-header,
+#calendarArea .message-list-section-title {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+  font-size: 1.05em; }
+
+#calendarArea .message-list-placeholder StLabel {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0.5px 0 0 rgba(250, 250, 250, 0.35);
+  font-weight: 700; }
+
 .icon-grid .app-well-app:focus .overview-icon {
   background-gradient-start: rgba(255, 255, 255, 0.5);
   background-gradient-end: rgba(245, 245, 245, 0.1);
@@ -69,12 +110,16 @@ Theme by HackaN ( hackan301@gmail.com )
   background-gradient-direction: radial; }
 
 .search-entry:focus,
-.search-entry:focus:hover, .icon-grid .app-well-app.app-folder > .overview-icon StBoxLayout, .icon-grid .app-well-app:drop .overview-icon, .icon-grid .app-well-app-running-dot, .workspace-thumbnails, #calendarArea .message:hover,
-#calendarArea .message:focus:hover,
-#calendarArea .message:active:hover, StEntry:focus,
+.search-entry:focus:hover, .icon-grid .app-well-app:drop .overview-icon,
+.icon-grid .app-well-app.app-folder:drop > .overview-icon, .icon-grid .app-well-app.app-folder > .overview-icon StBoxLayout, .icon-grid .app-well-app-running-dot, .workspace-thumbnails .placeholder, .workspace-thumbnails, #calendarArea .message:focus,
+#calendarArea .message:active,
+#calendarArea .world-clocks-button:focus,
+#calendarArea .world-clocks-button:active,
+#calendarArea .weather-button:focus,
+#calendarArea .weather-button:active, StEntry:focus,
 StEntry:active,
 .lock-screen-entry:focus,
-.lock-screen-entry:active {
+.lock-screen-entry:active, .button:active {
   box-shadow: inset 0 0 1px 0.5px rgba(0, 0, 0, 0.7);
   border: 0.5px solid rgba(240, 240, 240, 0.2);
   background-color: rgba(30, 30, 30, 0.2); }
@@ -84,10 +129,18 @@ StEntry:active,
   border: 0.5px solid rgba(240, 240, 240, 0.2);
   background-color: rgba(30, 30, 30, 0.1); }
 
-.icon-grid .app-well-app.app-folder:hover > .overview-icon StBoxLayout {
+.icon-grid .app-well-app.app-folder:hover > .overview-icon StBoxLayout, #calendarArea .message:hover,
+#calendarArea .message:focus:hover,
+#calendarArea .message:active:hover,
+#calendarArea .world-clocks-button:hover,
+#calendarArea .world-clocks-button:focus:hover,
+#calendarArea .world-clocks-button:active:hover,
+#calendarArea .weather-button:hover,
+#calendarArea .weather-button:focus:hover,
+#calendarArea .weather-button:active:hover {
   box-shadow: inset 0 0 1px 0.5px black;
-  border: 0.5px solid rgba(240, 240, 240, 0.4);
-  background-color: rgba(25, 30, 35, 0.4); }
+  border: 0.5px solid rgba(240, 240, 240, 0.25);
+  background-color: rgba(17, 17, 17, 0.2); }
 
 .page-indicator .page-indicator-icon:focus, .page-indicator .page-indicator-icon, .icon-grid .app-well-app:hover .app-well-app-running-dot,
 .icon-grid .app-well-app:focus .app-well-app-running-dot,
@@ -97,27 +150,25 @@ StEntry:active,
   border: 0.5px solid rgba(0, 0, 0, 0); }
 
 .app-view-control:first-child:checked,
-.app-view-control:last-child:checked, .app-folder-dialog {
+.app-view-control:last-child:checked {
   background-color: rgba(56, 56, 56, 0.95);
   box-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
   border: 0.5px solid rgba(36, 39, 44, 0.9); }
 
 .search-provider-icon .list-search-provider-content, .list-search-result, .app-view-control:first-child,
-.app-view-control:last-child, .icon-grid .app-well-app.app-folder:drop > .overview-icon StBoxLayout, .osd-window .level, .search-section-content,
+.app-view-control:last-child, .icon-grid .app-well-app.app-folder:drop > .overview-icon StBoxLayout, .icon-grid .app-well-app.app-folder > .overview-icon, .osd-window .level, .search-section-content,
 .search-provider-icon, .search-provider-icon:focus .list-search-provider-content, .list-search-result:hover,
 .list-search-result:focus,
 .list-search-result:focus:hover,
 .list-search-result:selected, StEntry,
-.lock-screen-entry, .search-entry, .app-view-controls, .popup-sub-menu, #calendarArea .message:focus,
-#calendarArea .message:active, #calendarArea .calendar,
+.lock-screen-entry, .search-entry, .app-view-controls, #calendarArea .calendar,
 #calendarArea .world-clocks-button,
 #calendarArea .weather-button {
   box-shadow: inset 0.5px 0 1px 0.5px rgba(0, 0, 0, 0);
   border: 0.5px solid rgba(240, 240, 240, 0);
   background-color: rgba(25, 30, 35, 0); }
 
-.search-entry, .app-view-controls, .popup-sub-menu, #calendarArea .message:focus,
-#calendarArea .message:active, #calendarArea .calendar,
+.search-entry, .app-view-controls, #calendarArea .calendar,
 #calendarArea .world-clocks-button,
 #calendarArea .weather-button {
   border: 0.5px solid rgba(255, 255, 255, 0.05);
@@ -129,8 +180,7 @@ StEntry,
   background-color: rgba(30, 30, 30, 0.1);
   box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.25); }
 
-#calendarArea .message:focus,
-#calendarArea .message:active, #calendarArea .calendar,
+#calendarArea .calendar,
 #calendarArea .world-clocks-button,
 #calendarArea .weather-button {
   background-color: rgba(38, 38, 38, 0.75); }
@@ -150,8 +200,7 @@ StEntry,
   color: white;
   text-shadow: 0 1px 2px 2px black; }
 
-.search-entry, .app-view-controls, .popup-sub-menu, #calendarArea .message:focus,
-#calendarArea .message:active, #calendarArea .calendar,
+.search-entry, .app-view-controls, #calendarArea .calendar,
 #calendarArea .world-clocks-button,
 #calendarArea .weather-button {
   border: 0.5px solid rgba(255, 255, 255, 0.05);
@@ -198,6 +247,12 @@ StEntry,
   border: 0.5px solid rgba(153, 153, 153, 0.3);
   background-color: rgba(25, 25, 25, 0.95); }
 
+.app-folder-dialog {
+  background-color: rgba(38, 38, 38, 0.98);
+  border: 0.5px solid rgba(153, 153, 153, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); }
+
 #overview {
   background-color: rgba(140, 145, 150, 0.4);
   border: 2em solid rgba(25, 30, 35, 0);
@@ -235,13 +290,57 @@ MetaStage {
 #uiGroup Gjs_ui_layout_UiActor {
   border: 3px red solid !important; }
 
-.button {
-  min-height: 20px;
-  padding: 5px 32px;
-  transition-duration: 100ms;
-  border-radius: 2px 2px 2px 2px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
-  font-weight: bold; }
+/* Buttons */
+/* Check Boxes */
+/* Switches */
+/* Slider */
+.slider {
+  height: 15px;
+  -barlevel-height: 3px;
+  -barlevel-background-color: rgba(255, 255, 255, 0.3);
+  -barlevel-border-width: 0px;
+  -barlevel-border-color: transparent;
+  -barlevel-active-background-color: rgba(255, 255, 255, 0.9);
+  -barlevel-active-border-color: green;
+  -barlevel-overdrive-color: #e01b24;
+  -barlevel-overdrive-border-color: #ce1921;
+  -barlevel-overdrive-separator-width: 1px;
+  -slider-handle-radius: 7.5px;
+  -slider-handle-border-width: 1px;
+  -slider-handle-border-color: white;
+  color: #f7f7f7; }
+
+.slider > * StIcon {
+  icon-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); }
+
+/* Scrollbars */
+StScrollView.vfade {
+  -st-vfade-offset: 68px; }
+
+StScrollView.hfade {
+  -st-hfade-offset: 68px; }
+
+StScrollBar {
+  padding: 0; }
+
+StScrollView StScrollBar {
+  min-width: 14px;
+  min-height: 14px; }
+
+StScrollBar StBin#trough {
+  border-radius: 0;
+  background-color: transparent; }
+
+StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
+  border-radius: 8px;
+  background-color: #7e8182;
+  margin: 3px; }
+
+StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
+  background-color: #565b5c; }
+
+StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
+  background-color: #3584e4; }
 
 .osd-window {
   /*box-shadow: $boxShadowMassive;
@@ -522,37 +621,34 @@ MetaStage {
   text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
   icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
 
-.popup-menu-item {
-  background-color: transparent;
-  color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
-
+.popup-menu-item,
 .popup-menu-item .popup-menu-icon,
 .popup-menu-item .system-switch-user-submenu-icon,
 .popup-menu-item .popup-menu-arrow {
+  background-color: transparent;
   color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
   icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
 
 .popup-menu-item:hover {
-  background-color: rgba(179, 179, 179, 0.3); }
+  background-color: rgba(179, 179, 179, 0.3);
+  color: rgba(255, 255, 255, 0.9); }
 
 .popup-menu-item:checked {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: rgba(0, 0, 0, 0.7);
-  text-shadow: 0 0.5px 0 0 white;
-  icon-shadow: 0 0.5px 0 0 white; }
+  background-color: rgba(153, 153, 153, 0.3);
+  color: rgba(255, 255, 255, 0.85); }
 
 .popup-menu-item:checked .popup-menu-icon,
 .popup-menu-item:checked .system-switch-user-submenu-icon,
 .popup-menu-item:checked .popup-menu-arrow {
-  color: rgba(0, 0, 0, 0.7);
-  icon-shadow: 0 0.5px 0 0 white; }
+  color: rgba(255, 255, 255, 0.7);
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
 
-.popup-sub-menu .popup-menu-item {
-  color: white; }
-
-.popup-sub-menu {
-  border-radius: 5px; }
+.popup-menu-item:checked:hover,
+.popup-menu-item:checked:hover .popup-menu-icon,
+.popup-menu-item:checked:hover .system-switch-user-submenu-icon,
+.popup-menu-item:checked:hover .popup-menu-arrow {
+  color: rgba(255, 255, 255, 0.9); }
 
 .popup-menu-boxpointer,
 .candidate-popup-boxpointer {
@@ -570,7 +666,8 @@ MetaStage {
   -arrow-base: 20px;
   -arrow-rise: 10px;
   -arrow-box-shadow: 10px black;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); }
+  -box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  -arrow-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); }
 
 .gsconnect-device-section {
   border: 1px solid blue;
@@ -602,10 +699,39 @@ PopupMenu.PopupMenuSection {
   margin: 0 auto;
   border: 1px solid red; }
 
+.datemenu-calendar-column {
+  border: none; }
+
+#calendarArea .events-section-title {
+  font-size: 1.5em; }
+
+#calendarArea .events-section-title:hover,
+#calendarArea .events-section-title:focus {
+  color: rgba(255, 255, 255, 0.9); }
+
+#calendarArea .events-section-title:focus:hover {
+  color: white; }
+
 #calendarArea .message {
   background: transparent;
   border: 1px solid transparent;
   color: white; }
+
+#calendarArea .message .message-secondary-bin > .event-time {
+  color: transparent; }
+
+#calendarArea .message:hover .message-secondary-bin > .event-time,
+#calendarArea .message:focus .message-secondary-bin > .event-time,
+#calendarArea .message:active .message-secondary-bin > .event-time {
+  color: rgba(255, 255, 255, 0.85); }
+
+#calendarArea .message-list-placeholder StIcon {
+  /* ikon inga händelser */
+  width: 0px;
+  height: 0px; }
+
+#calendarArea .message-list-placeholder StLabel {
+  font-size: 2.5em; }
 
 /* överblicken */
 #overview {
@@ -643,10 +769,10 @@ PopupMenu.PopupMenuSection {
 
 .workspace-thumbnails .placeholder {
   background-image: none;
-  background-color: rgba(140, 145, 150, 0.4);
-  border: 0 solid rgba(25, 30, 35, 0);
-  border-radius: 5px;
-  box-shadow: inset 0 0 0.5px 0.5px rgba(255, 255, 255, 0.25); }
+  /*background-color: rgba(140,145,150,.4);
+  border: 0 solid rgba(25,30,35,.0);
+  box-shadow:inset 0 0 .5px .5px rgba(255,255,255,.25);*/
+  border-radius: 20px; }
 
 .workspace-thumbnail-indicator {
   border: 4px solid rgba(230, 235, 240, 0.6);
@@ -756,9 +882,6 @@ PopupMenu.PopupMenuSection {
   /* kan ej vara negativ, försvinner då*/
   border-radius: 3px; }
 
-.icon-grid .app-well-app:drop .overview-icon {
-  border-radius: 10px; }
-
 .icon-grid .app-well-app.app-folder,
 .icon-grid .app-well-app.app-folder > .overview-icon {
   background-color: transparent !important;
@@ -769,6 +892,10 @@ PopupMenu.PopupMenuSection {
 
 .icon-grid .app-well-app.app-folder:hover > .overview-icon StBoxLayout {
   border-radius: 5px; }
+
+.icon-grid .app-well-app:drop .overview-icon,
+.icon-grid .app-well-app.app-folder:drop > .overview-icon {
+  border-radius: 10px; }
 
 .icon-grid .app-well-app.app-folder:drop .overview-icon StLabel {
   color: rgba(255, 255, 255, 0.9);

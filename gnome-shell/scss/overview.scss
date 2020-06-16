@@ -79,10 +79,11 @@
 
 .workspace-thumbnails .placeholder {
   background-image: none; //överblicks-stil
-  background-color: rgba(140,145,150,.4);
+  /*background-color: rgba(140,145,150,.4);
   border: 0 solid rgba(25,30,35,.0);
-  border-radius: 5px;
-  box-shadow:inset 0 0 .5px .5px rgba(255,255,255,.25);
+  box-shadow:inset 0 0 .5px .5px rgba(255,255,255,.25);*/
+  border-radius: 20px;
+  @extend %sunkinglass;
 }
 .workspace-thumbnail {
   //finns inte något här som jag lyckats tweak:a

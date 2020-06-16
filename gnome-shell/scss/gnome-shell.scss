@@ -42,6 +42,7 @@ $borderColor: rgba(15,20,25,.9);
 $boxShadow: 0 0 2px 5px rgba(0,0,0,.7);
 $boxShadowLess: 0 0 2px 5px rgba(0,0,0,.2);
 $boxShadow2: 0 0 4px 2px rgba(0,0,0,1);
+$buttonShadow: 0 0 2px rgba(0,0,0,.0);
 $boxShadowMassive: 0 2px 10px rgba(0,0,0,.8);
 $overviewGlass: rgba(140,145,150,.4);
 
@@ -60,6 +61,7 @@ $textIconDefaultShadowBig: 0 1px 3.5px 2px rgba(0,0,0,.8);
 $sunkenShadow: inset 0 0 1px .5px rgba(0,0,0,.7);
 $textIconDefaultShine: 0 .5px 0 0 rgba(255,255,255,1);
 $textIconLessShine: 0 .5px 0 0 rgba(255,255,255,.5);
+$textIconEvenLessShine: 0 .5px 0 0 rgba(250,250,250,.35);
 
 $dockDefaultIconShadow: 0 0 2.5px 1px rgba(0,0,0,.55);
 $dockHoverIconShadow: 0 0 3.5px 2px rgba(0,0,0,.0);
@@ -88,7 +90,9 @@ $adwaitaBrightBorderShadow: rgba(205,200,195,1);
 $backgroundAdwaitaDark: rgba(38,38,38,1);
 $textIconColorDarkSub: rgba(0,0,0,.3);
 $textIconColorDarkWeak: rgba(0,0,0,.5);
+$textIconColorDarkMediumWeak: rgba(0,0,0,.6);
 $textIconColorDarkMedium: rgba(0,0,0,.7);
+$textIconColorDarkMediumStrong: rgba(0,0,0,.8);
 $textIconColorDarkStrong: rgba(0,0,0,.9);
 $textIconColorDarkSolid: rgba(0,0,0,1);
 
@@ -110,6 +114,80 @@ $markingColor: rgba(230,235,240,.6);
 // ----- Extend/Inheritance
 // Hämta med "{@extend %<namn>;}"
 
+%standardButton {
+  //@extend %pluggedDark;
+  border: .5px solid lighten($adwaitaDarkBorder, 5%);
+  //border-radius: 5px;
+  color: $textIconColorBrightMedium;
+  text-shadow: $textIconDefaultShadow;
+  icon-shadow: $textIconDefaultShadow;
+  background-color: $adwaitaDarkButton;
+  box-shadow: $adwaitaDarkBorderShadow;
+}
+%standardButtonHover {
+  //@extend %pluggedDark;
+  border: .5px solid lighten($adwaitaDarkBorder, 5%);
+  //border-radius: 5px;
+  color: $textIconColorBrightMedium;
+  text-shadow: $textIconDefaultShadow;
+  icon-shadow: $textIconDefaultShadow;
+  background-color: $adwaitaDarkButtonHover;
+  box-shadow: $adwaitaDarkBorderShadow;
+}
+
+%darkOnBright {
+  background-color: $textIconColorBrightMedium;
+  color: $textIconColorDarkMedium;
+  text-shadow: $textIconDefaultShine;
+  icon-shadow: $textIconDefaultShine;
+}
+%brightOnDark {
+  background-color: $textIconColorDarkMedium;
+  color: $textIconColorBrightMedium;
+  text-shadow: $textIconDefaultShadow;
+  icon-shadow: $textIconDefaultShadow;
+}
+
+%brightOnDarkHover {
+  background-color: darken($textIconColorBrightSub, 30%);
+  color: $textIconColorBrightStrong;
+  text-shadow: $textIconDefaultShadow;
+  icon-shadow: $textIconDefaultShadow;
+}
+%brightTitleStrong {
+  color: $textIconColorBrightStrong;
+  text-shadow: $textIconDefaultShadow;
+  font-weight: 700;
+  font-size: 1.05em;
+}
+%brightTitleSolid {
+  color: $textIconColorBrightSolid;
+  text-shadow: $textIconDefaultShadow;
+  font-weight: 700;
+  font-size: 1.05em;
+}
+%brightTitleMedium {
+  color: $textIconColorBrightMedium;
+  text-shadow: $textIconDefaultShadow;
+  font-weight: 700;
+  font-size: 1.05em;
+}
+%brightTitleWeak {
+  color: $textIconColorBrightWeak;
+  text-shadow: $textIconDefaultShadow;
+  font-weight: 700;
+  font-size: 1.05em;
+}
+%InvertedTitleMedium {
+  color: $textIconColorDarkMediumWeak;
+  text-shadow: $textIconEvenLessShine;
+  font-weight: 700;
+}
+%InvertedTitleMediumHover {
+  color: $textIconColorDarkMedium;
+  text-shadow: $textIconLessShine;
+  font-weight: 700;
+}
 %flashLightFocus {
   background-gradient-start: rgba(255,255,255,.5);
   background-gradient-end: rgba(245,245,245,.1);
@@ -140,7 +218,6 @@ background-gradient-end: rgba(38,38,38,1);
 background-gradient-direction: radial;
 border: .5px solid rgba(78,78,78,1);
 }
-
 %panelActive {
   border: none;
   border-top: none;
@@ -187,6 +264,11 @@ border: .5px solid rgba(78,78,78,1);
   border: .5px solid rgba(240,240,240,.2);
   background-color: $overViewSunkBackground;
 }
+%sunkinglassDimmed {
+  box-shadow: $sunkenShadow;
+  border: .5px solid rgba(240,240,240,.1);
+  background-color: $overViewSunkBackground;
+}
 %sunkinglassLight {
   box-shadow: $sunkenShadow;
   border: .5px solid rgba(240,240,240,.2);
@@ -194,8 +276,8 @@ border: .5px solid rgba(78,78,78,1);
 }
 %sunkinglassHover {
   box-shadow: inset 0 0 1px .5px rgba(0,0,0,1);
-  border: .5px solid rgba(240,240,240,.4);
-  background-color: rgba(25,30,35,.4);
+  border: .5px solid rgba(240,240,240,.25);
+  background-color: darken($overViewSunkBackground, 5%);
 }
 %sunkingDock {
  box-shadow: inset 0 0 1px .5px rgba(0,0,0,.7);
@@ -240,6 +322,10 @@ border: .5px solid rgba(78,78,78,1);
 %sunkinglassShallowContrastSolidBack {
   @extend %sunkinglassShallow;
   background-color: $adwaitaDark1;
+}
+%sunkinglassShallowContrastSolidBackFocus {
+  @extend %sunkinglassShallowContrastSolidBack;
+  border: .5px solid rgba(255,255,255,1);
 }
 
 %floatingglassClear {
@@ -439,6 +525,12 @@ border: .5px solid rgba(78,78,78,1);
 box-shadow: $boxShadowMassive;
 border: .5px solid darken($textIconColorBrightSub, 40%);
 background-color: darken($adwaitaDark1AlmostSolid, 5%);
+}
+%popupStyle {
+  background-color: lighten($adwaitaDark1AlmostSolid95, 0%);
+  border: .5px solid darken($textIconColorBrightSub, 40%);
+  border-radius: 10px;
+  box-shadow: $boxShadowMassive;
 }
 %floatingplateSVG {
     border-image: url("common-assets/misc/CarapaceAdwaitaOSD_v1_1px_.5pxBorder.svg") 9 9 9 9;
