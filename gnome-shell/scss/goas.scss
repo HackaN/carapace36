@@ -1,4 +1,4 @@
-// Globals, OSDs, App/Window -Switcher
+// Globals, OSDs, App/Window -Switcher, scrollbars etc
 
 
 // Globala inställningar
@@ -137,4 +137,40 @@ StScrollBar {
   padding: 6px;
 }
 
-// Sliders & Scrollbars
+// Sliders & Scrollbars // FIXME
+/* ::: scrollvyer  ::: */
+/*
+Om du vill kunna scrolla automatiskt när man stegar med piltangenter så kan offest inte vara mer än 0px
+*/
+StScrollView.vfade {
+  //-st-vfade-offset: 0px;
+ }
+
+StScrollView.hfade {
+  //-st-hfade-offset: 0px;
+}
+
+StScrollBar {
+  padding: 8px;
+  //margin: 0px 2px;
+  //@extend %sunkinglassShallowContrastSolidBack;
+  //border-radius: 5px;
+}
+  StScrollView StScrollBar {
+    min-width: 5px;
+    min-height: 5px; }
+  StScrollBar StBin#trough {
+    @extend %sunkinglassShallowContrastSolidBack;
+    border-radius: 5px;
+  }
+  StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
+    border-radius: 2px;
+    background-color: rgba(220,220,220,.85);
+    border: 0px solid;
+    margin: 0px;
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+   }
+    StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
+      background-color: rgba(145,145,145,.9) }
+    StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
+      background-color: rgba(175,175,175,.9); }

@@ -59,7 +59,7 @@
      //border: none;
      //@extend %sunkinglassShallow;
      //border-radius: 5px;
-     @extend %brightOnDark;
+     @extend %brightOnDark2;
      //border: none;
    }
    .popup-sub-menu .popup-menu-item {
@@ -89,9 +89,10 @@
      -arrow-border-radius: 10px;
      //-arrow-background-color: $menuBG;
      -arrow-background-color: lighten($adwaitaDark1AlmostSolid95, 0%);
-     -arrow-border-width: 1px;
-     //-arrow-border-color: $borderColor;
-     -arrow-border-color: darken($textIconColorBrightSub, 40%);
+     -arrow-border-width: .5px;
+     -arrow-border-color: $adwaitaDarkBorder; // sexy as hell
+     //-arrow-border-color: $adwaitaBrightBorder;
+     //-arrow-border-color: darken($textIconColorBrightSub, 40%);
      -arrow-base: 20px;
      -arrow-rise: 10px;
      //-arrow-box-shadow: $boxShadowMassive !important;
@@ -102,11 +103,14 @@
 
 // GSConnect meny Tweaks // FIXME
 .gsconnect-device-section {
+  font-size: .9em !important; // problemet är att när det blir två eller fler enheter så kommer en scrollbar upp som lägger sig utanför menyområdet och det blir kaos. Att justera textstrolek kanske är smidigaste lösningen.
+}
+/*.gsconnect-device-section {
   border: 1px solid blue;
   padding: 0px !important;
   padding-right: 0px !important;
 }
-/* Title Bar */
+// Title Bar
 .gsconnect-device-name {
     //margin-top: 1.5em;
     margin: 0px !important;
@@ -131,7 +135,7 @@ PopupMenu.PopupMenuSection {
 .gsconnect-device-battery {
     margin: 0 auto;
     border: 1px solid red;
-}
+}*/
 // ---- GSConnect slut
 
 // Jag kör Sliders och Scrollbars i goas.scss
@@ -170,6 +174,7 @@ PopupMenu.PopupMenuSection {
 #calendarArea .message {
   background: transparent;
   border: 1px solid transparent;
+  border-radius: 9px;
   color: $textIconColorBrightSolid;
 }
 #calendarArea .message .message-secondary-bin > .event-time {
@@ -209,6 +214,25 @@ PopupMenu.PopupMenuSection {
   height: 0px; // den går inte att ändra färg på, så gömmer den
  }
 #calendarArea .message-list-placeholder StLabel {
-  @extend %InvertedTitleMedium;
+  @extend %InvertedTitleWeak;
   font-size: 2.5em;
+}
+
+.datemenu-today-button {
+  background: $textIconColorBrightMedium;
+  color: $textIconColorDarkMedium;
+  text-shadow: $textIconDefaultShadow;
+  box-shadow: $buttonShadow;
+}
+.datemenu-today-button:hover {
+  background: rgb(190,190,190);
+}
+.datemenu-today-button:focus {
+  background: rgb(175,175,175);
+}
+.datemenu-today-button:insensitive {
+  background: transparent;
+  color: $textIconColorBrightMediumStrong;
+  text-shadow: $textIconDefaultShadow;
+  box-shadow: 0 0 2px rgba(0,0,0,0);
 }
