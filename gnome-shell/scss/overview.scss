@@ -57,6 +57,7 @@
 
 .workspace-thumbnails {
   @extend %sunkinglass;
+  //@extend %sunkinglassShallow;
   spacing: 15px;  //kan behövas fixas mer
   padding: 10px;
   border-radius: 3px 0 0 3px;
@@ -78,6 +79,7 @@
 }
 
 .workspace-thumbnails .placeholder {
+  // nya arbetsytor
   background-image: none; //överblicks-stil
   /*background-color: rgba(140,145,150,.4);
   border: 0 solid rgba(25,30,35,.0);
@@ -89,29 +91,39 @@
   //finns inte något här som jag lyckats tweak:a
 }
 .workspace-thumbnail-indicator {
-  border: 4px solid $markingColor;
+  /*border: 4px solid $markingColor;
   border-top: none;
   border-right: none;
   border-bottom: none;
   border-radius: 0px;
-  padding: 6px; /* typ samma avstånd som från skärmkanten*/
-  margin-left: 3px;
+  padding: 6px; // typ samma avstånd som från skärmkanten
+  margin-left: 3px;*/
+
+  //@extend %lupeGlass;
+  @extend %lupeoverviewGlass;
+
+
 }
 .window-picker { // låter picker vara
-  /*-horizontal-spacing: 32px;
-  -vertical-spacing: 40px;
-  padding-left: 52px;
-  padding-right: 12px;
-  padding-bottom: 15px;*/
+  -horizontal-spacing: 1em;
+  -vertical-spacing: 1.5em;
+  /*padding-left: 52px;
+  padding-right: 12px;*/
+  padding-bottom: 1em;
+  margin: .5em; // fixar avbruten close-button;
 }
 .window-picker.external-monitor {
   /*padding: 32px;*/
 }
 .window-clone-border {
-  border: 1px rgba(50,55,60,1);
+  /*border: 1px rgba(50,55,60,1);
   border-radius: 2px;
   box-shadow: $boxShadow2;
-  background-color: rgba(140,145,150,.1);
+  background-color: rgba(140,145,150,.1);*/
+
+  //@extend %lupeoverviewGlass;
+
+  @extend %lupeoverviewGlassLarge;
 }
 .window-clone {
   // finns inget att göra här

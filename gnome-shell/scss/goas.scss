@@ -100,7 +100,8 @@ StScrollBar {
   /*box-shadow: $boxShadowMassive;
   border: .5px solid darken($textIconColorBrightSub, 40%);
   background-color: darken($adwaitaDark1AlmostSolid, 5%);*/
-  @extend %floatingDarkPlate2;
+  //@extend %floatingDarkPlate2;
+  @extend %popupStyle2;
   //border: .5px solid $textIconColorBrightSub;
   //@extend %dashLabelAdwaitaDark;
   //@extend %floatingDarkPlate;
