@@ -196,12 +196,12 @@ StEntry,
 .workspace-thumbnail-indicator {
   background-color: rgba(140, 145, 150, 0.4);
   border: 2px solid rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 0.5px 0.5px rgba(255, 255, 255, 0.4); }
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.4); }
 
 .window-clone-border {
   background-color: rgba(140, 145, 150, 0.4);
-  border: 2px solid rgba(38, 38, 38, 0.75);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4); }
+  border: 2.5px solid rgba(58, 58, 58, 0.98);
+  box-shadow: inset 0 0 0 0.5px black; }
 
 .dash-label {
   background-color: rgba(43, 43, 43, 0.75);
@@ -470,8 +470,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel .power-status.panel-status-indicators-box {
   spacing: 0; }
 
+#panel {
+  border-top: 1px solid transparent;
+  border-left: 0px solid #191e23;
+  border-bottom: 0px solid #191e23;
+  border-right: 0px solid #191e23; }
+
 #panel:overview {
-  border-top: 1px solid #191e23;
+  background-color: transparent;
+  border-top: 1px solid black;
   border-left: 0px solid #191e23;
   border-bottom: 0px solid #191e23;
   border-right: 0px solid #191e23; }
@@ -859,13 +866,14 @@ PopupMenu.PopupMenuSection {
   /*border: 1px rgba(50,55,60,1);
   border-radius: 2px;
   box-shadow: $boxShadow2;
-  background-color: rgba(140,145,150,.1);*/ }
+  background-color: rgba(140,145,150,.1);*/
+  border-radius: 6px 6px 3px 3px; }
 
 .window-caption {
   background: transparent;
   text-shadow: 0 0 4px 2px black;
   margin-top: 2em;
-  padding-bottom: .5em;
+  padding-bottom: 1em;
   color: #fff;
   font-weight: 400;
   font-size: 1.1em;

@@ -101,8 +101,7 @@
 
   //@extend %lupeGlass;
   @extend %lupeoverviewGlass;
-
-
+  // border-radius: 3px; - helskärmsfönsters kanter sticker ut, skiter i kurva
 }
 .window-picker { // låter picker vara
   -horizontal-spacing: 1em;
@@ -123,7 +122,9 @@
 
   //@extend %lupeoverviewGlass;
 
-  @extend %lupeoverviewGlassLarge;
+  //@extend %lupeoverviewGlassLarge;
+  @extend %lupeoverviewGlassLargeIverted;
+  border-radius: 6px 6px 3px 3px; // fönster är ju i regel kurvade upptil men inte nertill
 }
 .window-clone {
   // finns inget att göra här
@@ -132,7 +133,7 @@
   background: transparent;
   text-shadow: $boxShadow2;
   margin-top: 2em;
-  padding-bottom: .5em;
+  padding-bottom: 1em;
   color: $brightHoverColor;
   font-weight: $fontWeight;
   font-size: $largeFontSize;

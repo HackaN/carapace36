@@ -85,11 +85,18 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
 
 #panel.transparent {
 }
-
+#panel {
+  //background-color: $blackBezel;
+  border-top: 1px solid transparent; // så att panel items inte hoppar runt mellan desktop och overview
+  border-left: 0px solid $overViewFrame;
+  border-bottom: 0px solid $overViewFrame;
+  border-right: 0px solid $overViewFrame;
+}
 #panel:overview {
   //box-shadow: 0 0 0 2px rgba(250,0,0,1) !important;
   // för att täcka ljusa kanten
-  border-top: 1px solid $overViewFrame;
+  background-color: transparent;
+  border-top: 1px solid black; // för att täcka edge i overview
   border-left: 0px solid $overViewFrame;
   border-bottom: 0px solid $overViewFrame;
   border-right: 0px solid $overViewFrame;
