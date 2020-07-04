@@ -568,7 +568,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dash {
   color: white;
   font-size: 1.2em;
-  padding: 3em 3em 0em 0em;
+  padding: .3em .3em 0em 0em;
   background: none; }
 
 #dashtodockDashScrollview {
