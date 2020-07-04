@@ -29,17 +29,22 @@
 }*/
 #dash .app-well-app .overview-icon {
   //@extend %flashLightOff;
-  //border-radius: 96px;
+  border-radius: 96px;
   background-color: transparent;
-  border-radius: 0px;
+  background-gradient-direction: none;
 }
 // markering för :hover, har kvar denna för att vara övertydlig med startar-ikoner. Har gjort en fetare effekt med running-dot nedan. Det blir också övertydligt vilka program som körs och vilka som bara är startare :-)
 #dash .app-well-app:hover .overview-icon {
   //@extend %flashLightHover;
   box-shadow: inset 0 -.9em 0 0 rgba(0,0,0,.1);
 }
-#dash .focused .overview-icon {
-  box-shadow: inset 0 -.9em 0 0 $textIconColorDarkMicro;
+#dash .focused.app-well-app .overview-icon {
+  //box-shadow: inset 0 -.9em 0 0 $textIconColorDarkMicro;
+  //background-color: red;
+  background-gradient-start: $overviewGlassStart;
+  background-gradient-end: $overviewGlassEnd;
+  background-gradient-direction: radial;
+  //border-radius: 96px;
 }
 #dash .app-well-app:selected .overview-icon,
 #dash .app-well-app:active .overview-icon {
