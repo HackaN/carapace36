@@ -11,79 +11,100 @@
 #dashtodockBox {
   //@extend %dashBoxPureCode;
 }
-
+#dashtodockDashScrollview {
+  padding-left: 5px;
+}
+#dash .app-well-app .overview-icon {
+  border-radius: 2px;
+  background-color: transparent !important;
+  border-width: .5px;
+}
 #dash .app-well-app {
+  //@extend %flashLightOff;
+  border-radius: 2px;
+  border-width: 0px;
   @extend %gradientHalfShadow;
 }
-#dash .app-well-app .overview-icon > * StIcon {
+#dash .app-well-app .overview-icon > * StIcon,
+#dash .app-well-app .overview-icon.fallback-app-icon > * StIcon {
   icon-shadow: $dockDefaultIconShadow;
   background-color: rgba(100,200,255,0);
   //av någon anledning så behöver dom en definerad bakgrund plus stjärnan för att skuggan ska ritas... :-/
 }
-#dash .app-well-app:hover .overview-icon > * StIcon {
-  icon-shadow: $dockHoverIconShadow;
-  background-color: rgba(100,200,255,0);
-}
 /*#dash .dash-item-container {
   @extend %gradientVagueShadow;
 }*/
-#dash .app-well-app .overview-icon {
-  //@extend %flashLightOff;
-  border-radius: 96px;
-  background-color: transparent;
-  background-gradient-direction: none;
-}
+
 // markering för :hover, har kvar denna för att vara övertydlig med startar-ikoner. Har gjort en fetare effekt med running-dot nedan. Det blir också övertydligt vilka program som körs och vilka som bara är startare :-)
+
 #dash .app-well-app:hover .overview-icon {
-  //@extend %flashLightHover;
-  box-shadow: inset 0 -.9em 0 0 rgba(0,0,0,.1);
+  //box-shadow: inset 0 -.8em 0 0 $textIconColorBrightNano;
 }
-#dash .focused.app-well-app .overview-icon {
+#dash .app-well-app:hover {
+  //@extend %flashLightHover;
+  //box-shadow: inset 0 -1em 0 0 $textIconColorDarkMicro;
+}
+//#dash .focused.app-well-app .overview-icon {
   //box-shadow: inset 0 -.9em 0 0 $textIconColorDarkMicro;
   //background-color: red;
-  background-gradient-start: $overviewGlassStart;
-  background-gradient-end: $overviewGlassEnd;
-  background-gradient-direction: radial;
   //border-radius: 96px;
-}
-#dash .app-well-app:selected .overview-icon,
-#dash .app-well-app:active .overview-icon {
+  //@extend %gradientFullShadow;
+  //@extend %gradientOverviewglassShadow;
+
+//}
+#dash .app-well-app:selected,
+#dash .app-well-app:active {
   //@extend %flashLightSelected;
-  box-shadow: inset 0 -.9em 0 0 rgba(0,0,0,.2);
+  box-shadow: inset 0 -15px 0 0 rgba(20,20,20,.4);
   // :hover :focus :activ är egentligen onödiga, dom blir :hover-färg när man går till menyn iaf
 }
-#dash .app-well-app:focus .overview-icon {
-  //@extend %flashLightFocus;
-  box-shadow: inset 0 -.9em 0 0 rgba(0,0,0,.3);
+#dash .focused.app-well-app .overview-icon {
+  //box-shadow: inset 0 -.8em 0 0 darken($textIconColorBrightNano, 5%); // ljus mörk ram
+  box-shadow: inset 0 -14px 0 0 darken($textIconColorBrightNano, 5%);
 }
+#dash .focused.app-well-app {
+  //@extend %flashLightFocus;
+  //box-shadow: inset 0 -1em 0 0 $textIconColorDarkNano; // ljus mörk ram
+  box-shadow: inset 0 -15px 0 0 $textIconColorDarkNano;
+  //padding: 1px;
+  /*background-gradient-start: $overviewGlassStart; //.5
+  background-gradient-end: $overviewGlassEnd;
+  background-gradient-direction: radial;*/
+  @extend %gradientFullShadow;
+}
+#dash .focused StWidget {
+  //box-shadow: inset 0 .9em 0 0 $textIconColorBrightMedium;
+}
+/*#dash .focused.app-well-app > * StIcon {
+  icon-shadow: $textIconDefaultShadowBig;
+}*/
 // gör visa program här
 
-#dash .focused .app-well-app-running-dot {
+#dash .app-well-app-running-dot {
   /*width: 32px;
-  height: 2px;
-  border-radius: 2.5px;*/
+  height: 2px;*/
+  border-radius: 3px;
   //margin-bottom: 0px; /*sänker indikatorn iom att vi gjorde lådorna mindre*/
   /*background: red;
   box-shadow: 0 0 1px 1px rgba(0,0,0,.8);*/
   //@extend %sunkingDock;
-  background: red;
 }
 #dash .running1 .app-well-app-running-dot {
   width: 6px;
   height: 2.5px;
-  background: $texticonUnfocusedColor;
+  background: $runningDotUnfocused;
 }
 #dash .running1:hover .app-well-app-running-dot {
-  background: $textIconHoverColor;
+  background: $runningDotUnfocused;
   width: 48px;
 }
 #dash .focused.running1 .app-well-app-running-dot {
   width: 6px;
   height: 2.5px;
-  background: $textIconFocusColor;
+  background: $runningDotFocused;
 }
 #dash .focused.running1:hover .app-well-app-running-dot {
-  background: $textIconHoverColor;
+  background: $runningDotFocused;
   width: 48px;
 }
 
@@ -91,30 +112,60 @@
 #dash .running2 .app-well-app-running-dot {
   width: 12px;
   height: 2.5px;
-  background: $textIconHoverColor;
+  background: $runningDotUnfocused;
 }
 #dash .running2:hover .app-well-app-running-dot {
-  background: $textIconFocusColor;
+  background: $runningDotUnfocused;
   width: 48px;
 }
+#dash .focused.running2 .app-well-app-running-dot {
+  width: 12px;
+  height: 2.5px;
+  background: $runningDotFocused;
+}
+#dash .focused.running2:hover .app-well-app-running-dot {
+  background: $runningDotFocused;
+  width: 48px;
+}
+
 #dash .running3 .app-well-app-running-dot {
   width: 24px;
   height: 2.5px;
-  background: $textIconHoverColor;
+  background: $runningDotUnfocused;
 }
 #dash .running3:hover .app-well-app-running-dot {
-  background: $textIconFocusColor;
+  background: $runningDotUnfocused;
   width: 48px;
 }
+#dash .focused.running3 .app-well-app-running-dot {
+  width: 24px;
+  height: 2.5px;
+  background: $runningDotFocused;
+}
+#dash .focused.running3:hover .app-well-app-running-dot {
+  background: $runningDotFocused;
+  width: 48px;
+}
+
 #dash .running4 .app-well-app-running-dot {
   width: 32px;
   height: 2.5px;
-  background: $textIconHoverColor;
+  background: $runningDotUnfocused;
 }
 #dash .running4:hover .app-well-app-running-dot {
-  background: $textIconFocusColor;
+  background: $runningDotUnfocused;
   width: 48px;
 }
+#dash .focuxsed.running4 .app-well-app-running-dot {
+  width: 32px;
+  height: 2.5px;
+  background: $runningDotFocused;
+}
+#dash .focused.running4:hover .app-well-app-running-dot {
+  background: $runningDotFocused;
+  width: 48px;
+}
+
 .dash-label {
   @extend %dashLabelAdwaitaDark;
   -x-offset: -3px; // :-)

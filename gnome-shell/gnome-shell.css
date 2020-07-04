@@ -99,9 +99,9 @@ Theme by HackaN ( hackan301@gmail.com )
   box-shadow: none;
   -panel-corner-border-color: transparent; }
 
-#dash .show-apps {
-  background-gradient-start: rgba(0, 0, 0, 0.4);
-  background-gradient-end: rgba(0, 0, 0, 0);
+#dash .show-apps, #dash .focused.app-well-app {
+  background-gradient-start: rgba(0, 0, 0, 0.5);
+  background-gradient-end: rgba(40, 40, 40, 0);
   background-gradient-direction: radial; }
 
 #dash .app-well-app {
@@ -571,52 +571,56 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   padding: 4px 0;
   background: none; }
 
-#dash .app-well-app .overview-icon > * StIcon {
-  icon-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.55);
-  background-color: rgba(100, 200, 255, 0); }
+#dashtodockDashScrollview {
+  padding-left: 5px; }
 
-#dash .app-well-app:hover .overview-icon > * StIcon {
-  icon-shadow: 0 0 3.5px 2px rgba(0, 0, 0, 0);
+#dash .app-well-app .overview-icon {
+  border-radius: 2px;
+  background-color: transparent !important;
+  border-width: .5px; }
+
+#dash .app-well-app {
+  border-radius: 2px;
+  border-width: 0px; }
+
+#dash .app-well-app .overview-icon > * StIcon,
+#dash .app-well-app .overview-icon.fallback-app-icon > * StIcon {
+  icon-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.55);
   background-color: rgba(100, 200, 255, 0); }
 
 /*#dash .dash-item-container {
   @extend %gradientVagueShadow;
 }*/
-#dash .app-well-app .overview-icon {
-  border-radius: 96px;
-  background-color: transparent;
-  background-gradient-direction: none; }
-
-#dash .app-well-app:hover .overview-icon {
-  box-shadow: inset 0 -0.9em 0 0 rgba(0, 0, 0, 0.1); }
+#dash .app-well-app:selected,
+#dash .app-well-app:active {
+  box-shadow: inset 0 -15px 0 0 rgba(20, 20, 20, 0.4); }
 
 #dash .focused.app-well-app .overview-icon {
-  background-gradient-start: rgba(140, 145, 150, 0.7);
-  background-gradient-end: rgba(100, 105, 110, 0);
-  background-gradient-direction: radial; }
+  box-shadow: inset 0 -14px 0 0 rgba(242, 242, 242, 0.1); }
 
-#dash .app-well-app:selected .overview-icon,
-#dash .app-well-app:active .overview-icon {
-  box-shadow: inset 0 -0.9em 0 0 rgba(0, 0, 0, 0.2); }
+#dash .focused.app-well-app {
+  box-shadow: inset 0 -15px 0 0 rgba(0, 0, 0, 0.1);
+  /*background-gradient-start: $overviewGlassStart; //.5
+  background-gradient-end: $overviewGlassEnd;
+  background-gradient-direction: radial;*/ }
 
-#dash .app-well-app:focus .overview-icon {
-  box-shadow: inset 0 -0.9em 0 0 rgba(0, 0, 0, 0.3); }
-
-#dash .focused .app-well-app-running-dot {
+/*#dash .focused.app-well-app > * StIcon {
+  icon-shadow: $textIconDefaultShadowBig;
+}*/
+#dash .app-well-app-running-dot {
   /*width: 32px;
-  height: 2px;
-  border-radius: 2.5px;*/
+  height: 2px;*/
+  border-radius: 3px;
   /*background: red;
-  box-shadow: 0 0 1px 1px rgba(0,0,0,.8);*/
-  background: red; }
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.8);*/ }
 
 #dash .running1 .app-well-app-running-dot {
   width: 6px;
   height: 2.5px;
-  background: #c8c8c8; }
+  background: rgba(180, 180, 180, 0.7); }
 
 #dash .running1:hover .app-well-app-running-dot {
-  background: white;
+  background: rgba(180, 180, 180, 0.7);
   width: 48px; }
 
 #dash .focused.running1 .app-well-app-running-dot {
@@ -625,33 +629,60 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background: whitesmoke; }
 
 #dash .focused.running1:hover .app-well-app-running-dot {
-  background: white;
+  background: whitesmoke;
   width: 48px; }
 
 #dash .running2 .app-well-app-running-dot {
   width: 12px;
   height: 2.5px;
-  background: white; }
+  background: rgba(180, 180, 180, 0.7); }
 
 #dash .running2:hover .app-well-app-running-dot {
+  background: rgba(180, 180, 180, 0.7);
+  width: 48px; }
+
+#dash .focused.running2 .app-well-app-running-dot {
+  width: 12px;
+  height: 2.5px;
+  background: whitesmoke; }
+
+#dash .focused.running2:hover .app-well-app-running-dot {
   background: whitesmoke;
   width: 48px; }
 
 #dash .running3 .app-well-app-running-dot {
   width: 24px;
   height: 2.5px;
-  background: white; }
+  background: rgba(180, 180, 180, 0.7); }
 
 #dash .running3:hover .app-well-app-running-dot {
+  background: rgba(180, 180, 180, 0.7);
+  width: 48px; }
+
+#dash .focused.running3 .app-well-app-running-dot {
+  width: 24px;
+  height: 2.5px;
+  background: whitesmoke; }
+
+#dash .focused.running3:hover .app-well-app-running-dot {
   background: whitesmoke;
   width: 48px; }
 
 #dash .running4 .app-well-app-running-dot {
   width: 32px;
   height: 2.5px;
-  background: white; }
+  background: rgba(180, 180, 180, 0.7); }
 
 #dash .running4:hover .app-well-app-running-dot {
+  background: rgba(180, 180, 180, 0.7);
+  width: 48px; }
+
+#dash .focuxsed.running4 .app-well-app-running-dot {
+  width: 32px;
+  height: 2.5px;
+  background: whitesmoke; }
+
+#dash .focused.running4:hover .app-well-app-running-dot {
   background: whitesmoke;
   width: 48px; }
 
