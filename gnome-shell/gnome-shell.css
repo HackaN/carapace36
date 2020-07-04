@@ -207,7 +207,7 @@ StEntry,
   background-color: rgba(43, 43, 43, 0.75);
   border: 1px solid rgba(13, 14, 16, 0.9);
   box-shadow: 0 0 2px black;
-  color: white;
+  color: whitesmoke;
   text-shadow: 0 1px 2px 2px black; }
 
 .search-entry, .app-view-controls, #calendarArea .calendar,
@@ -284,9 +284,6 @@ StEntry,
 
 .switcher-popup {
   box-shadow: inset 0 -0.5px 0 0 rgba(255, 255, 255, 0.25), inset 0 0.5px 0 0 rgba(255, 255, 255, 0.25); }
-
-#dash {
-  border-image: url("common-assets/dash/CarapaceDockPantheon_v1.svg") 9 9 9 9; }
 
 #dash {
   border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 9 9 9 9; }
@@ -464,8 +461,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   font-size: 1em;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8) !important;
+  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8) !important; }
 
 #panel .power-status.panel-status-indicators-box {
   spacing: 0; }
@@ -592,6 +589,9 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dash .app-well-app:hover .overview-icon {
   box-shadow: inset 0 -0.9em 0 0 rgba(0, 0, 0, 0.1); }
 
+#dash .focused .overview-icon {
+  box-shadow: inset 0 -0.9em 0 0 rgba(0, 0, 0, 0.2); }
+
 #dash .app-well-app:selected .overview-icon,
 #dash .app-well-app:active .overview-icon {
   box-shadow: inset 0 -0.9em 0 0 rgba(0, 0, 0, 0.2); }
@@ -599,47 +599,57 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #dash .app-well-app:focus .overview-icon {
   box-shadow: inset 0 -0.9em 0 0 rgba(0, 0, 0, 0.3); }
 
-#dash .default .app-well-app-running-dot {
-  width: 32px;
+#dash .focused .app-well-app-running-dot {
+  /*width: 32px;
   height: 2px;
-  border-radius: 2.5px;
-  background: red;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.8); }
+  border-radius: 2.5px;*/
+  /*background: red;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.8);*/
+  background: red; }
 
 #dash .running1 .app-well-app-running-dot {
   width: 6px;
   height: 2.5px;
-  background: #e6e6e6; }
+  background: #c8c8c8; }
 
 #dash .running1:hover .app-well-app-running-dot {
+  background: white;
+  width: 48px; }
+
+#dash .focused.running1 .app-well-app-running-dot {
+  width: 6px;
+  height: 2.5px;
+  background: whitesmoke; }
+
+#dash .focused.running1:hover .app-well-app-running-dot {
   background: white;
   width: 48px; }
 
 #dash .running2 .app-well-app-running-dot {
   width: 12px;
   height: 2.5px;
-  background: #e6e6e6; }
+  background: white; }
 
 #dash .running2:hover .app-well-app-running-dot {
-  background: white;
+  background: whitesmoke;
   width: 48px; }
 
 #dash .running3 .app-well-app-running-dot {
   width: 24px;
   height: 2.5px;
-  background: #e6e6e6; }
+  background: white; }
 
 #dash .running3:hover .app-well-app-running-dot {
-  background: white;
+  background: whitesmoke;
   width: 48px; }
 
 #dash .running4 .app-well-app-running-dot {
   width: 32px;
   height: 2.5px;
-  background: #e6e6e6; }
+  background: white; }
 
 #dash .running4:hover .app-well-app-running-dot {
-  background: white;
+  background: whitesmoke;
   width: 48px; }
 
 .dash-label {
@@ -653,11 +663,11 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   border: 1px solid rgba(13, 14, 16, 0.9);
   border-radius: 5px 5px 0 0;
   box-shadow: inset 0 0.5px 0 0 #4c4c4c;
-  color: #e6e6e6; }
+  color: white; }
 
 #dash .show-apps:hover .show-apps-icon {
   background-color: #393939;
-  color: white; }
+  color: whitesmoke; }
 
 /* ::: menyer ::: */
 .popup-menu-content {
@@ -873,7 +883,7 @@ PopupMenu.PopupMenuSection {
   background: transparent;
   text-shadow: 0 0 4px 2px black;
   margin-top: 2em;
-  padding-bottom: 1em;
+  padding-bottom: .5em;
   color: #fff;
   font-weight: 400;
   font-size: 1.1em;

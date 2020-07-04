@@ -73,8 +73,8 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
   font-weight: $fontWeight;
   //color: darken($textIconColorBrightSolid, 15%);
   color: $textIconColorBrightStrong;
-  text-shadow: $textIconDefaultShadow;
-  icon-shadow: $textIconDefaultShadow;
+  text-shadow: $textIconDefaultShadow !important;
+  icon-shadow: $textIconDefaultShadow !important;
   //text-shadow: $textIconDefaultShine;
   //icon-shadow: $textIconDefaultShine;
 }

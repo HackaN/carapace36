@@ -124,6 +124,7 @@
 
   //@extend %lupeoverviewGlassLarge;
   @extend %lupeoverviewGlassLargeIverted;
+  //@extend %lupeoverviewGlassLargeIverted2;
   border-radius: 6px 6px 3px 3px; // fönster är ju i regel kurvade upptil men inte nertill
 }
 .window-clone {
@@ -133,7 +134,7 @@
   background: transparent;
   text-shadow: $boxShadow2;
   margin-top: 2em;
-  padding-bottom: 1em;
+  padding-bottom: .5em;
   color: $brightHoverColor;
   font-weight: $fontWeight;
   font-size: $largeFontSize;

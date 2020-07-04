@@ -69,8 +69,9 @@ $dockHoverIconShadow: 0 0 3.5px 2px rgba(0,0,0,.0);
 $textIconOverviewPanelColor: rgba(255,255,255,.7);
 
 $textIconRestingColor: rgba(175,180,185,1);
-$textIconHoverColor: rgba(230,230,230,1);
-$textIconFocusColor: rgba(255,255,255,1);
+$texticonUnfocusedColor: rgba(200,200,200,1);
+$textIconHoverColor: rgba(255,255,255,1);
+$textIconFocusColor: rgba(245,245,245,1);
 $backgroundHoverFocusColor: rgba(255,255,255,.6);
 
 // ljus färg
@@ -89,6 +90,8 @@ $adwaitaBrightBorderShadow: rgba(205,200,195,1);
 
 // mörk färg
 $backgroundAdwaitaDark: rgba(38,38,38,1);
+$textIconColorDarkNano: rgba(0,0,0,.1);
+$textIconColorDarkMicro: rgba(0,0,0,.2);
 $textIconColorDarkSub: rgba(0,0,0,.3);
 $textIconColorDarkWeakSub: rgba(0,0,0,.4);
 $textIconColorDarkWeak: rgba(0,0,0,.5);
@@ -407,6 +410,14 @@ border: .5px solid rgba(78,78,78,1);
   box-shadow: inset 0 0 0 .5px $textIconColorDarkSolid;
   //box-shadow: 0 0 2.5px 2.5px $textIconColorDarkSolid;
 }
+%lupeoverviewGlassLargeIverted2 {
+  //background-color: $textIconColorBrightSub;
+  background-color: darken($overviewGlass, 6%);
+  //border: .5px solid $textIconColorDarkSolid;
+  border: 2.5px solid lighten($adwaitaDark2AlmostSolid95, 6%);
+  box-shadow: 0 0 3px 2px $textIconColorDarkMedium;
+  //box-shadow: 0 0 2.5px 2.5px $textIconColorDarkSolid;
+}
 %dashLabelAdwaitaDark {
   background-color: $adwaitaDark2;
   border: 1px solid $adwaitaDarkBorder;
@@ -621,14 +632,14 @@ background-color: darken($adwaitaDark1AlmostSolid, 5%);
     border-image: url("common-assets/dash/CarapaceDockPantheon_v1.svg") 9 9 9 9;
 }
 // 2 (Adwaita)
-%dashSVG2 {
+%dashSVG3 {
     border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 9 9 9 9;
 }
-%dashSVG2_scalable {
+%dashSVG3_scalable {
     border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 9 9 9 9;
 }
 // 3 (3D)
-%dashSVG3 {
+%dashSVG4 {
     border-image: url("common-assets/dash/CarapaceDock3D_v5.svg") 10 10 10 10;
 }
 // Pure Code
