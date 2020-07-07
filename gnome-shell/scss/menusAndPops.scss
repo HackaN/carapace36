@@ -89,7 +89,7 @@
      -arrow-border-radius: 10px;
      //-arrow-background-color: $menuBG;
      -arrow-background-color: lighten($adwaitaDark1AlmostSolid95, 0%);
-     -arrow-border-width: .5px;
+     -arrow-border-width: 1px; // kan inte vara .5px på 100% displayer, hela menyn blir felskalad och uppkukad
      -arrow-border-color: $adwaitaDarkBorder; // sexy as hell
      //-arrow-border-color: $adwaitaBrightBorder;
      //-arrow-border-color: darken($textIconColorBrightSub, 40%);

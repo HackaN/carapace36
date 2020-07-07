@@ -28,7 +28,7 @@ Theme by HackaN ( hackan301@gmail.com )
 ****** */
 
 // Globala variabler
-$fontStack: Lato, NimbusSans, Cantarell;
+$fontStack: Lato, NimbusSans, Cantarell, Ubuntu;
 $hoverColor: grey;
 $primaryColor: #eee;
 $brightHoverColor: #fff;
@@ -100,6 +100,7 @@ $adwaitaBrightBorderShadow: rgba(205,200,195,1);
 
 // mörk färg
 $backgroundAdwaitaDark: rgba(38,38,38,1);
+$textIconColorDarkPico: rgba(0,0,0,.05);
 $textIconColorDarkNano: rgba(0,0,0,.1);
 $textIconColorDarkMicro: rgba(0,0,0,.2);
 $textIconColorDarkSub: rgba(0,0,0,.3);
@@ -125,7 +126,7 @@ $adwaitaDarkBorderShadow:rgba(76,76,76,1);
 
 $markingColor: rgba(230,235,240,.6);
 
-$blackBezel: rgb(20,20,20);
+$blackBezel: rgba(0,0,0,.98);
 // ----- Extend/Inheritance
 // Hämta med "{@extend %<namn>;}"
 

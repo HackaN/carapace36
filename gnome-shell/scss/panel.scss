@@ -83,16 +83,32 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
   //font-size: 1.2em; //
  }
 
-#panel.transparent {
-}
+
 #panel {
-  //background-color: $blackBezel;
+  background-color: $blackBezel;
   border-top: 1px solid transparent; // så att panel items inte hoppar runt mellan desktop och overview
   border-left: 0px solid $overViewFrame;
   border-bottom: 0px solid $overViewFrame;
   border-right: 0px solid $overViewFrame;
+  transition-duration: 0ms !important; // det bidrar bara till blinking när tillägget skiftar paneler
+}
+#panel .panel-corner {
+  -panel-corner-radius: 5px;
+  -panel-corner-background-color: $blackBezel;
+  -panel-corner-border-width: 0px;
+  -panel-corner-border-color: $overViewFrame;
+}
+#panel.transparent {
+  transition-duration: 0ms !important;
+}
+#panel.transparent .panel-corner {
+  -panel-corner-radius: 0px;
+  -panel-corner-background-color: transparent;
+  -panel-corner-border-width: 0px;
+  -panel-corner-border-color: $overViewFrame;
 }
 #panel:overview {
+  transition-duration: 0ms !important;
   //box-shadow: 0 0 0 2px rgba(250,0,0,1) !important;
   // för att täcka ljusa kanten
   background-color: transparent;
@@ -101,6 +117,12 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
   border-bottom: 0px solid $overViewFrame;
   border-right: 0px solid $overViewFrame;
   }
+  #panel:overview .panel-corner {
+    -panel-corner-radius: 5px; // den ska bara vara osynlig, men behåller kurvan för övergångens skull
+    -panel-corner-background-color: transparent;
+    -panel-corner-border-width: 0px;
+    -panel-corner-border-color: $overViewFrame;
+  }
   #panel.transparent,
   #panel.transparent .panel-button,
   #panel.transparent .system-status-icon,
@@ -108,12 +130,6 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
   #panel.transparent .popup-menu-arrow,
   #panel.transparent Gjs_ui_dateMenu_MessagesIndicator {
     color: $textIconColorBrightStrong;
-  }
-  #panel.transparent .panel-corner {
-    -panel-corner-radius: 0px;
-    -panel-corner-background-color: rgba(15,20,30,0);
-    -panel-corner-border-width: 0px;
-    -panel-corner-border-color: transparent;
   }
 
 // nOTERING, .PANEL-BUTTON INKLUDERAR INTE STATUSITEMS
@@ -125,12 +141,6 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
   #panel:overview Gjs_ui_dateMenu_MessagesIndicator {
     //color: darken($textIconDefaultColor, 30%);
     color: $textIconColorBrightMedium;
-  }
-  #panel:overview .panel-corner {
-    -panel-corner-radius: 0px;
-    -panel-corner-background-color: rgba(15,20,30,0);
-    -panel-corner-border-width: 0px;
-    -panel-corner-border-color: transparent;
   }
 
     //börjar med solid panel

@@ -289,7 +289,7 @@ StEntry,
   border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 9 9 9 9; }
 
 stage {
-  font: 1em Lato, NimbusSans, Cantarell;
+  font: 1em Lato, NimbusSans, Cantarell, Ubuntu;
   color: #eee; }
 
 MetaStage {
@@ -468,17 +468,41 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   spacing: 0; }
 
 #panel {
+  background-color: rgba(0, 0, 0, 0.98);
   border-top: 1px solid transparent;
   border-left: 0px solid #191e23;
   border-bottom: 0px solid #191e23;
-  border-right: 0px solid #191e23; }
+  border-right: 0px solid #191e23;
+  transition-duration: 0ms !important; }
+
+#panel .panel-corner {
+  -panel-corner-radius: 5px;
+  -panel-corner-background-color: rgba(0, 0, 0, 0.98);
+  -panel-corner-border-width: 0px;
+  -panel-corner-border-color: #191e23; }
+
+#panel.transparent {
+  transition-duration: 0ms !important; }
+
+#panel.transparent .panel-corner {
+  -panel-corner-radius: 0px;
+  -panel-corner-background-color: transparent;
+  -panel-corner-border-width: 0px;
+  -panel-corner-border-color: #191e23; }
 
 #panel:overview {
+  transition-duration: 0ms !important;
   background-color: transparent;
   border-top: 1px solid black;
   border-left: 0px solid #191e23;
   border-bottom: 0px solid #191e23;
   border-right: 0px solid #191e23; }
+
+#panel:overview .panel-corner {
+  -panel-corner-radius: 5px;
+  -panel-corner-background-color: transparent;
+  -panel-corner-border-width: 0px;
+  -panel-corner-border-color: #191e23; }
 
 #panel.transparent,
 #panel.transparent .panel-button,
@@ -488,12 +512,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel.transparent Gjs_ui_dateMenu_MessagesIndicator {
   color: rgba(255, 255, 255, 0.9); }
 
-#panel.transparent .panel-corner {
-  -panel-corner-radius: 0px;
-  -panel-corner-background-color: rgba(15, 20, 30, 0);
-  -panel-corner-border-width: 0px;
-  -panel-corner-border-color: transparent; }
-
 #panel:overview,
 #panel:overview .panel-button,
 #panel:overview .system-status-icon,
@@ -501,12 +519,6 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panel:overview .popup-menu-arrow,
 #panel:overview Gjs_ui_dateMenu_MessagesIndicator {
   color: rgba(255, 255, 255, 0.7); }
-
-#panel:overview .panel-corner {
-  -panel-corner-radius: 0px;
-  -panel-corner-background-color: rgba(15, 20, 30, 0);
-  -panel-corner-border-width: 0px;
-  -panel-corner-border-color: transparent; }
 
 #panel :hover,
 #panel .panel-button:hover,
@@ -593,13 +605,13 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 }*/
 #dash .app-well-app:selected,
 #dash .app-well-app:active {
-  box-shadow: inset 0 -0.9em 0 0 rgba(20, 20, 20, 0.4); }
+  box-shadow: inset 0 -0.95em 0 0 rgba(20, 20, 20, 0.4); }
 
 #dash .focused.app-well-app .overview-icon {
   box-shadow: inset 0 -0.8em 0 0 rgba(242, 242, 242, 0.1); }
 
 #dash .focused.app-well-app {
-  box-shadow: inset 0 -1em 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -0.95em 0 0 rgba(0, 0, 0, 0.05);
   /*background-gradient-start: $overviewGlassStart; //.5
   background-gradient-end: $overviewGlassEnd;
   background-gradient-direction: radial;*/ }
@@ -621,7 +633,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dash .running1:hover .app-well-app-running-dot {
   background: rgba(180, 180, 180, 0.7);
-  width: 48px; }
+  width: 46px; }
 
 #dash .focused.running1 .app-well-app-running-dot {
   width: 6px;
@@ -630,7 +642,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dash .focused.running1:hover .app-well-app-running-dot {
   background: whitesmoke;
-  width: 48px; }
+  width: 46px; }
 
 #dash .running2 .app-well-app-running-dot {
   width: 12px;
@@ -639,7 +651,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dash .running2:hover .app-well-app-running-dot {
   background: rgba(180, 180, 180, 0.7);
-  width: 48px; }
+  width: 46px; }
 
 #dash .focused.running2 .app-well-app-running-dot {
   width: 12px;
@@ -648,7 +660,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dash .focused.running2:hover .app-well-app-running-dot {
   background: whitesmoke;
-  width: 48px; }
+  width: 46px; }
 
 #dash .running3 .app-well-app-running-dot {
   width: 24px;
@@ -657,7 +669,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dash .running3:hover .app-well-app-running-dot {
   background: rgba(180, 180, 180, 0.7);
-  width: 48px; }
+  width: 46px; }
 
 #dash .focused.running3 .app-well-app-running-dot {
   width: 24px;
@@ -666,7 +678,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dash .focused.running3:hover .app-well-app-running-dot {
   background: whitesmoke;
-  width: 48px; }
+  width: 46px; }
 
 #dash .running4 .app-well-app-running-dot {
   width: 32px;
@@ -675,7 +687,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dash .running4:hover .app-well-app-running-dot {
   background: rgba(180, 180, 180, 0.7);
-  width: 48px; }
+  width: 46px; }
 
 #dash .focuxsed.running4 .app-well-app-running-dot {
   width: 32px;
@@ -684,7 +696,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #dash .focused.running4:hover .app-well-app-running-dot {
   background: whitesmoke;
-  width: 48px; }
+  width: 46px; }
 
 .dash-label {
   -x-offset: -3px; }
@@ -750,7 +762,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
      -arrow-box-shadow: 0 0 10px rgba(250,0,0,1) !important;*/
   -arrow-border-radius: 10px;
   -arrow-background-color: rgba(38, 38, 38, 0.98);
-  -arrow-border-width: .5px;
+  -arrow-border-width: 1px;
   -arrow-border-color: rgba(13, 14, 16, 0.9);
   -arrow-base: 20px;
   -arrow-rise: 10px;
