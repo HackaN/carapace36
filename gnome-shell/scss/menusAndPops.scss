@@ -16,18 +16,33 @@
    .popup-menu-item,
    .popup-menu-item .popup-menu-icon,
    .popup-menu-item .system-switch-user-submenu-icon,
-   .popup-menu-item .popup-menu-arrow {
+   .popup-menu-item .popup-menu-arrow,
+   .message-media-control,
+   .message-media-control > StIcon {
      background-color: transparent; //ikoner kan vara med p.g.a transparent, dom förljer bakgrundsfärg
      color: $textIconColorBrightMediumStrong;
      text-shadow: $textIconMediumShadow;
      icon-shadow: $textIconMediumShadow;
    }
 
+   .message-media-control:insensitive,
+   .message-media-control:insensitive > StIcon  {
+     color: $textIconColorBrightSub;
+   }
 
-   .popup-menu-item:hover {
+
+   .popup-menu-item:hover,
+   .message-media-control:hover  {
      background-color: darken($textIconColorBrightSub, 30%);
      color: $textIconColorBrightStrong;
    }
+   .media-message-cover-icon,
+   .media-message-cover-icon > StIcon,
+   .media-message-cover-icon.fallback,
+   .popup-menu-item > StIcon {
+     icon-shadow: $textIconMediumShadow;
+   }
+
    .popup-menu-item:checked
     {
      //background-color: darken($textIconColorBrightMedium, 30%);
@@ -60,7 +75,9 @@
      //@extend %sunkinglassShallow;
      //border-radius: 5px;
      @extend %brightOnDark2;
-     //border: none;
+     //border: 1px solid $textIconColorDarkNano;
+     border: 0 none transparent;
+     font-size: .95em;
    }
    .popup-sub-menu .popup-menu-item {
      //background-color: $adwaitaDark1;
@@ -171,11 +188,19 @@ PopupMenu.PopupMenuSection {
   @extend %sunkinglassShallowContrastSolidBack;
 }
 
-#calendarArea .message {
+#calendarArea .message,
+#calendarArea .message-body,
+#calendarArea .message-title,
+#calendarArea .message-content, {
   background: transparent;
   border: 1px solid transparent;
   border-radius: 9px;
   color: $textIconColorBrightSolid;
+}
+#calendarArea .message-body {
+  color: $textIconColorBrightMedium;
+  font-size: .95em;
+  line-height: 1.05em;
 }
 #calendarArea .message .message-secondary-bin > .event-time {
   color: transparent;
@@ -219,16 +244,20 @@ PopupMenu.PopupMenuSection {
 }
 
 .datemenu-today-button {
-  background: $textIconColorBrightMedium;
+  /*background: $textIconColorBrightMedium;
   color: $textIconColorDarkMedium;
   text-shadow: $textIconDefaultShadow;
-  box-shadow: $buttonShadow;
+  box-shadow: $buttonShadow;*/
+  @extend %pluggedDark;
 }
-.datemenu-today-button:hover {
-  background: rgb(190,190,190);
-}
+.datemenu-today-button:hover,
 .datemenu-today-button:focus {
-  background: rgb(175,175,175);
+  //background: rgb(190,190,190);
+  @extend %pluggedDarkHover;
+}
+.datemenu-today-button:active {
+  //background: rgb(175,175,175);
+  @extend %sunkinglass;
 }
 .datemenu-today-button:insensitive {
   background: transparent;

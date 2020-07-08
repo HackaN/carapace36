@@ -49,7 +49,7 @@ StEntry:active,
 // FIXME:
 
 /* Slider */
-.slider {
+.slider { // volym och skärmljus
   height: 15px;
   -barlevel-height: 3px;
   -barlevel-background-color: $textIconColorBrightSub;
@@ -71,7 +71,7 @@ StEntry:active,
 }
 
 /* Scrollbars */
-StScrollView.vfade {
+/*StScrollView.vfade {
   -st-vfade-offset: 68px; }
 
 StScrollView.hfade {
@@ -87,12 +87,12 @@ StScrollBar {
     background-color: transparent; }
   StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
     border-radius: 8px;
-    background-color: #7e8182;
+    background-color: red;
     margin: 3px; }
     StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
-      background-color: #565b5c; }
+      background-color: green; }
     StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
-      background-color: #3584e4; }
+      background-color: blue; }*/
 
 // ::: OSD fönster :::
 
@@ -161,17 +161,30 @@ StScrollBar {
     min-width: 5px;
     min-height: 5px; }
   StScrollBar StBin#trough {
-    @extend %sunkinglassShallowContrastSolidBack;
+    //@extend %sunkinglassShallowContrastSolidBack;
+    //@extend %transparentglass;
+    @extend %sunkingDock;
     border-radius: 5px;
   }
+  #overview StScrollBar StBin#trough {
+    @extend %sunkinglassDimmed;
+  }
   StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
-    border-radius: 2px;
+    /*border-radius: 2px;
     background-color: rgba(220,220,220,.85);
     border: 0px solid;
     margin: 0px;
-    box-shadow: 0 0 5px rgba(0,0,0,1);
+    box-shadow: 0 0 5px rgba(0,0,0,1);*/
+    @extend %pluggedDimmed;
+   }
+   #overview StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
+     @extend %plugged;
    }
     StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
-      background-color: rgba(145,145,145,.9) }
+      //background-color: rgba(145,145,145,.9)
+      @extend %pluggedHover;
+    }
     StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
-      background-color: rgba(175,175,175,.9); }
+      //background-color: rgba(175,175,175,.9);
+      @extend %pluggedActive;
+    }

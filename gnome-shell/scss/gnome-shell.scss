@@ -196,23 +196,23 @@ $blackBezel: rgba(0,0,0,.98);
 }
 %brightTitleWeak {
   color: $textIconColorBrightWeak;
-  text-shadow: $textIconDefaultShadow;
+  text-shadow: $textIconDefaultShadow !important;
   font-weight: 700;
   font-size: 1.05em;
 }
 %InvertedTitleMedium {
   color: $textIconColorDarkMediumWeak;
-  text-shadow: $textIconEvenLessShine;
+  text-shadow: $textIconEvenLessShine !important;
   font-weight: 700;
 }
 %InvertedTitleWeak {
   color: $textIconColorDarkWeak;
-  text-shadow: $textIconEvenLessShine;
+  text-shadow: $textIconEvenLessShine !important;
   font-weight: 700;
 }
 %InvertedTitleMediumHover {
   color: $textIconColorDarkMedium;
-  text-shadow: $textIconLessShine;
+  text-shadow: $textIconLessShine !important;
   font-weight: 700;
 }
 %flashLightFocus {
@@ -321,10 +321,30 @@ border: .5px solid rgba(78,78,78,1);
   box-shadow:outset 0 0 4px 1px rgba(0,0,0,.8);
   border: .5px solid rgba(0,0,0,.0);
 }
+%pluggedDimmed {
+  @extend %plugged;
+  background-color: darken($backgroundAdwaitaBright, 10%);
+}
+%pluggedHover {
+  @extend %plugged;
+  background-color: lighten($backgroundAdwaitaBright, 5%);
+}
+%pluggedActive {
+  @extend %plugged;
+  background-color: lighten($backgroundAdwaitaBright, 10%);
+}
 %pluggedDark {
   background-color: lighten($adwaitaDark2AlmostSolid, 5%);
   box-shadow: $textIconMediumShadow;
   border: .5px solid lighten($adwaitaDarkBorder, 10%);
+}
+%pluggedDarkHover {
+  @extend %pluggedDark;
+  background-color: lighten($adwaitaDark2AlmostSolid, 10%);
+}
+%pluggedDarkActive {
+  @extend %pluggedDark;
+  background-color: $adwaitaDark2AlmostSolid;
 }
 %transparentglass {
   box-shadow: inset .5px 0 1px .5px rgba(0,0,0,.0);
