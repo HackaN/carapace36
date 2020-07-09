@@ -83,10 +83,11 @@
 }*/
 // gör visa program här
 
-#dash .app-well-app-running-dot {
+#dash .default .app-well-app-running-dot {
   /*width: 32px;
   height: 2px;*/
   border-radius: 3px;
+  background-color: lighten($adwaitaDark2AlmostSolid, 5%);
   //margin-bottom: 0px; /*sänker indikatorn iom att vi gjorde lådorna mindre*/
   /*background: red;
   box-shadow: 0 0 1px 1px rgba(0,0,0,.8);*/
