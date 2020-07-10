@@ -79,7 +79,8 @@
 }
 
 .list-search-result StIcon,
-.list-search-provider-content StIcon {
+.list-search-provider-content StIcon,
+.list-search-result .system-action-icon StIcon {
   icon-shadow: $textIconDefaultShadow;
 }
 .list-search-result:hover StIcon,

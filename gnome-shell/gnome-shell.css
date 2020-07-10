@@ -986,7 +986,7 @@ PopupMenu.PopupMenuSection {
 .app-folder-dialog,
 .app-folder-dialog .icon-grid,
 .app-folder-dialog .icon-grid .overview-icon {
-  icon-size: 9em !important;
+  icon-size: 5em;
   spacing: 1.8em !important;
   -shell-grid-horizontal-item-size: 8em !important;
   -shell-grid-vertical-item-size: 8em !important; }
@@ -1156,7 +1156,8 @@ PopupMenu.PopupMenuSection {
   border-radius: 5px; }
 
 .list-search-result StIcon,
-.list-search-provider-content StIcon {
+.list-search-provider-content StIcon,
+.list-search-result .system-action-icon StIcon {
   icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
 
 .search-provider-icon .list-search-provider-content {
