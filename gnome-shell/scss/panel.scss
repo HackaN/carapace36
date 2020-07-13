@@ -15,6 +15,13 @@
   border-radius: 1px;
 }
 
+#panel,
+#panel.trasparent,
+#panel:overview {
+    font-size: 1.1em;
+    icon-size: 1em;
+}
+
 #panel .panel-button .app-menu-icon { /* program-ikoner, ligger framför namnet i panelen, men dom är inte alltid så vackra... */
   width: 0px;
   height: 0px;
@@ -27,26 +34,33 @@
 #panel:overview #panelActivities.panel-button > * {
 icon-shadow: $textIconDefaultShadow;
 text-shadow: $textIconDefaultShadow;
-width: 1em;
-height: 1em;
+width: 1.2em;
+height: 1.2em;
+/* FIXME:
+ 1em ser bra ut på 200% och 100% på SamsungTV... På PBP så är foten på tok för liten. 1.2em känns bra på PBP.
+ */
 background-color: transparent !important;
 background-gradient-direction: none !important;
-border: 0 none transparent !important;
+border: 1px solid transparent !important; // att behålla kanten gör foten storre och finare
 text-shadow: 0 0 transparent !important;
 transition-duration: 0ms !important;
 box-shadow: none !important;
 color: transparent;
+//margin-top: .15em;
 //background-image: none;
 }
 // fot default
 #panel #panelActivities.panel-button > * {
 background-image: url("common-assets/panel/GnomeFootVit.95_v2.svg");
+//background-size: contain; // contain verkar vara default
 }
 #panel.transparent #panelActivities.panel-button > * {
+//background-size: contain;
 background-image: url("common-assets/panel/GnomeFootVit.9.svg");
 }
 #panel:overview #panelActivities.panel-button > * {
 background-image: url("common-assets/panel/GnomeFootVit.7.svg");
+//background-size: contain;
 }
 // fot hover
 #panel :hover #panelActivities.panel-button > * {
@@ -68,8 +82,15 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
 #panel .system-status-icon,
 #panel .app-menu-icon > StIcon,
 #panel .popup-menu-arrow,
-#panel Gjs_ui_dateMenu_MessagesIndicator {
+#panel Gjs_ui_dateMenu_MessagesIndicator,
+#panel:overview,
+#panel:overview .panel-button,
+#panel:overview .system-status-icon,
+#panel:overview .app-menu-icon > StIcon,
+#panel:overview .popup-menu-arrow,
+#panel:overview Gjs_ui_dateMenu_MessagesIndicator{
   font-size: 1em;
+  icon-size: 1em !important;
   font-weight: $fontWeight;
   //color: darken($textIconColorBrightSolid, 15%);
   color: $textIconColorBrightStrong;
@@ -78,10 +99,28 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
   //text-shadow: $textIconDefaultShine;
   //icon-shadow: $textIconDefaultShine;
 }
+
+// Tangentbordslayout, texten är by default så liten och nedsänkt...
+#panel Gjs_status_keyboard_InputSourceIndicator StLabel {
+    font-size: 1em !important;
+    vertical-align: text-top !important;
+    color: red !important;
+    background-color: blue !important;
+    padding-top: 0em !important;
+}
 #panel .power-status.panel-status-indicators-box {
-  spacing: 0;
-  //font-size: 1.2em; //
+    spacing: 0;
+    font-size: 1.1em;
+    color: $textIconColorBrightMedium;
+}
+#panel .power-status.panel-status-indicators-box StIcon,
+#panel.transparent .power-status.panel-status-indicators-box StIcon,
+#panel:overview .power-status.panel-status-indicators-box StIcon{
+  icon-size: .8em !important; // FIXME: blir lite suddig på PBP, men bättre storlek
  }
+ /*#panel .power-status.panel-status-indicators-box StIcon {
+     icon-size: .5em !important;
+}*/
 
 
 #panel {
@@ -90,7 +129,7 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
   border-left: 0px solid $overViewFrame;
   border-bottom: 0px solid $overViewFrame;
   border-right: 0px solid $overViewFrame;
-  transition-duration: 0ms !important; // det bidrar bara till blinking när tillägget skiftar paneler
+  transition-duration: 0ms !important; // det bidrar bara till blinking när tillägget skiftar paneler:overview
 }
 #panel .panel-corner {
   -panel-corner-radius: 5px;
@@ -142,6 +181,9 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
     //color: darken($textIconDefaultColor, 30%);
     color: $textIconColorBrightMedium;
   }
+  #panel:overview .power-status.panel-status-indicators-box {
+      color: $textIconColorBrightWeak; // det är strong/medium på solid och transparent
+}
 
     //börjar med solid panel
     #panel :hover,
@@ -149,15 +191,17 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
     #panel :hover .system-status-icon,
     #panel .app-menu-icon:hover > StIcon,
     #panel :hover .popup-menu-arrow,
-    #panel Gjs_ui_dateMenu_MessagesIndicator:hover,
+    #panel :hover .power-status.panel-status-indicators-box,
+    #panel :hover Gjs_ui_dateMenu_MessagesIndicator,
     #panel :active,
     #panel .panel-button:active,
     #panel :active .system-status-icon,
     #panel .app-menu-icon:active > StIcon,
     #panel :active .popup-menu-arrow,
-    #panel Gjs_ui_dateMenu_MessagesIndicator:active {
+    #panel :active Gjs_ui_dateMenu_MessagesIndicator {
       color: $textIconColorBrightSolid;
     }
+    
     #panel .panel-button:active,
     #panel .panel-corner:active {
       //box-shadow: inset 0 -2px 0 0 $textIconColorBrightSolid;
@@ -168,18 +212,19 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
     }
 
   // fortsätter med transparent
-  #panel.transparent :hover,
-  #panel.transparent .panel-button:hover,
-  #panel.transparent :hover .system-status-icon,
-  #panel.transparent .app-menu-icon:hover > StIcon,
-  #panel.transparent :hover .popup-menu-arrow,
-  #panel.transparent Gjs_ui_dateMenu_MessagesIndicator:hover,
-  #panel.transparent :active,
-  #panel.transparent .panel-button:active,
-  #panel.transparent :active .system-status-icon,
-  #panel.transparent .app-menu-icon:active > StIcon,
-  #panel.transparent :active .popup-menu-arrow,
-  #panel.transparent Gjs_ui_dateMenu_MessagesIndicator:active {
+    #panel.transparent :hover,
+    #panel.transparent .panel-button:hover,
+    #panel.transparent :hover .system-status-icon,
+    #panel.transparent .app-menu-icon:hover > StIcon,
+    #panel.transparent :hover .popup-menu-arrow,
+    #panel.transparent :hover .power-status.panel-status-indicators-box,
+    #panel.transparent :hover Gjs_ui_dateMenu_MessagesIndicator,
+    #panel.transparent :active,
+    #panel.transparent .panel-button:active,
+    #panel.transparent :active .system-status-icon,
+    #panel.transparent .app-menu-icon:active > StIcon,
+    #panel.transparent :active .popup-menu-arrow,
+    #panel.transparent :active Gjs_ui_dateMenu_MessagesIndicator {
     color: $textIconColorBrightSolid;
   }
   #panel.transparent .panel-button:active {
@@ -187,18 +232,19 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
     @extend %panelActive;
   }
   //nästa är overview
-#panel:overview :hover,
-#panel:overview .panel-button:hover,
-#panel:overview :hover .system-status-icon,
-#panel:overview .app-menu-icon:hover > StIcon,
-#panel:overview :hover .popup-menu-arrow,
-#panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover,
-#panel:overview :active,
-#panel:overview .panel-button:active,
-#panel:overview :active .system-status-icon,
-#panel:overview .app-menu-icon:active > StIcon,
-#panel:overview :active .popup-menu-arrow,
-#panel:overview Gjs_ui_dateMenu_MessagesIndicator:active {
+    #panel:overview :hover,
+    #panel:overview .panel-button:hover,
+    #panel:overview :hover .system-status-icon,
+    #panel:overview .app-menu-icon:hover > StIcon,
+    #panel:overview :hover .popup-menu-arrow,
+    #panel:overview :hover .power-status.panel-status-indicators-box,
+    #panel:overview :hover Gjs_ui_dateMenu_MessagesIndicator,
+    #panel:overview :active,
+    #panel:overview .panel-button:active,
+    #panel:overview :active .system-status-icon,
+    #panel:overview .app-menu-icon:active > StIcon,
+    #panel:overview :active .popup-menu-arrow,
+    #panel:overview :active Gjs_ui_dateMenu_MessagesIndicator {
   //color: darken($textIconDefaultColor, 30%);
   color: $textIconColorBrightStrong;
 }

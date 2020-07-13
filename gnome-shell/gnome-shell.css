@@ -415,6 +415,12 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   box-shadow: inset 0px 0.5px 0.5px rgba(245, 245, 250, 0.25);
   border-radius: 1px; }
 
+#panel,
+#panel.trasparent,
+#panel:overview {
+  font-size: 1.1em;
+  icon-size: 1em; }
+
 #panel .panel-button .app-menu-icon {
   /* program-ikoner, ligger framför namnet i panelen, men dom är inte alltid så vackra... */
   width: 0px;
@@ -427,11 +433,14 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 #panel:overview #panelActivities.panel-button > * {
   icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
   text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  width: 1em;
-  height: 1em;
+  width: 1.2em;
+  height: 1.2em;
+  /* FIXME:
+ 1em ser bra ut på 200% och 100% på SamsungTV... På PBP så är foten på tok för liten. 1.2em känns bra på PBP.
+ */
   background-color: transparent !important;
   background-gradient-direction: none !important;
-  border: 0 none transparent !important;
+  border: 1px solid transparent !important;
   text-shadow: 0 0 transparent !important;
   transition-duration: 0ms !important;
   box-shadow: none !important;
@@ -463,16 +472,40 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 #panel .system-status-icon,
 #panel .app-menu-icon > StIcon,
 #panel .popup-menu-arrow,
-#panel Gjs_ui_dateMenu_MessagesIndicator {
+#panel Gjs_ui_dateMenu_MessagesIndicator,
+#panel:overview,
+#panel:overview .panel-button,
+#panel:overview .system-status-icon,
+#panel:overview .app-menu-icon > StIcon,
+#panel:overview .popup-menu-arrow,
+#panel:overview Gjs_ui_dateMenu_MessagesIndicator {
   font-size: 1em;
+  icon-size: 1em !important;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8) !important;
   icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8) !important; }
 
-#panel .power-status.panel-status-indicators-box {
-  spacing: 0; }
+#panel Gjs_status_keyboard_InputSourceIndicator StLabel {
+  font-size: 1em !important;
+  vertical-align: text-top !important;
+  color: red !important;
+  background-color: blue !important;
+  padding-top: 0em !important; }
 
+#panel .power-status.panel-status-indicators-box {
+  spacing: 0;
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.7); }
+
+#panel .power-status.panel-status-indicators-box StIcon,
+#panel.transparent .power-status.panel-status-indicators-box StIcon,
+#panel:overview .power-status.panel-status-indicators-box StIcon {
+  icon-size: .8em !important; }
+
+/*#panel .power-status.panel-status-indicators-box StIcon {
+     icon-size: .5em !important;
+}*/
 #panel {
   background-color: rgba(0, 0, 0, 0.98);
   border-top: 1px solid transparent;
@@ -526,18 +559,22 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 #panel:overview Gjs_ui_dateMenu_MessagesIndicator {
   color: rgba(255, 255, 255, 0.7); }
 
+#panel:overview .power-status.panel-status-indicators-box {
+  color: rgba(255, 255, 255, 0.5); }
+
 #panel :hover,
 #panel .panel-button:hover,
 #panel :hover .system-status-icon,
 #panel .app-menu-icon:hover > StIcon,
 #panel :hover .popup-menu-arrow,
-#panel Gjs_ui_dateMenu_MessagesIndicator:hover,
+#panel :hover .power-status.panel-status-indicators-box,
+#panel :hover Gjs_ui_dateMenu_MessagesIndicator,
 #panel :active,
 #panel .panel-button:active,
 #panel :active .system-status-icon,
 #panel .app-menu-icon:active > StIcon,
 #panel :active .popup-menu-arrow,
-#panel Gjs_ui_dateMenu_MessagesIndicator:active {
+#panel :active Gjs_ui_dateMenu_MessagesIndicator {
   color: white; }
 
 #panel .panel-button:active StLabel.clock {
@@ -548,13 +585,14 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 #panel.transparent :hover .system-status-icon,
 #panel.transparent .app-menu-icon:hover > StIcon,
 #panel.transparent :hover .popup-menu-arrow,
-#panel.transparent Gjs_ui_dateMenu_MessagesIndicator:hover,
+#panel.transparent :hover .power-status.panel-status-indicators-box,
+#panel.transparent :hover Gjs_ui_dateMenu_MessagesIndicator,
 #panel.transparent :active,
 #panel.transparent .panel-button:active,
 #panel.transparent :active .system-status-icon,
 #panel.transparent .app-menu-icon:active > StIcon,
 #panel.transparent :active .popup-menu-arrow,
-#panel.transparent Gjs_ui_dateMenu_MessagesIndicator:active {
+#panel.transparent :active Gjs_ui_dateMenu_MessagesIndicator {
   color: white; }
 
 #panel:overview :hover,
@@ -562,13 +600,14 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 #panel:overview :hover .system-status-icon,
 #panel:overview .app-menu-icon:hover > StIcon,
 #panel:overview :hover .popup-menu-arrow,
-#panel:overview Gjs_ui_dateMenu_MessagesIndicator:hover,
+#panel:overview :hover .power-status.panel-status-indicators-box,
+#panel:overview :hover Gjs_ui_dateMenu_MessagesIndicator,
 #panel:overview :active,
 #panel:overview .panel-button:active,
 #panel:overview :active .system-status-icon,
 #panel:overview .app-menu-icon:active > StIcon,
 #panel:overview :active .popup-menu-arrow,
-#panel:overview Gjs_ui_dateMenu_MessagesIndicator:active {
+#panel:overview :active Gjs_ui_dateMenu_MessagesIndicator {
   color: rgba(255, 255, 255, 0.9); }
 
 /*#panel:overview #panelActivities.panel-button {
