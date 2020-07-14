@@ -4,7 +4,8 @@
 // Globala inställningar
 
 stage {
-  //font: $fontStack; // gnome-shell följer valt typsnitt för gränssnittet... Lite onödigt att sätta om användaren vill ha något speciellt. Kan bara rekommendera Lato i beskrivningen.
+  font: $fontStack; // gnome-shell följer valt typsnitt för gränssnittet... Lite onödigt att sätta om användaren vill ha något speciellt. Sätter upp Lato som standard, om inte Lato finns så kommer shell att följa gränssnitt
+    //font: 1em;
   color: $primaryColor;
  }
 
