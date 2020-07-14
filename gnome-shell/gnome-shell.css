@@ -487,11 +487,11 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8) !important; }
 
 #panel Gjs_status_keyboard_InputSourceIndicator StLabel {
-  font-size: 1em !important;
   vertical-align: text-top !important;
   color: red !important;
   background-color: blue !important;
-  padding-top: 0em !important; }
+  padding-top: 0em !important;
+  all: initial !important; }
 
 #panel .power-status.panel-status-indicators-box {
   spacing: 0;

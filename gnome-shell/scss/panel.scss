@@ -102,11 +102,14 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
 
 // Tangentbordslayout, texten är by default så liten och nedsänkt...
 #panel Gjs_status_keyboard_InputSourceIndicator StLabel {
-    font-size: 1em !important;
+    //font-size: 1em !important;
     vertical-align: text-top !important;
     color: red !important;
     background-color: blue !important;
     padding-top: 0em !important;
+    all: initial !important; // Det verkar vara något med Lato som sänker ner viss text. NimbusSans vertikalcenterar det som på lato är nedsänkt :-/
+    //line-hight: 2.5em !important;
+    //font: NimbusSans !important;
 }
 #panel .power-status.panel-status-indicators-box {
     spacing: 0;
