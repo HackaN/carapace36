@@ -34,8 +34,8 @@
 #panel:overview #panelActivities.panel-button > * {
 icon-shadow: $textIconDefaultShadow;
 text-shadow: $textIconDefaultShadow;
-width: 1.65em;
-height: 1.65em; //typsnittskalning:  100%
+width: 1.65em; //1.65 100%, 2.245 130%
+height: 1.65em;
 /* FIXME:
  1em ser bra ut på 200% och 100% på SamsungTV... På PBP så är foten på tok för liten. 1.2em känns bra på PBP.
  */
