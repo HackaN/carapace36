@@ -451,16 +451,13 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 background-image: url("common-assets/misc/close.svg");
 }*/
 #panel #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit.95_v2.svg");
-  background-size: contain; }
+  background-image: url("common-assets/panel/GnomeFootVit.95_v2.svg"); }
 
 #panel.transparent #panelActivities.panel-button > * {
-  background-size: contain;
   background-image: url("common-assets/panel/GnomeFootVit.9.svg"); }
 
 #panel:overview #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit.7.svg");
-  background-size: contain; }
+  background-image: url("common-assets/panel/GnomeFootVit.7.svg"); }
 
 #panel :hover #panelActivities.panel-button > * {
   background-image: url("common-assets/panel/GnomeFootVit.svg"); }
