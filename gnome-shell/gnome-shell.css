@@ -24,28 +24,28 @@ Theme by HackaN ( hackan301@gmail.com )
 .button {
   border: 0.5px solid rgba(24, 26, 30, 0.9);
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
   background-color: #343434;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); }
 
 .button:hover {
   border: 0.5px solid rgba(24, 26, 30, 0.9);
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
   background-color: #393939;
   box-shadow: #4c4c4c; }
 
 .popup-sub-menu {
   background-color: rgba(35, 35, 35, 0.75);
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 #calendarArea .events-section-title {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
   font-weight: 700;
   font-size: 1.05em; }
 
@@ -53,7 +53,7 @@ Theme by HackaN ( hackan301@gmail.com )
 #calendarArea .weather-header,
 #calendarArea .message-list-section-title {
   color: rgba(255, 255, 255, 0.5);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8) !important;
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8) !important;
   font-weight: 700;
   font-size: 1.05em; }
 
@@ -172,7 +172,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .app-view-control:last-child:checked, .datemenu-today-button, .datemenu-today-button:hover,
 .datemenu-today-button:focus {
   background-color: rgba(56, 56, 56, 0.95);
-  box-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4);
   border: 0.5px solid rgba(36, 39, 44, 0.9); }
 
 .datemenu-today-button:hover,
@@ -232,7 +232,7 @@ StEntry,
   border: 1px solid rgba(13, 14, 16, 0.9);
   box-shadow: 0 0 2px black;
   color: whitesmoke;
-  text-shadow: 0 1px 2px 2px black; }
+  text-shadow: 0 0.1em 0.2em 0.2em black; }
 
 .search-entry, .app-view-controls, #calendarArea .calendar,
 #calendarArea .world-clocks-button,
@@ -247,15 +247,15 @@ StEntry,
   /*text-shadow: $textIconDefaultShadow;
   icon-shadow: $textIconSolidShadow;
   color: rgba(0,0,0,.6);*/
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
+  text-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4);
+  icon-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4); }
 
 .search-entry:hover,
 .search-entry:hover .search-entry-icon,
 .search-entry:hover .hint-text {
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 .search-entry:focus,
 .search-entry:focus:hover,
@@ -264,8 +264,8 @@ StEntry,
 .search-entry:focus .hint-text,
 .search-entry:focus:hover .hint-text {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 .search-section-content,
 .search-provider-icon {
@@ -298,7 +298,7 @@ StEntry,
   box-shadow: inset 0 0 0.5px 0.5px rgba(255, 255, 255, 0.25);
   font-weight: bold;
   font-size: 1.2em;
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 .switcher-popup {
   box-shadow: none; }
@@ -307,7 +307,7 @@ StEntry,
   border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 9 9 9 9; }
 
 stage {
-  font: 1em Lato, RalewayMedium, NotoSans, Cantarell, Ubuntu, Roboto;
+  font: 1em;
   color: #eee; }
 
 MetaStage {
@@ -374,7 +374,7 @@ StScrollBar {
   -barlevel-active-background-color: white; }
 
 .osd-window StIcon {
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 .switcher-list {
   background: rgba(45, 50, 55, 0);
@@ -418,7 +418,7 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 #panel,
 #panel.trasparent,
 #panel:overview {
-  font-size: 1.1em;
+  font-size: 1em !important;
   icon-size: 1em; }
 
 #panel .panel-button .app-menu-icon {
@@ -431,29 +431,36 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 #panel #panelActivities.panel-button > *,
 #panel #panelActivities.panel-button > *,
 #panel:overview #panelActivities.panel-button > * {
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  width: 1.2em;
-  height: 1.2em;
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
+  width: 1.65em;
+  height: 1.65em;
   /* FIXME:
  1em ser bra ut på 200% och 100% på SamsungTV... På PBP så är foten på tok för liten. 1.2em känns bra på PBP.
  */
   background-color: transparent !important;
   background-gradient-direction: none !important;
-  border: 1px solid transparent !important;
+  border: 0 none transparent !important;
   text-shadow: 0 0 transparent !important;
   transition-duration: 0ms !important;
   box-shadow: none !important;
   color: transparent; }
 
+/*
 #panel #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit.95_v2.svg"); }
+background-image: url("common-assets/misc/close.svg");
+}*/
+#panel #panelActivities.panel-button > * {
+  background-image: url("common-assets/panel/GnomeFootVit.95_v2.svg");
+  background-size: contain; }
 
 #panel.transparent #panelActivities.panel-button > * {
+  background-size: contain;
   background-image: url("common-assets/panel/GnomeFootVit.9.svg"); }
 
 #panel:overview #panelActivities.panel-button > * {
-  background-image: url("common-assets/panel/GnomeFootVit.7.svg"); }
+  background-image: url("common-assets/panel/GnomeFootVit.7.svg");
+  background-size: contain; }
 
 #panel :hover #panelActivities.panel-button > * {
   background-image: url("common-assets/panel/GnomeFootVit.svg"); }
@@ -483,8 +490,8 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   icon-size: 1em !important;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8) !important;
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8) !important; }
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8) !important;
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8) !important; }
 
 #panel Gjs_status_keyboard_InputSourceIndicator StLabel {
   vertical-align: text-top !important;
@@ -765,8 +772,8 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 .popup-menu-content {
   border-radius: 5px;
   color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
+  text-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4);
+  icon-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4); }
 
 .popup-menu-item,
 .popup-menu-item .popup-menu-icon,
@@ -776,8 +783,8 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 .message-media-control > StIcon {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
+  text-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4);
+  icon-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4); }
 
 .message-media-control:insensitive,
 .message-media-control:insensitive > StIcon {
@@ -792,7 +799,7 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 .media-message-cover-icon > StIcon,
 .media-message-cover-icon.fallback,
 .popup-menu-item > StIcon {
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
+  icon-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4); }
 
 .popup-menu-item:checked {
   background-color: rgba(153, 153, 153, 0.3);
@@ -802,7 +809,7 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 .popup-menu-item:checked .system-switch-user-submenu-icon,
 .popup-menu-item:checked .popup-menu-arrow {
   color: rgba(255, 255, 255, 0.7);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 .popup-menu-item:checked:hover,
 .popup-menu-item:checked:hover .popup-menu-icon,
@@ -919,7 +926,7 @@ PopupMenu.PopupMenuSection {
 .datemenu-today-button:insensitive {
   background: transparent;
   color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0); }
 
 /* överblicken */
@@ -1049,8 +1056,8 @@ PopupMenu.PopupMenuSection {
 .switcher-list .item-box,
 .switcher-list .item-box StIcon {
   color: rgba(255, 255, 255, 0.5);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
+  text-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4);
+  icon-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4); }
 
 .icon-grid .app-well-app-running-dot {
   width: 30px;
@@ -1070,8 +1077,8 @@ PopupMenu.PopupMenuSection {
 .switcher-list .item-box:selected StIcon,
 .switcher-list .item-box:outlined StIcon {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 1px 3.5px 2px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.1em 0.35em 0.2em rgba(0, 0, 0, 0.8); }
 
 .icon-grid .app-well-app:hover .app-well-app-running-dot,
 .icon-grid .app-well-app:focus .app-well-app-running-dot,
@@ -1099,7 +1106,7 @@ PopupMenu.PopupMenuSection {
 
 .icon-grid .app-well-app.app-folder:drop .overview-icon StLabel {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   margin-top: .5em; }
 
@@ -1132,8 +1139,8 @@ PopupMenu.PopupMenuSection {
 .app-folder-dialog .app-well-app .overview-icon StLabel,
 .app-folder-dialog .app-well-app .overview-icon StIcon {
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
+  text-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4);
+  icon-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4); }
 
 /*.app-folder-dialog .app-well-app .overview-icon {
    icon-size: 24px !important;
@@ -1197,7 +1204,7 @@ PopupMenu.PopupMenuSection {
 .list-search-result StIcon,
 .list-search-provider-content StIcon,
 .list-search-result .system-action-icon StIcon {
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 .search-provider-icon .list-search-provider-content {
   border-radius: 5px;
@@ -1220,7 +1227,7 @@ PopupMenu.PopupMenuSection {
 .search-provider-icon .list-search-provider-content,
 .search-provider-icon .list-search-provider-content {
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.4); }
+  text-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4); }
 
 .list-search-result:hover .list-search-result-content,
 .list-search-result:focus .list-search-result-content,
@@ -1229,7 +1236,7 @@ PopupMenu.PopupMenuSection {
 .search-provider-icon:focus .list-search-provider-content,
 .search-provider-icon:focus:hover .list-search-provider-content {
   color: white;
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 .list-search-result:hover .list-search-result-description,
 .list-search-result:focus .list-search-result-description,

@@ -18,7 +18,7 @@
 #panel,
 #panel.trasparent,
 #panel:overview {
-    font-size: 1.1em;
+    font-size: 1em !important;
     icon-size: 1em;
 }
 
@@ -34,14 +34,14 @@
 #panel:overview #panelActivities.panel-button > * {
 icon-shadow: $textIconDefaultShadow;
 text-shadow: $textIconDefaultShadow;
-width: 1.2em;
-height: 1.2em;
+width: 1.65em;
+height: 1.65em; //typsnittskalning:  100%
 /* FIXME:
  1em ser bra ut på 200% och 100% på SamsungTV... På PBP så är foten på tok för liten. 1.2em känns bra på PBP.
  */
 background-color: transparent !important;
 background-gradient-direction: none !important;
-border: 1px solid transparent !important; // att behålla kanten gör foten storre och finare
+border: 0 none transparent !important; // att behålla kanten gör foten storre och finare
 text-shadow: 0 0 transparent !important;
 transition-duration: 0ms !important;
 box-shadow: none !important;
@@ -50,17 +50,24 @@ color: transparent;
 //background-image: none;
 }
 // fot default
+/*
+#panel #panelActivities.panel-button > * {
+background-image: url("common-assets/misc/close.svg");
+}*/
+
+
 #panel #panelActivities.panel-button > * {
 background-image: url("common-assets/panel/GnomeFootVit.95_v2.svg");
-//background-size: contain; // contain verkar vara default
+background-size: contain; // contain verkar vara default
 }
+
 #panel.transparent #panelActivities.panel-button > * {
-//background-size: contain;
+background-size: contain;
 background-image: url("common-assets/panel/GnomeFootVit.9.svg");
 }
 #panel:overview #panelActivities.panel-button > * {
 background-image: url("common-assets/panel/GnomeFootVit.7.svg");
-//background-size: contain;
+background-size: contain;
 }
 // fot hover
 #panel :hover #panelActivities.panel-button > * {
