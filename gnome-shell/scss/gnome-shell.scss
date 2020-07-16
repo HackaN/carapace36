@@ -249,6 +249,15 @@ background-gradient-end: rgba(38,38,38,1);
 background-gradient-direction: radial;
 border: .5px solid rgba(78,78,78,1);
 }
+%calendarDayBase {
+  border: .5px solid $textIconColorDarkMedium;
+  background-color: $textIconColorBrightNano;
+  width: 1rem;
+  height: 1rem; // rem = root em, för att stilen på föräldern hade en för liten text. Så vi refererar till globalt värde. Nu ska jag borsta tänderna.
+  border-radius: 1rem;
+  color: $textIconColorBrightMediumStrong;
+  box-shadow: $textIconDefaultShadow;
+}
 %panelActive {
   border: none;
   border-top: none;

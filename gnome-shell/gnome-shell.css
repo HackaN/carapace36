@@ -63,14 +63,14 @@ Theme by HackaN ( hackan301@gmail.com )
   text-shadow: 0 0.5px 0 0 rgba(250, 250, 250, 0.35) !important;
   font-weight: 700; }
 
-.icon-grid .app-well-app:focus .overview-icon, .calendar .calendar-day-base:focus {
+.icon-grid .app-well-app:focus .overview-icon {
   background-gradient-start: rgba(255, 255, 255, 0.5);
   background-gradient-end: rgba(245, 245, 245, 0.1);
   background-gradient-direction: radial;
   border: 0.5px solid rgba(255, 255, 255, 0.1); }
 
 .icon-grid .app-well-app:selected .overview-icon,
-.switcher-list .item-box:selected, .calendar .calendar-day-base:selected {
+.switcher-list .item-box:selected {
   background-gradient-start: rgba(255, 255, 255, 0.5);
   background-gradient-end: rgba(235, 235, 235, 0.1);
   background-gradient-direction: radial;
@@ -89,11 +89,14 @@ Theme by HackaN ( hackan301@gmail.com )
   background-gradient-direction: radial;
   border: 0.5px solid rgba(255, 255, 255, 0); }
 
-.calendar .calendar-day-base:hover {
-  background-gradient-start: #2b2b2b;
-  background-gradient-end: #262626;
-  background-gradient-direction: radial;
-  border: 0.5px solid #4e4e4e; }
+.calendar .calendar-day-base {
+  border: 0.5px solid rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 #panel:overview .panel-button:active,
 #panel:overview #panelActivities.panel-button,
@@ -161,15 +164,21 @@ StScrollBar StBin#trough {
 
 .page-indicator .page-indicator-icon:focus, .page-indicator .page-indicator-icon, .icon-grid .app-well-app:hover .app-well-app-running-dot,
 .icon-grid .app-well-app:focus .app-well-app-running-dot,
-.icon-grid .app-well-app:selected .app-well-app-running-dot, #overview StScrollBar StButton#vhandle, StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active, StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover, .datemenu-today-button, StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
+.icon-grid .app-well-app:selected .app-well-app-running-dot, #overview StScrollBar StButton#vhandle, StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active, StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover, .datemenu-today-button,
+.calendar .calendar-today, .datemenu-today-button:hover,
+.datemenu-today-button:focus,
+.calendar .calendar-today:hover, StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   background-color: gainsboro;
   box-shadow: outset 0 0 4px 1px rgba(0, 0, 0, 0.8);
   border: 0.5px solid rgba(0, 0, 0, 0); }
 
-StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
+.datemenu-today-button:hover,
+.datemenu-today-button:focus,
+.calendar .calendar-today:hover, StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   background-color: #c3c3c3; }
 
-.datemenu-today-button {
+.datemenu-today-button,
+.calendar .calendar-today {
   background-color: #5d5d5d;
   box-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
@@ -180,15 +189,10 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: #f6f6f6; }
 
 .app-view-control:first-child:checked,
-.app-view-control:last-child:checked, .datemenu-today-button:hover,
-.datemenu-today-button:focus {
+.app-view-control:last-child:checked {
   background-color: rgba(56, 56, 56, 0.95);
   box-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4);
   border: 0.5px solid rgba(36, 39, 44, 0.9); }
-
-.datemenu-today-button:hover,
-.datemenu-today-button:focus {
-  background-color: rgba(69, 69, 69, 0.95); }
 
 .search-provider-icon .list-search-provider-content, .list-search-result, .app-view-control:first-child,
 .app-view-control:last-child, .icon-grid .app-well-app.app-folder:drop > .overview-icon StBoxLayout, .icon-grid .app-well-app.app-folder > .overview-icon, .osd-window .level, .search-section-content,
@@ -928,13 +932,19 @@ PopupMenu.PopupMenuSection {
 #calendarArea .message-list-placeholder StLabel {
   font-size: 2.5em; }
 
-.datemenu-today-button {
+.datemenu-today-button,
+.calendar .calendar-today {
   /*background: $textIconColorBrightMedium;
   color: $textIconColorDarkMedium;
   text-shadow: $textIconDefaultShadow;
   box-shadow: $buttonShadow;*/
   color: rgba(0, 0, 0, 0.8);
   text-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5); }
+
+.datemenu-today-button:hover,
+.datemenu-today-button:focus,
+.calendar .calendar-today:hover {
+  color: black !important; }
 
 .datemenu-today-button:insensitive {
   background: transparent;
@@ -954,8 +964,18 @@ PopupMenu.PopupMenuSection {
   color: rgba(255, 255, 255, 0.7); }
 
 .calendar .calendar-day-base {
-  width: 1rem;
-  height: 1rem; }
+  font-weight: 400; }
+
+.calendar .calendar-day-base:hover,
+.calendar .calendar-day-base:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600; }
+
+.calendar .calendar-day-base:selected {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 600; }
 
 /* överblicken */
 #overview {

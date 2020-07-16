@@ -244,7 +244,8 @@ PopupMenu.PopupMenuSection {
   font-size: 2.5em;
 }
 
-.datemenu-today-button {
+.datemenu-today-button,
+.calendar .calendar-today {
   /*background: $textIconColorBrightMedium;
   color: $textIconColorDarkMedium;
   text-shadow: $textIconDefaultShadow;
@@ -254,9 +255,12 @@ PopupMenu.PopupMenuSection {
   text-shadow: $textIconLessShine;
 }
 .datemenu-today-button:hover,
-.datemenu-today-button:focus {
+.datemenu-today-button:focus,
+.calendar .calendar-today:hover {
   //background: rgb(190,190,190);
-  @extend %pluggedDarkHover;
+  //@extend %pluggedDarkHover;
+  @extend %pluggedDimmed;
+  color: $textIconColorDarkSolid !important;
 }
 .datemenu-today-button:active {
   //background: rgb(175,175,175);
@@ -288,15 +292,18 @@ PopupMenu.PopupMenuSection {
 
 .calendar .calendar-day-base {
     // samtliga dagar
-    width: 1rem;
-    height: 1rem; // rem = root em, för att stilen på föräldern hade en för liten text. Så vi refererar till globalt värde. Nu ska jag borsta tänderna.
+    @extend %calendarDayBase;
+    font-weight: 400;
 }
-.calendar .calendar-day-base:hover {
-    @extend %flashLightPlate;
-}
+
+.calendar .calendar-day-base:hover,
 .calendar .calendar-day-base:focus {
-    @extend %flashLightFocus;
+    background-color: $textIconColorBrightWeak;
+    color: $textIconColorDarkMediumStrong;
+    font-weight: 600;
 }
 .calendar .calendar-day-base:selected {
-    @extend %flashLightSelected;
+  background-color: $textIconColorBrightMediumStrong;
+  color: $textIconColorDarkStrong;
+  font-weight: 600;
 }
