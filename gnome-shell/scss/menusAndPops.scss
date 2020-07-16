@@ -100,7 +100,7 @@
      -arrow-background-color: rgba(45,50,55,95);
      -arrow-border-width: 4.5px;
      -arrow-border-color: rgba(35,40,45,.45);
-     -arrow-base: 24px;
+     -arrow-base: 24px;Ska försöka hacka docken också
      -arrow-rise: 8px;
      -arrow-box-shadow: 0 0 10px rgba(250,0,0,1) !important;*/
      -arrow-border-radius: 10px;
@@ -167,7 +167,8 @@ PopupMenu.PopupMenuSection {
 }
 #calendarArea .world-clocks-header,
 #calendarArea .weather-header,
-#calendarArea .message-list-section-title {
+#calendarArea .message-list-section-title,
+#calendarArea .calendar .calendar-month-label{
   @extend %brightTitleWeak;
 }
 #calendarArea .events-section-title {
@@ -239,7 +240,7 @@ PopupMenu.PopupMenuSection {
   height: 0px; // den går inte att ändra färg på, så gömmer den
  }
 #calendarArea .message-list-placeholder StLabel {
-  @extend %InvertedTitleWeak;
+  @extend %InvertedTitleMedium;
   font-size: 2.5em;
 }
 
@@ -248,7 +249,9 @@ PopupMenu.PopupMenuSection {
   color: $textIconColorDarkMedium;
   text-shadow: $textIconDefaultShadow;
   box-shadow: $buttonShadow;*/
-  @extend %pluggedDark;
+  @extend %pluggedDimmedMore;
+  color: $textIconColorDarkMediumStrong;
+  text-shadow: $textIconLessShine;
 }
 .datemenu-today-button:hover,
 .datemenu-today-button:focus {
@@ -264,4 +267,36 @@ PopupMenu.PopupMenuSection {
   color: $textIconColorBrightMediumStrong;
   text-shadow: $textIconDefaultShadow;
   box-shadow: 0 0 2px rgba(0,0,0,0);
+}
+.datemenu-today-button .day-label {
+    font-size: 1.5em;
+    font-weight: 400;
+    //color: $textIconColorBrightMedium;
+}
+  .datemenu-today-button .date-label {
+    font-size: 1.8em;
+    font-weight: 600;
+    //color: $textIconColorBrightMedium;
+    //text-shadow: $textIconDefaultShadow;
+  }
+  .datemenu-today-button:insensitive .date-label {
+      color: $textIconColorBrightMedium;
+}
+.calendar .calendar-month-label {
+    //@extend ;
+}
+
+.calendar .calendar-day-base {
+    // samtliga dagar
+    width: 1rem;
+    height: 1rem; // rem = root em, för att stilen på föräldern hade en för liten text. Så vi refererar till globalt värde. Nu ska jag borsta tänderna.
+}
+.calendar .calendar-day-base:hover {
+    @extend %flashLightPlate;
+}
+.calendar .calendar-day-base:focus {
+    @extend %flashLightFocus;
+}
+.calendar .calendar-day-base:selected {
+    @extend %flashLightSelected;
 }

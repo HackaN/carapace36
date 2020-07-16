@@ -322,12 +322,17 @@ border: .5px solid rgba(78,78,78,1);
 }
 %plugged {
   background-color: $backgroundAdwaitaBright;
-  box-shadow:outset 0 0 4px 1px rgba(0,0,0,.8);
+  box-shadow: outset 0 0 4px 1px rgba(0,0,0,.8);
   border: .5px solid rgba(0,0,0,.0);
 }
 %pluggedDimmed {
   @extend %plugged;
   background-color: darken($backgroundAdwaitaBright, 10%);
+}
+%pluggedDimmedMore {
+    @extend %plugged;
+    background-color: darken($backgroundAdwaitaBright, 50%);
+    box-shadow: $textIconDefaultShadow;
 }
 %pluggedHover {
   @extend %plugged;

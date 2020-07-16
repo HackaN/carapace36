@@ -37,7 +37,7 @@ text-shadow: $textIconDefaultShadow;
 width: 1.65em; //1.65 100%, 2.245 130%
 height: 1.65em;
 /* FIXME:
- 1em ser bra ut på 200% och 100% på SamsungTV... På PBP så är foten på tok för liten. 1.2em känns bra på PBP.
+ Har skalat upp fötterna i Inkscape från 32px till 48px. Det verkar gå bättre för shell att skala ner fötterna vid behov än att skala upp dom.
  */
 background-color: transparent !important;
 background-gradient-direction: none !important;
@@ -57,27 +57,27 @@ background-image: url("common-assets/misc/close.svg");
 
 
 #panel #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit.95_v2_48px.svg");
+background-image: url("common-assets/panel/GnomeFootVit.95_48px.svg");
 background-size: contain; // contain verkar vara default
 }
 
 #panel.transparent #panelActivities.panel-button > * {
 background-size: contain;
-background-image: url("common-assets/panel/GnomeFootVit.9.svg");
+background-image: url("common-assets/panel/GnomeFootVit.9_48px.svg");
 }
 #panel:overview #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit.7.svg");
+background-image: url("common-assets/panel/GnomeFootVit.7_48px.svg");
 background-size: contain;
 }
 // fot hover
 #panel :hover #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit.svg");
+background-image: url("common-assets/panel/GnomeFootVit_48px.svg");
 }
 #panel.transparent :hover #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit.svg");
+background-image: url("common-assets/panel/GnomeFootVit_48px.svg");
 }
 #panel:overview :hover #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit.95.svg");
+background-image: url("common-assets/panel/GnomeFootVit.95_48px.svg");
 }
 #panel .popup-menu-arrow {
   width: 0; }
@@ -110,11 +110,12 @@ background-image: url("common-assets/panel/GnomeFootVit.95.svg");
 // Tangentbordslayout, texten är by default så liten och nedsänkt...
 #panel Gjs_status_keyboard_InputSourceIndicator StLabel {
     //font-size: 1em !important;
-    vertical-align: text-top !important;
+    /*vertical-align: text-top !important;
     color: red !important;
     background-color: blue !important;
     padding-top: 0em !important;
-    all: initial !important; // Det verkar vara något med Lato som sänker ner viss text. NimbusSans vertikalcenterar det som på lato är nedsänkt :-/
+    all: initial !important; */
+    // Det verkar vara något med Lato som sänker ner viss text. NimbusSans vertikalcenterar det som på lato är nedsänkt :-/
     //line-hight: 2.5em !important;
     //font: NimbusSans !important;
 }
