@@ -59,11 +59,14 @@ background-image: url("common-assets/misc/close.svg");
 #panel #panelActivities.panel-button > * {
 background-image: url("common-assets/panel/GnomeFootVit.95_48px.svg");
 background-size: contain; // contain verkar vara default
+filter:opacity(30%) !important;
 }
 
 #panel.transparent #panelActivities.panel-button > * {
 background-size: contain;
 background-image: url("common-assets/panel/GnomeFootVit.9_48px.svg");
+//filter: blur(10px);
+filter:opacity(30%);
 }
 #panel:overview #panelActivities.panel-button > * {
 background-image: url("common-assets/panel/GnomeFootVit.7_48px.svg");

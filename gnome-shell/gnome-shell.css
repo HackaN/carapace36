@@ -467,11 +467,13 @@ background-image: url("common-assets/misc/close.svg");
 }*/
 #panel #panelActivities.panel-button > * {
   background-image: url("common-assets/panel/GnomeFootVit.95_48px.svg");
-  background-size: contain; }
+  background-size: contain;
+  filter: opacity(30%) !important; }
 
 #panel.transparent #panelActivities.panel-button > * {
   background-size: contain;
-  background-image: url("common-assets/panel/GnomeFootVit.9_48px.svg"); }
+  background-image: url("common-assets/panel/GnomeFootVit.9_48px.svg");
+  filter: opacity(30%); }
 
 #panel:overview #panelActivities.panel-button > * {
   background-image: url("common-assets/panel/GnomeFootVit.7_48px.svg");
@@ -966,9 +968,13 @@ PopupMenu.PopupMenuSection {
 .calendar .calendar-day-base {
   font-weight: 400; }
 
-.calendar .calendar-day-base:hover,
-.calendar .calendar-day-base:focus {
+.calendar .calendar-day-base:hover {
   background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600; }
+
+.calendar .calendar-day-base:focus {
+  background-color: rgba(255, 255, 255, 0.3);
   color: rgba(0, 0, 0, 0.8);
   font-weight: 600; }
 
@@ -983,6 +989,7 @@ PopupMenu.PopupMenuSection {
 .calendar-day-with-events:hover,
 .calendar-day-with-events:selected,
 .calendar-day-with-events:checked,
+.calendar-day-with-events:focus,
 .calendar-today.calendar-day-with-events {
   background-image: url("common-assets/misc/calendarDayWithEvents_Inverted.svg"); }
 

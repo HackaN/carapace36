@@ -296,11 +296,15 @@ PopupMenu.PopupMenuSection {
     font-weight: 400;
 }
 
-.calendar .calendar-day-base:hover,
-.calendar .calendar-day-base:focus {
+.calendar .calendar-day-base:hover {
     background-color: $textIconColorBrightWeak;
     color: $textIconColorDarkMediumStrong;
     font-weight: 600;
+}
+.calendar .calendar-day-base:focus {
+  background-color: $textIconColorBrightSub;
+  color: $textIconColorDarkMediumStrong;
+  font-weight: 600;
 }
 .calendar .calendar-day-base:selected {
   background-color: $textIconColorBrightMediumStrong;
@@ -314,6 +318,7 @@ PopupMenu.PopupMenuSection {
 .calendar-day-with-events:hover,
 .calendar-day-with-events:selected,
 .calendar-day-with-events:checked,
+.calendar-day-with-events:focus,
 .calendar-today.calendar-day-with-events {
   background-image: url("common-assets/misc/calendarDayWithEvents_Inverted.svg");
 }
