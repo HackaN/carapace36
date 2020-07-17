@@ -977,6 +977,15 @@ PopupMenu.PopupMenuSection {
   color: rgba(0, 0, 0, 0.9);
   font-weight: 600; }
 
+.calendar-day-with-events {
+  background-image: url("common-assets/misc/calendarDayWithEvents_v2.svg"); }
+
+.calendar-day-with-events:hover,
+.calendar-day-with-events:selected,
+.calendar-day-with-events:checked,
+.calendar-today.calendar-day-with-events {
+  background-image: url("common-assets/misc/calendarDayWithEvents_Inverted.svg"); }
+
 /* överblicken */
 #overview {
   /*
