@@ -322,3 +322,7 @@ PopupMenu.PopupMenuSection {
 .calendar-today.calendar-day-with-events {
   background-image: url("common-assets/misc/calendarDayWithEvents_Inverted.svg");
 }
+.calendar .calendar-week-number {
+    background-color: lighten($adwaitaDark1AlmostSolid95, 2%);
+    color: $textIconColorBrightWeak;
+}

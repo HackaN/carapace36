@@ -993,6 +993,10 @@ PopupMenu.PopupMenuSection {
 .calendar-today.calendar-day-with-events {
   background-image: url("common-assets/misc/calendarDayWithEvents_Inverted.svg"); }
 
+.calendar .calendar-week-number {
+  background-color: rgba(43, 43, 43, 0.98);
+  color: rgba(255, 255, 255, 0.5); }
+
 /* överblicken */
 #overview {
   /*
