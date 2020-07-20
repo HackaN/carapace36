@@ -200,16 +200,12 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .list-search-result:focus,
 .list-search-result:focus:hover,
 .list-search-result:selected, StEntry,
-.lock-screen-entry, .search-entry, .app-view-controls, #calendarArea .calendar,
-#calendarArea .world-clocks-button,
-#calendarArea .weather-button {
+.lock-screen-entry, .search-entry, .app-view-controls {
   box-shadow: inset 0.5px 0 1px 0.5px rgba(0, 0, 0, 0);
   border: 0.5px solid rgba(240, 240, 240, 0);
   background-color: rgba(25, 30, 35, 0); }
 
-.search-entry, .app-view-controls, #calendarArea .calendar,
-#calendarArea .world-clocks-button,
-#calendarArea .weather-button {
+.search-entry, .app-view-controls {
   border: 0.5px solid rgba(255, 255, 255, 0.05);
   box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.25); }
 
@@ -222,6 +218,7 @@ StEntry,
 #calendarArea .calendar,
 #calendarArea .world-clocks-button,
 #calendarArea .weather-button {
+  border: 0.05em solid rgba(220, 220, 220, 0.05);
   background-color: rgba(38, 38, 38, 0.75);
   box-shadow: inset 0 0 0.01em 0.05em rgba(20, 21, 24, 0.9) !important; }
 
@@ -250,9 +247,7 @@ StEntry,
   color: whitesmoke;
   text-shadow: 0 0.1em 0.2em 0.2em black; }
 
-.search-entry, .app-view-controls, #calendarArea .calendar,
-#calendarArea .world-clocks-button,
-#calendarArea .weather-button {
+.search-entry, .app-view-controls {
   border: 0.5px solid rgba(255, 255, 255, 0.05);
   box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.25); }
 
