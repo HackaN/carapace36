@@ -3,10 +3,9 @@
 
 .icon-grid,
 .icon-grid .overview-icon,
-.app-folder-dialog .icon-grid,
 .app-folder-popup,
 .app-folder-popup-bin,
-.app-folder-dialog ,
+.app-folder-dialog,
 .app-folder-dialog .icon-grid,
 .app-folder-dialog .icon-grid .overview-icon {
   icon-size: 5em;
@@ -41,9 +40,12 @@
    color: $textIconColorBrightWeak;
    text-shadow: $textIconMediumShadow;
    //font-size: 1em;
+   font-weight: 500;
    icon-shadow: $textIconMediumShadow;
  }
-.icon-grid .app-well-app-running-dot {
+ 
+.icon-grid .app-well-app-running-dot,
+.app-folder-dialog .app-well-app-running-dot {
   width: 30px;
   height: 3px;
   margin-bottom: 5px; /* kan ej vara negativ, försvinner då*/
@@ -67,7 +69,7 @@
  .switcher-list .item-box:outlined StIcon {
    color: $textIconColorBrightStrong;
    //font-size: 1.1em;
-   //font-weight: bold;
+   //font-weight: 600;
    text-shadow: $textIconDefaultShadow;
    icon-shadow: $textIconDefaultShadowBig;
  }

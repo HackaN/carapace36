@@ -10,10 +10,10 @@ stage {
  }
 
 MetaStage {
-  border: 3px red solid !important;
+  //border: 3px red solid !important;
 }
 #uiGroup Gjs_ui_layout_UiActor {
-  border: 3px red solid !important;
+  //border: 3px red solid !important;
 }
 
 .button {
@@ -97,7 +97,14 @@ StScrollBar {
 
 // ::: OSD fönster :::
 
-.osd-window {
+ /* {
+    background-color: red !important;
+}*/
+// FIXME: lägg till meddelanden och lösenordsrutor här
+.osd-window,
+.notification-banner,
+.modal-dialog,
+.nm-dialog {
   /*box-shadow: $boxShadowMassive;
   border: .5px solid darken($textIconColorBrightSub, 40%);
   background-color: darken($adwaitaDark1AlmostSolid, 5%);*/
@@ -113,8 +120,8 @@ StScrollBar {
 .osd-window .level {
   //@extend %sunkinglassShallowContrast;
   @extend %transparentglass;
-  border-radius: 3px;
-  -barlevel-height: 3px;
+  border-radius: 4px;
+  -barlevel-height: 4px;
   -barlevel-background-color: $textIconColorBrightSub; //snarlik till oifylld ikon
   -barlevel-active-background-color: $textIconColorBrightSolid;
 }
@@ -134,7 +141,7 @@ StScrollBar {
   background: rgba(45,50,55,0);
   border: 1px solid rgba(230,220,0,0);
   border-radius: 3px;
-  box-shadow:inset 0 0 0 rgba(0,0,0,0);
+  box-shadow: inset 0 0 0 rgba(0,0,0,0);
   /*ställer padding till 6px så att alla ikoner får plats utan att pilarna försvinner */
   padding: 6px;
 }

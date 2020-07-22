@@ -4,8 +4,13 @@
   color: rgba(255,255,255,1);
   font-size: 1.2em;
   padding: .3em .3em 0em 0em;
-  background: none;
-  @extend %dashSVG3;
+  //background: transparent;
+  background-color: transparent;
+  //background-image: none;
+  border-color: transparent;
+  //border-image: none;
+  //@extend %dashSVG3
+  @extend %dashSVG3_scalable;
   //@extend %dashPureCode;
 }
 #dashtodockBox {
@@ -60,13 +65,13 @@
 }
 #dash .focused.app-well-app .overview-icon {
   //box-shadow: inset 0 -.8em 0 0 darken($textIconColorBrightNano, 5%); // ljus mörk ram
-  box-shadow: inset 0 -.8em 0 0 darken($textIconColorBrightNano, 5%);
+  //box-shadow: inset 0 -.8em 0 0 darken($textIconColorBrightNano, 5%);
 }
 #dash .focused.app-well-app {
   //@extend %flashLightFocus;
   //box-shadow: inset 0 -1em 0 0 $textIconColorDarkNano; // ljus mörk ram
 
-  box-shadow: inset 0 -.95em 0 0 $textIconColorDarkPico;
+  //box-shadow: inset 0 -.95em 0 0 $textIconColorDarkPico;
   //box-shadow: inset 0 -.95em 0 0 $adwaitaDark1;
 
   //padding: 1px;
@@ -86,7 +91,9 @@
 #dash .default .app-well-app-running-dot {
   /*width: 32px;
   height: 2px;*/
-  border-radius: 3px;
+  border-radius: .2em; // 3px
+  width: .38em; // 6px
+  height: .18em; // 2.5px
   background-color: lighten($adwaitaDark2AlmostSolid, 5%);
   //margin-bottom: 0px; /*sänker indikatorn iom att vi gjorde lådorna mindre*/
   /*background: red;
@@ -94,90 +101,74 @@
   //@extend %sunkingDock;
 }
 #dash .running1 .app-well-app-running-dot {
-  width: 6px;
-  height: 2.5px;
   background: $runningDotUnfocused;
 }
 #dash .running1:hover .app-well-app-running-dot {
-  background: $runningDotUnfocused;
-  width: 46px; // 46 istället för 48 för att undvika flyttningar när docken är proppfull
+  //background: $runningDotUnfocused;
+  width: .38em*7.5; // 46px (46/6=7.65, så .38*7.5=2.85) 46 istället för 48 för att undvika flyttningar när docken är proppfull
 }
 #dash .focused.running1 .app-well-app-running-dot {
-  width: 6px;
-  height: 2.5px;
   background: $runningDotFocused;
 }
 #dash .focused.running1:hover .app-well-app-running-dot {
   background: $runningDotFocused;
-  width: 46px;
 }
 
 
 #dash .running2 .app-well-app-running-dot {
-  width: 12px;
-  height: 2.5px;
+  width: .38em*2;
   background: $runningDotUnfocused;
 }
 #dash .running2:hover .app-well-app-running-dot {
   background: $runningDotUnfocused;
-  width: 46px;
+  width: .38em*7.5;
 }
 #dash .focused.running2 .app-well-app-running-dot {
-  width: 12px;
-  height: 2.5px;
   background: $runningDotFocused;
 }
 #dash .focused.running2:hover .app-well-app-running-dot {
   background: $runningDotFocused;
-  width: 46px;
 }
 
 #dash .running3 .app-well-app-running-dot {
-  width: 24px;
-  height: 2.5px;
+  width: .38em*3;
   background: $runningDotUnfocused;
 }
 #dash .running3:hover .app-well-app-running-dot {
   background: $runningDotUnfocused;
-  width: 46px;
+  width: .38em*7.5;
 }
 #dash .focused.running3 .app-well-app-running-dot {
-  width: 24px;
-  height: 2.5px;
   background: $runningDotFocused;
 }
 #dash .focused.running3:hover .app-well-app-running-dot {
   background: $runningDotFocused;
-  width: 46px;
 }
 
 #dash .running4 .app-well-app-running-dot {
-  width: 32px;
-  height: 2.5px;
+  width: .38em*4;
   background: $runningDotUnfocused;
 }
 #dash .running4:hover .app-well-app-running-dot {
   background: $runningDotUnfocused;
-  width: 46px;
+  width: .38em*7.5;
 }
-#dash .focuxsed.running4 .app-well-app-running-dot {
-  width: 32px;
-  height: 2.5px;
+#dash .focused.running4 .app-well-app-running-dot {
   background: $runningDotFocused;
 }
 #dash .focused.running4:hover .app-well-app-running-dot {
   background: $runningDotFocused;
-  width: 46px;
 }
 
 .dash-label {
   @extend %dashLabelAdwaitaDark;
-  -x-offset: -3px; // :-)
+  -x-offset: -.2em; // 3px :-)
 }
 
 #dash .show-apps {
   @extend %gradientFullShadow;
   //border: 1px solid green;
+  margin-right: .8em;
 }
 #dash .show-apps .overview-icon {
   // lådan för showapps

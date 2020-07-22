@@ -121,7 +121,8 @@ Theme by HackaN ( hackan301@gmail.com )
 
 .search-entry:focus,
 .search-entry:focus:hover, .icon-grid .app-well-app:drop .overview-icon,
-.icon-grid .app-well-app.app-folder:drop > .overview-icon, .icon-grid .app-well-app.app-folder > .overview-icon StBoxLayout, .icon-grid .app-well-app-running-dot, .workspace-thumbnails .placeholder, .workspace-thumbnails, .datemenu-today-button:active, #calendarArea .message:focus,
+.icon-grid .app-well-app.app-folder:drop > .overview-icon, .icon-grid .app-well-app.app-folder > .overview-icon StBoxLayout, .icon-grid .app-well-app-running-dot,
+.app-folder-dialog .app-well-app-running-dot, .workspace-thumbnails .placeholder, .workspace-thumbnails, .datemenu-today-button:active, #calendarArea .message:focus,
 #calendarArea .message:active,
 #calendarArea .world-clocks-button:focus,
 #calendarArea .world-clocks-button:active,
@@ -287,7 +288,10 @@ StEntry,
   box-shadow: none;
   border: none; }
 
-.app-folder-dialog, .osd-window {
+.app-folder-dialog, .osd-window,
+.notification-banner,
+.modal-dialog,
+.nm-dialog {
   background-color: rgba(38, 38, 38, 0.98);
   border: 0.5px solid rgba(13, 14, 16, 0.9);
   border-radius: 10px;
@@ -315,17 +319,11 @@ StEntry,
   box-shadow: none; }
 
 #dash {
-  border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 9 9 9 9; }
+  border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 30 30 9 9; }
 
 stage {
   font: 1em;
   color: #eee; }
-
-MetaStage {
-  border: 3px red solid !important; }
-
-#uiGroup Gjs_ui_layout_UiActor {
-  border: 3px red solid !important; }
 
 /* Buttons */
 /* Check Boxes */
@@ -373,14 +371,20 @@ StScrollBar {
       background-color: green; }
     StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
       background-color: blue; }*/
-.osd-window {
+/* {
+    background-color: red !important;
+}*/
+.osd-window,
+.notification-banner,
+.modal-dialog,
+.nm-dialog {
   /*box-shadow: $boxShadowMassive;
   border: .5px solid darken($textIconColorBrightSub, 40%);
   background-color: darken($adwaitaDark1AlmostSolid, 5%);*/ }
 
 .osd-window .level {
-  border-radius: 3px;
-  -barlevel-height: 3px;
+  border-radius: 4px;
+  -barlevel-height: 4px;
   -barlevel-background-color: rgba(255, 255, 255, 0.3);
   -barlevel-active-background-color: white; }
 
@@ -646,7 +650,8 @@ background-image: url("common-assets/misc/close.svg");
   color: white;
   font-size: 1.2em;
   padding: .3em .3em 0em 0em;
-  background: none; }
+  background-color: transparent;
+  border-color: transparent; }
 
 #dashtodockDashScrollview {
   padding-left: .3em; }
@@ -672,11 +677,7 @@ background-image: url("common-assets/misc/close.svg");
 #dash .app-well-app:active {
   box-shadow: inset 0 -0.95em 0 0 rgba(20, 20, 20, 0.4); }
 
-#dash .focused.app-well-app .overview-icon {
-  box-shadow: inset 0 -0.8em 0 0 rgba(242, 242, 242, 0.1); }
-
 #dash .focused.app-well-app {
-  box-shadow: inset 0 -0.95em 0 0 rgba(0, 0, 0, 0.05);
   /*background-gradient-start: $overviewGlassStart; //.5
   background-gradient-end: $overviewGlassEnd;
   background-gradient-direction: radial;*/ }
@@ -687,85 +688,72 @@ background-image: url("common-assets/misc/close.svg");
 #dash .default .app-well-app-running-dot {
   /*width: 32px;
   height: 2px;*/
-  border-radius: 3px;
+  border-radius: .2em;
+  width: .38em;
+  height: .18em;
   background-color: rgba(56, 56, 56, 0.95);
   /*background: red;
   box-shadow: 0 0 1px 1px rgba(0,0,0,.8);*/ }
 
 #dash .running1 .app-well-app-running-dot {
-  width: 6px;
-  height: 2.5px;
   background: rgba(180, 180, 180, 0.7); }
 
 #dash .running1:hover .app-well-app-running-dot {
-  background: rgba(180, 180, 180, 0.7);
-  width: 46px; }
+  width: 2.85em; }
 
 #dash .focused.running1 .app-well-app-running-dot {
-  width: 6px;
-  height: 2.5px;
   background: whitesmoke; }
 
 #dash .focused.running1:hover .app-well-app-running-dot {
-  background: whitesmoke;
-  width: 46px; }
+  background: whitesmoke; }
 
 #dash .running2 .app-well-app-running-dot {
-  width: 12px;
-  height: 2.5px;
+  width: 0.76em;
   background: rgba(180, 180, 180, 0.7); }
 
 #dash .running2:hover .app-well-app-running-dot {
   background: rgba(180, 180, 180, 0.7);
-  width: 46px; }
+  width: 2.85em; }
 
 #dash .focused.running2 .app-well-app-running-dot {
-  width: 12px;
-  height: 2.5px;
   background: whitesmoke; }
 
 #dash .focused.running2:hover .app-well-app-running-dot {
-  background: whitesmoke;
-  width: 46px; }
+  background: whitesmoke; }
 
 #dash .running3 .app-well-app-running-dot {
-  width: 24px;
-  height: 2.5px;
+  width: 1.14em;
   background: rgba(180, 180, 180, 0.7); }
 
 #dash .running3:hover .app-well-app-running-dot {
   background: rgba(180, 180, 180, 0.7);
-  width: 46px; }
+  width: 2.85em; }
 
 #dash .focused.running3 .app-well-app-running-dot {
-  width: 24px;
-  height: 2.5px;
   background: whitesmoke; }
 
 #dash .focused.running3:hover .app-well-app-running-dot {
-  background: whitesmoke;
-  width: 46px; }
+  background: whitesmoke; }
 
 #dash .running4 .app-well-app-running-dot {
-  width: 32px;
-  height: 2.5px;
+  width: 1.52em;
   background: rgba(180, 180, 180, 0.7); }
 
 #dash .running4:hover .app-well-app-running-dot {
   background: rgba(180, 180, 180, 0.7);
-  width: 46px; }
+  width: 2.85em; }
 
-#dash .focuxsed.running4 .app-well-app-running-dot {
-  width: 32px;
-  height: 2.5px;
+#dash .focused.running4 .app-well-app-running-dot {
   background: whitesmoke; }
 
 #dash .focused.running4:hover .app-well-app-running-dot {
-  background: whitesmoke;
-  width: 46px; }
+  background: whitesmoke; }
 
 .dash-label {
-  -x-offset: -3px; }
+  -x-offset: -.2em; }
+
+#dash .show-apps {
+  margin-right: .8em; }
 
 #dash .show-apps .overview-icon {
   background-color: rgba(0, 0, 0, 0) !important; }
@@ -1090,7 +1078,6 @@ PopupMenu.PopupMenuSection {
 
 .icon-grid,
 .icon-grid .overview-icon,
-.app-folder-dialog .icon-grid,
 .app-folder-popup,
 .app-folder-popup-bin,
 .app-folder-dialog,
@@ -1121,9 +1108,11 @@ PopupMenu.PopupMenuSection {
 .switcher-list .item-box StIcon {
   color: rgba(255, 255, 255, 0.5);
   text-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4);
+  font-weight: 500;
   icon-shadow: 0 0.1em 0.25em 0.1em rgba(0, 0, 0, 0.4); }
 
-.icon-grid .app-well-app-running-dot {
+.icon-grid .app-well-app-running-dot,
+.app-folder-dialog .app-well-app-running-dot {
   width: 30px;
   height: 3px;
   margin-bottom: 5px;

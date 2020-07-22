@@ -697,7 +697,8 @@ background-color: darken($adwaitaDark1AlmostSolid, 5%);
     border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 9 9 9 9;
 }
 %dashSVG3_scalable {
-    border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 9 9 9 9;
+    border-image: url("common-assets/dash/CarapaceDockPantheonAdwaita_v4_1px_.5pxBorder.svg") 30 30 9 9;
+    // 30 slice:ar tight:are, motverkar cp-kanter vid fractional skalning
 }
 // 3 (3D)
 %dashSVG4 {
@@ -705,14 +706,16 @@ background-color: darken($adwaitaDark1AlmostSolid, 5%);
 }
 // Pure Code
 %dashBoxPureCode {
-  padding: 1px 1px 0px 1px; //bara sidorna
-  border: 0px none transparent;
-  background-clip: padding-box;
+  //padding: 3px 3px 0px 3px; //bara sidorna
+  //border: 0px none transparent;
+  //background-clip: padding-box;
+  box-shadow: inset 0 -2em 0 0 red;
+  background-color: red;
 }
 %dashPureCode {
   background-color: rgba(35,45,50,.0);
   border: 0px none transparent;
-  box-shadow: inset 0 -2em 0 0 rgba(35,45,50,1);
+  //box-shadow: inset 0 -1.95em 0 0 $adwaitaDark2AlmostSolid95;
 }
 
 
