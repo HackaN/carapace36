@@ -16,22 +16,83 @@ MetaStage {
   //border: 3px red solid !important;
 }
 
-.button {
+.button,
+.modal-dialog-button,
+.modal-dialog-linked-button,
+.hotplug-notification-item,
+.notification-banner .notification-button {
    @extend %standardButton;
+   //margin: -1px;
    //@extend %pluggedDark;
   }
-.button:hover {
+
+.button:hover,
+.modal-dialog-button:hover,
+.modal-dialog-linked-button:hover,
+.hotplug-notification-item:hover,
+.notification-banner .notification-button:hover {
   @extend %standardButtonHover;
 }
-.button:active {
-  @extend %sunkinglass;
+.button:active,
+.modal-dialog-button:active,
+.modal-dialog-linked-button:active,
+.hotplug-notification-item:active,
+.notification-banner .notification-button:active {
+  @extend %standardButtonActive;
 }
-
+.button:default,
+.modal-dialog-button:default,
+.modal-dialog-linked-button:default,
+.hotplug-notification-item:default,
+.notification-banner .notification-button:default
+.button:focus,
+.modal-dialog-button:focus,
+.modal-dialog-linked-button:focus,
+.hotplug-notification-item:focus,
+.notification-banner .notification-button:focus {
+  @extend %standardButtonDefault;
+  color: $textIconColorBrightSolid;
+  text-shadow: $textIconSolidShadow;
+}
+.button:insensitive,
+.modal-dialog-button:insensitive,
+.modal-dialog-linked-button:insensitive,
+.hotplug-notification-item:insensitive,
+.notification-banner .notification-button:insensitive {
+  color: $textIconColorDarkWeak;
+  text-shadow: $textIconFatShine !important;
+}
+.modal-dialog-button-box {
+  background-color: transparent;
+  /*padding: -1px;
+  margin: -1px;*/
+}
+// lägger raminställningarna sist så att de inte skrivs över
+.modal-dialog-button,
+.modal-dialog-linked-button,
+.hotplug-notification-item,
+.notification-banner .notification-button {
+  border-bottom: none;
+}
+.modal-dialog-button:first-child,
+.modal-dialog-linked-button:first-child,
+.hotplug-notification-item:first-child,
+.notification-banner .notification-button:first-child {
+  border-left: none;
+}
+.modal-dialog-button:last-child,
+.modal-dialog-linked-button:last-child,
+.hotplug-notification-item:last-child,
+.notification-banner .notification-button:last-child {
+  border-right: none;
+}
 
 StEntry,
 .lock-screen-entry {
   // globala entry
   @extend %sunkinglassShallowContrast;
+  color: $textIconColorBrightStrong;
+  text-shadow: $textIconDefaultShadow;
 }
 StEntry:focus,
 StEntry:active,
@@ -116,6 +177,7 @@ StScrollBar {
   //@extend %flashLightPlate;
   //@extend %floatingplateSVG;
 }
+
 .osd-window .osd-monitor-label {}
 .osd-window .level {
   //@extend %sunkinglassShallowContrast;

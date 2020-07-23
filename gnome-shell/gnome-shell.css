@@ -21,21 +21,56 @@
 /* ******
 Theme by HackaN ( hackan301@gmail.com )
 ****** */
-.button {
-  border: 0.5px solid rgba(24, 26, 30, 0.9);
+.button,
+.modal-dialog-button,
+.modal-dialog-linked-button,
+.hotplug-notification-item,
+.notification-banner .notification-button {
+  border: 0.5px solid rgba(13, 14, 16, 0.9);
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
   icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
   background-color: #343434;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); }
+  box-shadow: inset 0 0 1px #4c4c4c; }
 
-.button:hover {
-  border: 0.5px solid rgba(24, 26, 30, 0.9);
+.button:hover,
+.modal-dialog-button:hover,
+.modal-dialog-linked-button:hover,
+.hotplug-notification-item:hover,
+.notification-banner .notification-button:hover, .button:default,
+.modal-dialog-button:default,
+.modal-dialog-linked-button:default,
+.hotplug-notification-item:default,
+.notification-banner .notification-button:default
+.button:focus,
+.modal-dialog-button:focus,
+.modal-dialog-linked-button:focus,
+.hotplug-notification-item:focus,
+.notification-banner .notification-button:focus {
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
   icon-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8);
-  background-color: #393939;
-  box-shadow: #4c4c4c; }
+  background-color: #393939; }
+
+.button:default,
+.modal-dialog-button:default,
+.modal-dialog-linked-button:default,
+.hotplug-notification-item:default,
+.notification-banner .notification-button:default
+.button:focus,
+.modal-dialog-button:focus,
+.modal-dialog-linked-button:focus,
+.hotplug-notification-item:focus,
+.notification-banner .notification-button:focus {
+  background-color: #414141; }
+
+.button:active,
+.modal-dialog-button:active,
+.modal-dialog-linked-button:active,
+.hotplug-notification-item:active,
+.notification-banner .notification-button:active {
+  background-color: #1b1b1b;
+  box-shadow: inset 0 1px 3px 0 black; }
 
 .popup-sub-menu {
   background-color: rgba(35, 35, 35, 0.75);
@@ -130,7 +165,7 @@ Theme by HackaN ( hackan301@gmail.com )
 #calendarArea .weather-button:active, StEntry:focus,
 StEntry:active,
 .lock-screen-entry:focus,
-.lock-screen-entry:active, .button:active {
+.lock-screen-entry:active {
   box-shadow: inset 0 0 1px 0.5px rgba(0, 0, 0, 0.7);
   border: 0.5px solid rgba(240, 240, 240, 0.2);
   background-color: rgba(30, 30, 30, 0.2); }
@@ -295,7 +330,8 @@ StEntry,
   background-color: rgba(38, 38, 38, 0.98);
   border: 0.5px solid rgba(13, 14, 16, 0.9);
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); }
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.9); }
 
 #overview {
   background-color: rgba(140, 145, 150, 0.4);
@@ -324,6 +360,55 @@ StEntry,
 stage {
   font: 1em;
   color: #eee; }
+
+.button:default,
+.modal-dialog-button:default,
+.modal-dialog-linked-button:default,
+.hotplug-notification-item:default,
+.notification-banner .notification-button:default
+.button:focus,
+.modal-dialog-button:focus,
+.modal-dialog-linked-button:focus,
+.hotplug-notification-item:focus,
+.notification-banner .notification-button:focus {
+  color: white;
+  text-shadow: 0 0.1em 0.2em 0.2em black; }
+
+.button:insensitive,
+.modal-dialog-button:insensitive,
+.modal-dialog-linked-button:insensitive,
+.hotplug-notification-item:insensitive,
+.notification-banner .notification-button:insensitive {
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 0 0 white !important; }
+
+.modal-dialog-button-box {
+  background-color: transparent;
+  /*padding: -1px;
+  margin: -1px;*/ }
+
+.modal-dialog-button,
+.modal-dialog-linked-button,
+.hotplug-notification-item,
+.notification-banner .notification-button {
+  border-bottom: none; }
+
+.modal-dialog-button:first-child,
+.modal-dialog-linked-button:first-child,
+.hotplug-notification-item:first-child,
+.notification-banner .notification-button:first-child {
+  border-left: none; }
+
+.modal-dialog-button:last-child,
+.modal-dialog-linked-button:last-child,
+.hotplug-notification-item:last-child,
+.notification-banner .notification-button:last-child {
+  border-right: none; }
+
+StEntry,
+.lock-screen-entry {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0.01em 0.25em 0.01em rgba(0, 0, 0, 0.8); }
 
 /* Buttons */
 /* Check Boxes */
@@ -467,13 +552,11 @@ background-image: url("common-assets/misc/close.svg");
 }*/
 #panel #panelActivities.panel-button > * {
   background-image: url("common-assets/panel/GnomeFootVit.95_48px.svg");
-  background-size: contain;
-  filter: opacity(30%) !important; }
+  background-size: contain; }
 
 #panel.transparent #panelActivities.panel-button > * {
   background-size: contain;
-  background-image: url("common-assets/panel/GnomeFootVit.9_48px.svg");
-  filter: opacity(30%); }
+  background-image: url("common-assets/panel/GnomeFootVit.9_48px.svg"); }
 
 #panel:overview #panelActivities.panel-button > * {
   background-image: url("common-assets/panel/GnomeFootVit.7_48px.svg");

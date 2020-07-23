@@ -67,6 +67,7 @@ $textIconSolidShadow: 0 .1em .2em .2em rgba(0,0,0,1);
 $textIconDefaultShadowBig: 0 .1em .35em .2em rgba(0,0,0,.8);
 $sunkenShadow: inset 0 0 1px .5px rgba(0,0,0,.7);
 $textIconDefaultShine: 0 .5px 0 0 rgba(255,255,255,1);
+$textIconFatShine: 0 1px 0 0 rgba(255,255,255,1);
 $textIconLessShine: 0 .5px 0 0 rgba(255,255,255,.5);
 $textIconEvenLessShine: 0 .5px 0 0 rgba(250,250,250,.35);
 
@@ -137,23 +138,32 @@ $blackBezel: rgba(0,0,0,.98);
 
 %standardButton {
   //@extend %pluggedDark;
-  border: .5px solid lighten($adwaitaDarkBorder, 5%);
+  border: .5px solid lighten($adwaitaDarkBorder, 0%);
   //border-radius: 5px;
   color: $textIconColorBrightMedium;
   text-shadow: $textIconDefaultShadow;
   icon-shadow: $textIconDefaultShadow;
   background-color: $adwaitaDarkButton;
-  box-shadow: $buttonShadow;
+  box-shadow: inset 0 0 1px $adwaitaDarkBorderShadow;
 }
 %standardButtonHover {
   //@extend %pluggedDark;
-  border: .5px solid lighten($adwaitaDarkBorder, 5%);
+  //border: .5px solid lighten($adwaitaDarkBorder, 5%);
   //border-radius: 5px;
   color: $textIconColorBrightMedium;
   text-shadow: $textIconDefaultShadow;
   icon-shadow: $textIconDefaultShadow;
   background-color: $adwaitaDarkButtonHover;
-  box-shadow: $adwaitaDarkBorderShadow;
+  //box-shadow: $adwaitaDarkBorderShadow;
+}
+%standardButtonDefault {
+  @extend %standardButtonHover;
+  background-color: lighten($adwaitaDarkButtonHover,3%);
+}
+%standardButtonActive {
+  //@extend %standardButton;
+  background-color: darken($adwaitaDarkButton, 10%);
+  box-shadow: inset 0 1px 3px 0 black;
 }
 
 %darkOnBright {
@@ -313,6 +323,11 @@ border: .5px solid rgba(78,78,78,1);
 %sunkinglassDimmed {
   box-shadow: $sunkenShadow;
   border: .5px solid rgba(240,240,240,.1);
+  background-color: $overViewSunkBackground;
+}
+%sunkinglassSuddle {
+  box-shadow: $sunkenShadow;
+  border: .5px solid rgba(127.5,127.5,127.5,.1);
   background-color: $overViewSunkBackground;
 }
 %sunkinglassLight {
@@ -645,6 +660,7 @@ background-color: darken($adwaitaDark1AlmostSolid, 5%);
   border: .5px solid $adwaitaDarkBorder;
   border-radius: 10px;
   box-shadow: $boxShadowMassive;
+  color: $textIconColorBrightStrong;
 }
 %floatingplateSVG {
     border-image: url("common-assets/misc/CarapaceAdwaitaOSD_v1_1px_.5pxBorder.svg") 9 9 9 9;
