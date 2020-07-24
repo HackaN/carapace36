@@ -18,11 +18,13 @@
    .popup-menu-item .system-switch-user-submenu-icon,
    .popup-menu-item .popup-menu-arrow,
    .message-media-control,
-   .message-media-control > StIcon {
+   .message-media-control > StIcon,
+   .message-icon-bin,
+   .message-icon-bin > StIcon {
      background-color: transparent; //ikoner kan vara med p.g.a transparent, dom förljer bakgrundsfärg
      color: $textIconColorBrightMediumStrong;
-     text-shadow: $textIconMediumShadow;
-     icon-shadow: $textIconMediumShadow;
+     text-shadow: $textIconDefaultShadow;
+     icon-shadow: $textIconDefaultShadow;
    }
 
    .message-media-control:insensitive,
@@ -190,13 +192,12 @@ PopupMenu.PopupMenuSection {
 }
 
 #calendarArea .message,
-#calendarArea .message-body,
 #calendarArea .message-title,
-#calendarArea .message-content, {
+#calendarArea .message-content {
   background: transparent;
   border: 1px solid transparent;
   border-radius: 9px;
-  color: $textIconColorBrightSolid;
+  color: $textIconColorBrightMediumStrong;
 }
 #calendarArea .message-body {
   color: $textIconColorBrightMedium;
@@ -213,10 +214,61 @@ PopupMenu.PopupMenuSection {
   color: $textIconColorBrightMediumStrong;
 }
 
-
+#calendarArea .message:hover .message-body,
+#calendarArea .message:focus:hover .message-body,
+#calendarArea .message:active:hover .message-body,
+#calendarArea .message:hover .message-title,
+#calendarArea .message:focus:hover .message-title,
+#calendarArea .message:active:hover .message-title,
+#calendarArea .message:hover .message-content,
+#calendarArea .message:focus:hover .message-content,
+#calendarArea .message:active:hover .message-content {
+  text-shadow: $textIconDefaultShadow;
+  icon-shadow: $textIconDefaultShadow;
+  color: $textIconColorBrightSolid;
+}
 #calendarArea .message:hover,
 #calendarArea .message:focus:hover,
-#calendarArea .message:active:hover,
+#calendarArea .message:active:hover {
+  /*background-color: $textIconColorBrightNano;
+  box-shadow: $textIconMediumShadow;*/
+  //@extend %dashLabelAdwaitaNotSoDark;
+  background-color: lighten($adwaitaDark2, 10%);
+  border: .05em solid darken($textIconColorBrightHypoNano, 0%);
+  box-shadow: $textIconMediumShadowBig;//0 0 .18em black;
+}
+.message-media-control > StIcon {
+  color: $textIconColorBrightMedium;
+  icon-shadow: $textIconDefaultShadow;
+}
+#calendarArea .message-media-control:insensitive > StIcon {
+  color: $textIconColorBrightSub;
+}
+#calendarArea .message-media-control:hover > StIcon {
+  color: $textIconColorBrightSolid;
+}
+.message-media-control {
+  background-color: transparent;
+  border: .05em solid transparent;
+  border-top: none;
+  border-bottom: none;
+}
+.message-media-control:hover {
+  //background-color: $textIconColorBrightWeak;
+  background-color: lighten($adwaitaDark2, 10%);
+  border: .05em solid darken($textIconColorBrightHypoNano, 0%);
+  border-top: none;
+  border-bottom: none;
+  box-shadow: $textIconMediumShadowBig;//0 0 .18em black;
+  color: $textIconColorBrightSolid;
+}
+.message-media-control:last-child {
+  border-right: none;
+}
+
+#calendarArea .calendar:hover,
+#calendarArea .calendar:focus:hover,
+#calendarArea .calendar:active:hover,
 #calendarArea .world-clocks-button:hover,
 #calendarArea .world-clocks-button:focus:hover,
 #calendarArea .world-clocks-button:active:hover,
