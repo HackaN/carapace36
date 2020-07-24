@@ -57,30 +57,36 @@ background-image: url("common-assets/misc/close.svg");
 
 
 #panel #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit.95_48px.svg");
+  // .9 alpha
+background-image: url("common-assets/panel/GnomeFootVit_48px_.9_ny skugga.svg");
 background-size: contain; // contain verkar vara default
 //filter:opacity(30%) !important;
 }
 
 #panel.transparent #panelActivities.panel-button > * {
+  // .9 alpha
 background-size: contain;
-background-image: url("common-assets/panel/GnomeFootVit.9_48px.svg");
+background-image: url("common-assets/panel/GnomeFootVit_48px_.9_ny skugga.svg");
 //filter: blur(10px);
 //filter:opacity(30%);
 }
 #panel:overview #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit.7_48px.svg");
+  // .7 alpha
+background-image: url("common-assets/panel/GnomeFootVit_48px_.7_ny skugga.svg");
 background-size: contain;
 }
 // fot hover
 #panel :hover #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit_48px.svg");
+  // 1 alpha
+background-image: url("common-assets/panel/GnomeFootVit_48px_1_ny skugga.svg");
 }
 #panel.transparent :hover #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit_48px.svg");
+  // 1 alpha
+background-image: url("common-assets/panel/GnomeFootVit_48px_1_ny skugga.svg");
 }
 #panel:overview :hover #panelActivities.panel-button > * {
-background-image: url("common-assets/panel/GnomeFootVit.95_48px.svg");
+  // .9 alpha
+background-image: url("common-assets/panel/GnomeFootVit_48px_.9_ny skugga.svg");
 }
 #panel .popup-menu-arrow {
   width: 0; }
@@ -98,7 +104,7 @@ background-image: url("common-assets/panel/GnomeFootVit.95_48px.svg");
 #panel:overview .system-status-icon,
 #panel:overview .app-menu-icon > StIcon,
 #panel:overview .popup-menu-arrow,
-#panel:overview Gjs_ui_dateMenu_MessagesIndicator{
+#panel:overview Gjs_ui_dateMenu_MessagesIndicator {
   font-size: 1em;
   icon-size: 1em !important;
   font-weight: $fontWeight;

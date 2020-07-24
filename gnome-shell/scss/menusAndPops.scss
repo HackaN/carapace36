@@ -246,21 +246,37 @@ PopupMenu.PopupMenuSection {
 }
 #calendarArea .message-media-control:hover > StIcon {
   color: $textIconColorBrightSolid;
+  icon-shadow: $textIconDefaultShadow;
 }
-.message-media-control {
-  background-color: transparent;
-  border: .05em solid transparent;
-  border-top: none;
-  border-bottom: none;
-}
+
 .message-media-control:hover {
   //background-color: $textIconColorBrightWeak;
-  background-color: lighten($adwaitaDark2, 10%);
+  background-color: lighten($adwaitaDark2, 20%);
   border: .05em solid darken($textIconColorBrightHypoNano, 0%);
   border-top: none;
   border-bottom: none;
   box-shadow: $textIconMediumShadowBig;//0 0 .18em black;
   color: $textIconColorBrightSolid;
+}
+.message-media-control:active {
+  //background-color: $textIconColorBrightWeak;
+  background-color: lighten($adwaitaDark2, 0%);
+  border: .05em solid darken($textIconColorBrightHypoNano, 0%);
+  border-top: none;
+  border-bottom: none;
+  box-shadow: $sunkenShadow;//0 0 .18em black;
+  color: $textIconColorBrightSolid;
+}
+.message-media-control:active StIcon,
+.message-media-control:focus StIcon {
+    icon-shadow: 0 0 5px white;
+}
+
+.message-media-control {
+  background-color: transparent;
+  border: .05em solid transparent;
+  border-top: none;
+  border-bottom: none;
 }
 .message-media-control:last-child {
   border-right: none;
