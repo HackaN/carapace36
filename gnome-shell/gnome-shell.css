@@ -28,8 +28,8 @@ Theme by HackaN ( hackan301@gmail.com )
 .notification-banner .notification-button {
   border: 0.5px solid rgba(13, 14, 16, 0.9);
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
   background-color: #343434;
   box-shadow: inset 0 0 1px #4c4c4c; }
 
@@ -48,8 +48,8 @@ Theme by HackaN ( hackan301@gmail.com )
 .hotplug-notification-item:focus,
 .notification-banner .notification-button:focus {
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
   background-color: #393939; }
 
 .button:default,
@@ -75,12 +75,12 @@ Theme by HackaN ( hackan301@gmail.com )
 .popup-sub-menu {
   background-color: rgba(35, 35, 35, 0.75);
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 #calendarArea .events-section-title {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
   font-weight: 700;
   font-size: 1.05em; }
 
@@ -89,7 +89,7 @@ Theme by HackaN ( hackan301@gmail.com )
 #calendarArea .message-list-section-title,
 #calendarArea .calendar .calendar-month-label {
   color: rgba(255, 255, 255, 0.5);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8) !important;
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8) !important;
   font-weight: 700;
   font-size: 1.05em; }
 
@@ -131,7 +131,23 @@ Theme by HackaN ( hackan301@gmail.com )
   height: 1rem;
   border-radius: 1rem;
   color: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  box-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  font-weight: 400; }
+
+.calendar .calendar-day-base:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600; }
+
+.calendar .calendar-day-base:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600; }
+
+.calendar .calendar-day-base:selected {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 600; }
 
 #panel:overview .panel-button:active,
 #panel:overview #panelActivities.panel-button,
@@ -203,20 +219,22 @@ StScrollBar StBin#trough {
 .icon-grid .app-well-app:selected .app-well-app-running-dot, #overview StScrollBar StButton#vhandle, StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active, StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover, .datemenu-today-button,
 .calendar .calendar-today, .datemenu-today-button:hover,
 .datemenu-today-button:focus,
-.calendar .calendar-today:hover, StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
+.calendar .calendar-today:hover,
+.calendar .calendar-today:focus, StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   background-color: gainsboro;
   box-shadow: outset 0 0 4px 1px rgba(0, 0, 0, 0.8);
   border: 0.5px solid rgba(0, 0, 0, 0); }
 
 .datemenu-today-button:hover,
 .datemenu-today-button:focus,
-.calendar .calendar-today:hover, StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
+.calendar .calendar-today:hover,
+.calendar .calendar-today:focus, StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   background-color: #c3c3c3; }
 
 .datemenu-today-button,
 .calendar .calendar-today {
   background-color: #5d5d5d;
-  box-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  box-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
   background-color: #e9e9e9; }
@@ -301,8 +319,8 @@ StEntry,
 .search-entry:hover .search-entry-icon,
 .search-entry:hover .hint-text {
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 .search-entry:focus,
 .search-entry:focus:hover,
@@ -311,8 +329,8 @@ StEntry,
 .search-entry:focus .hint-text,
 .search-entry:focus:hover .hint-text {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 .search-section-content,
 .search-provider-icon {
@@ -349,7 +367,7 @@ StEntry,
   box-shadow: inset 0 0 0.5px 0.5px rgba(255, 255, 255, 0.25);
   font-weight: bold;
   font-size: 1.2em;
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 .switcher-popup {
   box-shadow: none; }
@@ -408,7 +426,7 @@ stage {
 StEntry,
 .lock-screen-entry {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 /* Buttons */
 /* Check Boxes */
@@ -474,7 +492,7 @@ StScrollBar {
   -barlevel-active-background-color: white; }
 
 .osd-window StIcon {
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 .switcher-list {
   background: rgba(45, 50, 55, 0);
@@ -531,8 +549,8 @@ StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
 #panel #panelActivities.panel-button > *,
 #panel #panelActivities.panel-button > *,
 #panel:overview #panelActivities.panel-button > * {
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
   width: 1.65em;
   height: 1.65em;
   /* FIXME:
@@ -590,8 +608,8 @@ background-image: url("common-assets/misc/close.svg");
   icon-size: 1em !important;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8) !important;
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8) !important; }
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8) !important;
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8) !important; }
 
 #panel Gjs_status_keyboard_InputSourceIndicator StLabel {
   /*vertical-align: text-top !important;
@@ -869,8 +887,8 @@ background-image: url("common-assets/misc/close.svg");
 .message-icon-bin > StIcon {
   background-color: transparent;
   color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 .message-media-control:insensitive,
 .message-media-control:insensitive > StIcon {
@@ -895,7 +913,7 @@ background-image: url("common-assets/misc/close.svg");
 .popup-menu-item:checked .system-switch-user-submenu-icon,
 .popup-menu-item:checked .popup-menu-arrow {
   color: rgba(255, 255, 255, 0.7);
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 .popup-menu-item:checked:hover,
 .popup-menu-item:checked:hover .popup-menu-icon,
@@ -973,6 +991,9 @@ PopupMenu.PopupMenuSection {
 #calendarArea .events-section-title:focus:hover {
   color: white; }
 
+#calendarArea .message {
+  padding: -2px !important; }
+
 #calendarArea .message,
 #calendarArea .message-title,
 #calendarArea .message-content {
@@ -986,6 +1007,7 @@ PopupMenu.PopupMenuSection {
   font-size: .95em;
   line-height: 1.05em; }
 
+#calendarArea .message
 #calendarArea .message .message-secondary-bin > .event-time {
   color: transparent; }
 
@@ -1003,8 +1025,8 @@ PopupMenu.PopupMenuSection {
 #calendarArea .message:hover .message-content,
 #calendarArea .message:focus:hover .message-content,
 #calendarArea .message:active:hover .message-content {
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
   color: white; }
 
 #calendarArea .message:hover,
@@ -1016,45 +1038,35 @@ PopupMenu.PopupMenuSection {
   border: 0.05em solid rgba(220, 220, 220, 0.05);
   box-shadow: 0 0.063em 0.252em 0.095em rgba(0, 0, 0, 0.4); }
 
-.message-media-control > StIcon {
+#calendarArea .message-media-control > StIcon {
   color: rgba(255, 255, 255, 0.7);
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 #calendarArea .message-media-control:insensitive > StIcon {
   color: rgba(255, 255, 255, 0.3); }
 
 #calendarArea .message-media-control:hover > StIcon {
-  color: white;
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  color: black;
+  icon-shadow: 0 0.5px 0 0 rgba(255, 255, 255, 0.5); }
+
+#calendarArea .message-media-control:active > StIcon,
+#calendarArea .message-media-control:focus > StIcon {
+  color: rgba(255, 255, 255, 0.85);
+  icon-shadow: 0 0 5px white; }
 
 .message-media-control:hover {
-  background-color: rgba(94, 94, 94, 0.75);
-  border: 0.05em solid rgba(220, 220, 220, 0.05);
-  border-top: none;
-  border-bottom: none;
-  box-shadow: 0 0.063em 0.252em 0.095em rgba(0, 0, 0, 0.4);
-  color: white; }
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0.063em 0.252em 0.095em rgba(0, 0, 0, 0.4); }
 
-.message-media-control:active {
-  background-color: rgba(43, 43, 43, 0.75);
-  border: 0.05em solid rgba(220, 220, 220, 0.05);
-  border-top: none;
-  border-bottom: none;
-  box-shadow: inset 0 0 1px 0.5px rgba(0, 0, 0, 0.7);
+.message-media-control:active,
+.message-media-control:focus {
+  background-color: rgba(38, 38, 38, 0.75);
+  box-shadow: inset 0 0 2px 0.5px rgba(0, 0, 0, 0.6);
   color: white; }
-
-.message-media-control:active StIcon,
-.message-media-control:focus StIcon {
-  icon-shadow: 0 0 5px white; }
 
 .message-media-control {
   background-color: transparent;
-  border: .05em solid transparent;
-  border-top: none;
-  border-bottom: none; }
-
-.message-media-control:last-child {
-  border-right: none; }
+  border: 0 none transparent; }
 
 #calendarArea .message-list-placeholder StIcon {
   /* ikon inga händelser */
@@ -1075,13 +1087,14 @@ PopupMenu.PopupMenuSection {
 
 .datemenu-today-button:hover,
 .datemenu-today-button:focus,
-.calendar .calendar-today:hover {
+.calendar .calendar-today:hover,
+.calendar .calendar-today:focus {
   color: black !important; }
 
 .datemenu-today-button:insensitive {
   background: transparent;
   color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0); }
 
 .datemenu-today-button .day-label {
@@ -1095,23 +1108,20 @@ PopupMenu.PopupMenuSection {
 .datemenu-today-button:insensitive .date-label {
   color: rgba(255, 255, 255, 0.7); }
 
-.calendar .calendar-day-base {
-  font-weight: 400; }
-
 .calendar .calendar-day-base:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 600; }
+  /*background-color: $textIconColorBrightWeak;
+    color: $textIconColorDarkMediumStrong;
+    font-weight: 600;*/ }
 
 .calendar .calendar-day-base:focus {
-  background-color: rgba(255, 255, 255, 0.3);
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 600; }
+  /*background-color: $textIconColorBrightSub;
+  color: $textIconColorDarkMediumStrong;
+  font-weight: 600;*/ }
 
 .calendar .calendar-day-base:selected {
-  background-color: rgba(255, 255, 255, 0.85);
-  color: rgba(0, 0, 0, 0.9);
-  font-weight: 600; }
+  /*background-color: $textIconColorBrightMediumStrong;
+  color: $textIconColorDarkStrong;
+  font-weight: 600;*/ }
 
 .calendar-day-with-events {
   background-image: url("common-assets/misc/calendarDayWithEvents_v2.svg"); }
@@ -1276,7 +1286,7 @@ PopupMenu.PopupMenuSection {
 .switcher-list .item-box:selected StIcon,
 .switcher-list .item-box:outlined StIcon {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
   icon-shadow: 0 0.063em 0.252em 0.095em rgba(0, 0, 0, 0.8); }
 
 .icon-grid .app-well-app:hover .app-well-app-running-dot,
@@ -1305,7 +1315,7 @@ PopupMenu.PopupMenuSection {
 
 .icon-grid .app-well-app.app-folder:drop .overview-icon StLabel {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   margin-top: .5em; }
 
@@ -1403,7 +1413,7 @@ PopupMenu.PopupMenuSection {
 .list-search-result StIcon,
 .list-search-provider-content StIcon,
 .list-search-result .system-action-icon StIcon {
-  icon-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 .search-provider-icon .list-search-provider-content {
   border-radius: 5px;
@@ -1435,7 +1445,7 @@ PopupMenu.PopupMenuSection {
 .search-provider-icon:focus .list-search-provider-content,
 .search-provider-icon:focus:hover .list-search-provider-content {
   color: white;
-  text-shadow: 0 0.063em 0.158em 0.063em rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8); }
 
 .list-search-result:hover .list-search-result-description,
 .list-search-result:focus .list-search-result-description,

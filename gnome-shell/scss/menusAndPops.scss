@@ -190,7 +190,10 @@ PopupMenu.PopupMenuSection {
 #calendarArea .weather-button {
   @extend %sunkinglassShallowMoreContrastSolidBack;
 }
-
+#calendarArea .message {
+    //border: 0 none transparent !important;
+    padding: -2px !important; // annars så blir det fula kanter runt media-knapparna
+}
 #calendarArea .message,
 #calendarArea .message-title,
 #calendarArea .message-content {
@@ -203,7 +206,7 @@ PopupMenu.PopupMenuSection {
   color: $textIconColorBrightMedium;
   font-size: .95em;
   line-height: 1.05em;
-}
+}#calendarArea .message
 #calendarArea .message .message-secondary-bin > .event-time {
   color: transparent;
   //margin-bottom: .1em;
@@ -237,7 +240,7 @@ PopupMenu.PopupMenuSection {
   border: .05em solid darken($textIconColorBrightHypoNano, 0%);
   box-shadow: $textIconMediumShadowBig;//0 0 .18em black;
 }
-.message-media-control > StIcon {
+#calendarArea .message-media-control > StIcon {
   color: $textIconColorBrightMedium;
   icon-shadow: $textIconDefaultShadow;
 }
@@ -245,41 +248,53 @@ PopupMenu.PopupMenuSection {
   color: $textIconColorBrightSub;
 }
 #calendarArea .message-media-control:hover > StIcon {
-  color: $textIconColorBrightSolid;
-  icon-shadow: $textIconDefaultShadow;
+  //color: $textIconColorBrightSolid;
+  ///icon-shadow: $textIconDefaultShadow;
+  color: $textIconColorDarkSolid;
+  icon-shadow: $textIconLessShine;
 }
-
-.message-media-control:hover {
-  //background-color: $textIconColorBrightWeak;
-  background-color: lighten($adwaitaDark2, 20%);
-  border: .05em solid darken($textIconColorBrightHypoNano, 0%);
-  border-top: none;
-  border-bottom: none;
-  box-shadow: $textIconMediumShadowBig;//0 0 .18em black;
-  color: $textIconColorBrightSolid;
-}
-.message-media-control:active {
-  //background-color: $textIconColorBrightWeak;
-  background-color: lighten($adwaitaDark2, 0%);
-  border: .05em solid darken($textIconColorBrightHypoNano, 0%);
-  border-top: none;
-  border-bottom: none;
-  box-shadow: $sunkenShadow;//0 0 .18em black;
-  color: $textIconColorBrightSolid;
-}
-.message-media-control:active StIcon,
-.message-media-control:focus StIcon {
+#calendarArea .message-media-control:active > StIcon,
+#calendarArea .message-media-control:focus > StIcon{
+    color: $textIconColorBrightMediumStrong;
     icon-shadow: 0 0 5px white;
 }
+.message-media-control:hover {
+  background-color: $textIconColorBrightMedium;
+  //box-shadow: 0 0 0 .5px $textIconColorBrightMediumStrong;
+  //background-color: lighten($adwaitaDark2, 20%);
+  //border: .05em solid darken($textIconColorBrightHypoNano, 0%);
+  //border-top: none;
+  //border-bottom: none;
+  box-shadow: $textIconMediumShadowBig;//0 0 .18em black;
+  //box-shadow: 0 0 0 .05em darken($textIconColorBrightHypoNano, 0%);
+  //color: $textIconColorBrightSolid;
+  //@extend %calendarDayBaseSelected;
+}
+.message-media-control:active,
+.message-media-control:focus {
+  background-color: lighten($adwaitaDark1, 0%);
+  
+  //background-color: $textIconColorDarkSolid;
+  //box-shadow: 0 0 0 1px $textIconColorDarkSolid;
+  //border: .05em solid darken($textIconColorBrightHypoNano, 0%);
+  //border-top: none;
+  //border-bottom: none;
+  
+  box-shadow: $sunkenShadowDeeper;//0 0 .18em black;
+  color: $textIconColorBrightSolid;
+}
+
 
 .message-media-control {
   background-color: transparent;
-  border: .05em solid transparent;
-  border-top: none;
-  border-bottom: none;
+  border: 0 none transparent;
+  //border: .05em solid transparent;
+  //border-top: none;
+  //border-bottom: none;
 }
 .message-media-control:last-child {
-  border-right: none;
+  //border-right: none;
+    //border-radius: 0 4px 4px 0;
 }
 
 #calendarArea .calendar:hover,
@@ -324,7 +339,8 @@ PopupMenu.PopupMenuSection {
 }
 .datemenu-today-button:hover,
 .datemenu-today-button:focus,
-.calendar .calendar-today:hover {
+.calendar .calendar-today:hover,
+.calendar .calendar-today:focus {
   //background: rgb(190,190,190);
   //@extend %pluggedDarkHover;
   @extend %pluggedDimmed;
@@ -361,23 +377,26 @@ PopupMenu.PopupMenuSection {
 .calendar .calendar-day-base {
     // samtliga dagar
     @extend %calendarDayBase;
-    font-weight: 400;
+    //font-weight: 400;
 }
 
 .calendar .calendar-day-base:hover {
-    background-color: $textIconColorBrightWeak;
+    /*background-color: $textIconColorBrightWeak;
     color: $textIconColorDarkMediumStrong;
-    font-weight: 600;
+    font-weight: 600;*/
+    @extend %calendarDayBaseHover;
 }
 .calendar .calendar-day-base:focus {
-  background-color: $textIconColorBrightSub;
+  /*background-color: $textIconColorBrightSub;
   color: $textIconColorDarkMediumStrong;
-  font-weight: 600;
+  font-weight: 600;*/
+  @extend %calendarDayBaseFocus;
 }
 .calendar .calendar-day-base:selected {
-  background-color: $textIconColorBrightMediumStrong;
+  /*background-color: $textIconColorBrightMediumStrong;
   color: $textIconColorDarkStrong;
-  font-weight: 600;
+  font-weight: 600;*/
+  @extend %calendarDayBaseSelected;
 }
 .calendar-day-with-events {
   //background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg");
