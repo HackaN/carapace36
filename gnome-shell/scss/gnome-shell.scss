@@ -158,11 +158,14 @@ $blackBezel: rgba(0,0,0,1); // .98 -
   color: $textIconColorBrightMedium;
   text-shadow: $textIconDefaultShadow;
   icon-shadow: $textIconDefaultShadow;
-  background-color: $adwaitaDarkButtonHover;
+  background-color: lighten($adwaitaDarkButtonHover, 6%) !important;
   //box-shadow: $adwaitaDarkBorderShadow;
 }
 %standardButtonDefault {
-  @extend %standardButtonHover;
+  //@extend %standardButtonHover;
+    color: $textIconColorBrightMedium;
+  text-shadow: $textIconDefaultShadow;
+  icon-shadow: $textIconDefaultShadow;
   background-color: lighten($adwaitaDarkButtonHover,3%);
 }
 %standardButtonActive {

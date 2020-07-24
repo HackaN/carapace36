@@ -33,11 +33,26 @@ Theme by HackaN ( hackan301@gmail.com )
   background-color: #343434;
   box-shadow: inset 0 0 1px #4c4c4c; }
 
-.button:hover,
+.button:default:hover,
+.modal-dialog-button:default:hover,
+.modal-dialog-linked-button:default:hover,
+.hotplug-notification-item:default:hover,
+.notification-banner .notification-button:default,
+.button:focus:hover,
+.modal-dialog-button:focus:hover,
+.modal-dialog-linked-button:focus:hover,
+.hotplug-notification-item:focus:hover,
+.notification-banner .notification-button:focus:hover, .button:hover,
 .modal-dialog-button:hover,
 .modal-dialog-linked-button:hover,
 .hotplug-notification-item:hover,
-.notification-banner .notification-button:hover, .button:default,
+.notification-banner .notification-button:hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
+  background-color: #484848 !important; }
+
+.button:default,
 .modal-dialog-button:default,
 .modal-dialog-linked-button:default,
 .hotplug-notification-item:default,
@@ -50,18 +65,6 @@ Theme by HackaN ( hackan301@gmail.com )
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
   icon-shadow: 0 0.06em 0.155em 0.06em rgba(0, 0, 0, 0.8);
-  background-color: #393939; }
-
-.button:default,
-.modal-dialog-button:default,
-.modal-dialog-linked-button:default,
-.hotplug-notification-item:default,
-.notification-banner .notification-button:default
-.button:focus,
-.modal-dialog-button:focus,
-.modal-dialog-linked-button:focus,
-.hotplug-notification-item:focus,
-.notification-banner .notification-button:focus {
   background-color: #414141; }
 
 .button:active,

@@ -54,6 +54,18 @@ MetaStage {
   color: $textIconColorBrightSolid;
   text-shadow: $textIconSolidShadow;
 }
+.button:default:hover,
+.modal-dialog-button:default:hover,
+.modal-dialog-linked-button:default:hover,
+.hotplug-notification-item:default:hover,
+.notification-banner .notification-button:default,
+.button:focus:hover,
+.modal-dialog-button:focus:hover,
+.modal-dialog-linked-button:focus:hover,
+.hotplug-notification-item:focus:hover,
+.notification-banner .notification-button:focus:hover {
+    @extend %standardButtonHover;
+}
 .button:insensitive,
 .modal-dialog-button:insensitive,
 .modal-dialog-linked-button:insensitive,
