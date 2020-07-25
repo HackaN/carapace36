@@ -60,15 +60,15 @@ $textIconDefaultColor: #fff;
 
 // lite svårt, men 11pt så är 1px typ .063em, 1.5px .095em, 2px .126em, 2.5px .158em 3px .189em, 4px .252em, 5px .315em
 
-//$textIconDefaultShadow: 0 1px 2.5px 1px rgba(0,0,0,.8);
-$textIconDefaultShadow: 0 .06em .155em .06em rgba(0,0,0,.8);
+$textIconDefaultShadow: 0 1px 2.5px 1px rgba(0,0,0,.8);
+//$textIconDefaultShadow: 0 .06em .106em .06em rgba(0,0,0,.8);
 //$textIconMediumShadow: 0 1px 2.5px 1px rgba(0,0,0,.4);
-$textIconMediumShadow: 0 .063em .158em .063em rgba(0,0,0,.4);
-$textIconMediumShadowBig: 0 .063em .252em .095em rgba(0,0,0,.4);
+$textIconMediumShadow: 0 .06em .106em .06em rgba(0,0,0,.4);
+$textIconMediumShadowBig: 0 .06em .250em .095em rgba(0,0,0,.4);
 //$textIconSolidShadow: 0 1px 2px 2px rgba(0,0,0,1);
-$textIconSolidShadow: 0 .063em .0158em .063em rgba(0,0,0,1);
+$textIconSolidShadow: 0 .06em .105em .06em rgba(0,0,0,1);
 //$textIconDefaultShadowBig: 0 1px 3.5px 2px rgba(0,0,0,.8);
-$textIconDefaultShadowBig: 0 .063em .252em .095em rgba(0,0,0,.8);
+$textIconDefaultShadowBig: 0 .06em .250em .095em rgba(0,0,0,.8);
 $sunkenShadow: inset 0 0 1px .5px rgba(0,0,0,.7);
 $sunkenShadowDeeper: inset 0 0 2px .5px rgba(0,0,0,.6);
 $textIconDefaultShine: 0 .5px 0 0 rgba(255,255,255,1);
@@ -124,6 +124,7 @@ $textIconColorDarkStrong: rgba(0,0,0,.9);
 $textIconColorDarkSolid: rgba(0,0,0,1);
 
 $adwaitaDark1: rgba(38,38,38,.75);
+$adwaitaDark1Half: rgba(38,38,38,.5);
 $adwaitaDark2: rgba(43,43,43,.75);
 $adwaitaDark1Sub: rgba(38,38,38,.3);
 $adwaitaDark1AlmostSolid: rgba(38,38,38,.95);

@@ -262,9 +262,9 @@ PopupMenu.PopupMenuSection {
   background-color: $textIconColorBrightMedium;
   //box-shadow: 0 0 0 .5px $textIconColorBrightMediumStrong;
   //background-color: lighten($adwaitaDark2, 20%);
-  //border: .05em solid darken($textIconColorBrightHypoNano, 0%);
-  //border-top: none;
-  //border-bottom: none;
+  /*border: 0 none transparent;
+  border-top: 0 none transparent;
+  border-bottom: 0 none transparent;*/
   box-shadow: $textIconMediumShadowBig;//0 0 .18em black;
   //box-shadow: 0 0 0 .05em darken($textIconColorBrightHypoNano, 0%);
   //color: $textIconColorBrightSolid;
@@ -272,28 +272,31 @@ PopupMenu.PopupMenuSection {
 }
 .message-media-control:active,
 .message-media-control:focus {
-  background-color: lighten($adwaitaDark1, 0%);
-  
+  //background-color: lighten($adwaitaDark1, 0%);
+  background-color: $adwaitaDark1Half;
+
   //background-color: $textIconColorDarkSolid;
   //box-shadow: 0 0 0 1px $textIconColorDarkSolid;
-  //border: .05em solid darken($textIconColorBrightHypoNano, 0%);
-  //border-top: none;
-  //border-bottom: none;
-  
-  box-shadow: $sunkenShadowDeeper;//0 0 .18em black;
+  /*border-left: .05em solid green;
+  border-right: .05em solid green;
+  border-top: 0 none transparent;
+  border-bottom: 0 none transparent;*/
+
+  //box-shadow: $sunkenShadowDeeper;//0 0 .18em black;
+  box-shadow: inset 0 0 1px 0 $textIconColorDarkWeak;
   color: $textIconColorBrightSolid;
 }
 
 
 .message-media-control {
   background-color: transparent;
-  border: 0 none transparent;
+  //border: 0 none transparent;
   //border: .05em solid transparent;
-  //border-top: none;
-  //border-bottom: none;
+  //border-top: 0 none transparent;
+  //border-bottom: 0 none transparent;
 }
 .message-media-control:last-child {
-  //border-right: none;
+  //border-right: 0 none transparent;
     //border-radius: 0 4px 4px 0;
 }
 
