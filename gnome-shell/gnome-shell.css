@@ -1010,7 +1010,6 @@ PopupMenu.PopupMenuSection {
   font-size: .95em;
   line-height: 1.05em; }
 
-#calendarArea .message
 #calendarArea .message .message-secondary-bin > .event-time {
   color: transparent; }
 
