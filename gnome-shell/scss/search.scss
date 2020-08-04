@@ -30,6 +30,7 @@
 .search-entry .hint-text {
   //color: $textIconRestingColor;
   @extend %searchEntryTextIconDefault;
+  selection-background-color: $textIconColorDarkMicro;
 }
 
 .search-entry:hover,
@@ -39,15 +40,30 @@
   //color: $textIconOverviewPanelColor;
   @extend %searchEntryTextIconDefaultHover;
 }
-.search-entry:focus,
-.search-entry:focus:hover,
-.search-entry:focus .search-entry-icon,
-.search-entry:focus:hover .search-entry-icon,
-.search-entry:focus .hint-text,
-.search-entry:focus:hover .hint-text {
+.search-entry:focus {
   //color: $textIconFocusColor;
   //color: $textIconOverviewPanelColor;
-  @extend %searchEntryTextIconDefaultFocus;
+  //@extend %searchEntryTextIconDefaultFocus;
+  @extend %pluggedSmoothMedium;
+  //@extend %pluggedDarkSmooth;
+
+}
+.search-entry:focus:hover {
+  @extend %pluggedSmoothMediumStrong;
+}
+
+.search-entry:focus .search-entry-icon {
+  //color: $textIconColorDarkMedium;
+  //text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  color: $textIconColorDarkMedium;
+  text-shadow: $textIconMediumShadow;
+}
+.search-entry:focus:hover .search-entry-icon,
+.search-entry:focus:hover .hint-text {
+  color: $textIconColorDarkMediumStrong;
+}
+.search-entry:focus .hint-text {
+  color: $textIconColorDarkSub;
 }
 
 // ::: Results :::
@@ -104,7 +120,8 @@
   //background-color: $adwaitaDark1Sub;
   //@extend %sunkinglass;
   //box-shadow: 0 0 2px 0 rgba(0,0,0,.4);
-  @extend %floatinglassShallow;
+  //@extend %floatinglassShallow;
+  @extend %floatinglassShallowSmooth;
 }
 
 .search-provider-icon .list-search-provider-content {
@@ -125,7 +142,7 @@
 }
 
 .search-provider-icon:focus .list-search-provider-content {
-  @extend %floatinglassShallow;
+  @extend %floatinglassShallowSmooth;
 }
 
 .list-search-result .list-search-result-content,

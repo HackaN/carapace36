@@ -45,6 +45,7 @@
   @extend %overviewSpaceRoundedGlass;
   padding: -2em;/**/
   padding-right: 0em;
+  backdrop-filter: blur(10px); // man kan ju alltid önska
 }
 
 

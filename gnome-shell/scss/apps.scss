@@ -43,7 +43,7 @@
    font-weight: 500;
    icon-shadow: $textIconMediumShadow;
  }
- 
+
 .icon-grid .app-well-app-running-dot,
 .app-folder-dialog .app-well-app-running-dot {
   width: 30px;
@@ -221,7 +221,7 @@ StScrollView.all-apps {
 }
 .app-view-control:first-child:checked,
 .app-view-control:last-child:checked {
-  @extend %pluggedDark;
+  @extend %pluggedDarkSmooth;
   color: $textIconColorBrightMedium;
   //color: $textIconColorBrightStrong;
 }
@@ -234,7 +234,7 @@ StScrollView.all-apps {
 
 .page-indicator .page-indicator-icon {
   //@extend %sunkinglass;
-  @extend %plugged;
+  @extend %pluggedSmooth;
 }
 .page-indicator .page-indicator-icon:focus {
   @extend %plugged; // finns ingen matchning ":"

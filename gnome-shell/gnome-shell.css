@@ -217,16 +217,18 @@ StScrollBar StBin#trough {
   border: 0.5px solid rgba(76, 76, 76, 0.1);
   background-color: rgba(30, 30, 30, 0.2); }
 
-.page-indicator .page-indicator-icon:focus, .page-indicator .page-indicator-icon, .icon-grid .app-well-app:hover .app-well-app-running-dot,
+.page-indicator .page-indicator-icon:focus, .icon-grid .app-well-app:hover .app-well-app-running-dot,
 .icon-grid .app-well-app:focus .app-well-app-running-dot,
-.icon-grid .app-well-app:selected .app-well-app-running-dot, #overview StScrollBar StButton#vhandle, StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active, StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover, .datemenu-today-button,
+.icon-grid .app-well-app:selected .app-well-app-running-dot, #overview StScrollBar StButton#vhandle, StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active, StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover, .search-entry:focus, .search-entry:focus:hover, .page-indicator .page-indicator-icon, .datemenu-today-button,
 .calendar .calendar-today, .datemenu-today-button:hover,
 .datemenu-today-button:focus,
 .calendar .calendar-today:hover,
 .calendar .calendar-today:focus, StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   background-color: gainsboro;
   box-shadow: outset 0 0 4px 1px rgba(0, 0, 0, 0.8);
-  border: 0.5px solid rgba(0, 0, 0, 0); }
+  border: 0.5px solid rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
 
 .datemenu-today-button:hover,
 .datemenu-today-button:focus,
@@ -239,6 +241,27 @@ StScrollBar StBin#trough {
   background-color: #5d5d5d;
   box-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
 
+.page-indicator .page-indicator-icon {
+  background-gradient-start: gainsboro;
+  background-gradient-end: #c3c3c3;
+  background-gradient-direction: vertical;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: outset 0 0.5px 3px 0.5px rgba(0, 0, 0, 0.4); }
+
+.search-entry:focus:hover {
+  background-gradient-start: rgba(220, 220, 220, 0.85);
+  background-gradient-end: rgba(195, 195, 195, 0.85);
+  background-gradient-direction: vertical;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: outset 0 0.5px 3px 0.5px rgba(0, 0, 0, 0.4); }
+
+.search-entry:focus {
+  background-gradient-start: rgba(220, 220, 220, 0.7);
+  background-gradient-end: rgba(195, 195, 195, 0.7);
+  background-gradient-direction: vertical;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: outset 0 0.5px 3px 0.5px rgba(0, 0, 0, 0.4); }
+
 StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
   background-color: #e9e9e9; }
 
@@ -249,7 +272,15 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 .app-view-control:last-child:checked {
   background-color: rgba(56, 56, 56, 0.95);
   box-shadow: 0 0.06em 0.106em 0.06em rgba(0, 0, 0, 0.4);
-  border: 0.5px solid rgba(36, 39, 44, 0.9); }
+  border: 0.5px solid rgba(36, 39, 44, 0.9);
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 0.5px 0 0 rgba(250, 250, 250, 0.35); }
+
+.app-view-control:first-child:checked,
+.app-view-control:last-child:checked {
+  background-gradient-start: rgba(56, 56, 56, 0.95);
+  background-gradient-end: rgba(43, 43, 43, 0.95);
+  background-gradient-direction: vertical; }
 
 .search-provider-icon .list-search-provider-content, .list-search-result, .app-view-control:first-child,
 .app-view-control:last-child, .icon-grid .app-well-app.app-folder:drop > .overview-icon StBoxLayout, .icon-grid .app-well-app.app-folder > .overview-icon, .osd-window .level, .search-section-content,
@@ -283,9 +314,11 @@ StEntry,
 .list-search-result:focus,
 .list-search-result:focus:hover,
 .list-search-result:selected {
-  border: 0.5px solid rgba(255, 255, 255, 0.05);
-  background-color: rgba(140, 145, 150, 0.4);
-  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.25); }
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  background-gradient-start: rgba(153, 158, 162, 0.4);
+  background-gradient-end: rgba(140, 145, 150, 0.4);
+  background-gradient-direction: vertical;
+  box-shadow: inset 0 0 1px 0 rgba(255, 255, 255, 0.7); }
 
 .workspace-thumbnail-indicator {
   background-color: rgba(140, 145, 150, 0.4);
@@ -322,18 +355,8 @@ StEntry,
 .search-entry:hover .search-entry-icon,
 .search-entry:hover .hint-text {
   color: rgba(255, 255, 255, 0.7);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
-
-.search-entry:focus,
-.search-entry:focus:hover,
-.search-entry:focus .search-entry-icon,
-.search-entry:focus:hover .search-entry-icon,
-.search-entry:focus .hint-text,
-.search-entry:focus:hover .hint-text {
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
-  icon-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 0.06em 0.106em 0.06em rgba(0, 0, 0, 0.4);
+  icon-shadow: 0 0.06em 0.106em 0.06em rgba(0, 0, 0, 0.4); }
 
 .search-section-content,
 .search-provider-icon {
@@ -429,7 +452,8 @@ stage {
 StEntry,
 .lock-screen-entry {
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8); }
+  text-shadow: 0 1px 2.5px 1px rgba(0, 0, 0, 0.8);
+  selection-background-color: rgba(255, 255, 255, 0.5); }
 
 /* Buttons */
 /* Check Boxes */
@@ -1165,7 +1189,8 @@ PopupMenu.PopupMenuSection {
   padding: -2em;*/
   padding: -2em;
   /**/
-  padding-right: 0em; }
+  padding-right: 0em;
+  backdrop-filter: blur(10px); }
 
 .workspace-thumbnails {
   spacing: 15px;
@@ -1406,6 +1431,22 @@ PopupMenu.PopupMenuSection {
 
 .search-entry {
   margin-left: 2em; }
+
+.search-entry,
+.search-entry .search-entry-icon,
+.search-entry .hint-text {
+  selection-background-color: rgba(0, 0, 0, 0.2); }
+
+.search-entry:focus .search-entry-icon {
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0.06em 0.106em 0.06em rgba(0, 0, 0, 0.4); }
+
+.search-entry:focus:hover .search-entry-icon,
+.search-entry:focus:hover .hint-text {
+  color: rgba(0, 0, 0, 0.8); }
+
+.search-entry:focus .hint-text {
+  color: rgba(0, 0, 0, 0.3); }
 
 .search-section .icon-grid {
   margin-top: 1em;

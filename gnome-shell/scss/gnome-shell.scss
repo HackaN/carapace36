@@ -94,6 +94,8 @@ $runningDotFocusedHover: rgba(250,250,250,1);
 
 // ljus färg
 $backgroundAdwaitaBright: rgba(220,220,220,1);
+$backgroundAdwaitaBrightMedium: rgba(220,220,220,.7);
+$backgroundAdwaitaBrightMediumStrong: rgba(220,220,220,.85);
 $textIconColorBrightHypoNano: rgba(220,220,220,.05);
 $textIconColorBrightNano: rgba(255,255,255,.1);
 $textIconColorBrightMicro: rgba(255,255,255,.2);
@@ -374,6 +376,8 @@ border: .5px solid rgba(78,78,78,1);
   background-color: $backgroundAdwaitaBright;
   box-shadow: outset 0 0 4px 1px rgba(0,0,0,.8);
   border: .5px solid rgba(0,0,0,.0);
+  color: $textIconColorDarkMedium;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
 }
 %pluggedDimmed {
   @extend %plugged;
@@ -383,6 +387,38 @@ border: .5px solid rgba(78,78,78,1);
     @extend %plugged;
     background-color: darken($backgroundAdwaitaBright, 50%);
     box-shadow: $textIconDefaultShadow;
+}
+%pluggedSmooth {
+  @extend %plugged;
+  background-gradient-start: darken($backgroundAdwaitaBright, 0%);
+  background-gradient-end: darken($backgroundAdwaitaBright, 10%);
+  background-gradient-direction: vertical;
+  border: .5px solid $textIconColorDarkMicro;
+  box-shadow: outset 0 .5px 3px .5px rgba(0,0,0,.4);
+}
+%pluggedSmoothMediumStrong {
+  @extend %plugged;
+  background-gradient-start: darken($backgroundAdwaitaBrightMediumStrong, 0%);
+  background-gradient-end: darken($backgroundAdwaitaBrightMediumStrong, 10%);
+  background-gradient-direction: vertical;
+  border: .5px solid $textIconColorDarkMicro;
+  box-shadow: outset 0 .5px 3px .5px rgba(0,0,0,.4);
+}
+%pluggedSmoothMedium {
+  @extend %plugged;
+  background-gradient-start: darken($backgroundAdwaitaBrightMedium, 0%);
+  background-gradient-end: darken($backgroundAdwaitaBrightMedium, 10%);
+  background-gradient-direction: vertical;
+  border: .5px solid $textIconColorDarkMicro;
+  box-shadow: outset 0 .5px 3px .5px rgba(0,0,0,.4);
+}
+%pluggedSmoothWeak {
+  @extend %plugged;
+  background-gradient-start: darken($textIconColorBrightWeak, 0%);
+  background-gradient-end: darken($textIconColorBrightWeak, 10%);
+  background-gradient-direction: vertical;
+  border: .5px solid $textIconColorDarkMicro;
+  box-shadow: outset 0 .5px 3px .5px rgba(0,0,0,.4);
 }
 %pluggedHover {
   @extend %plugged;
@@ -396,6 +432,14 @@ border: .5px solid rgba(78,78,78,1);
   background-color: lighten($adwaitaDark2AlmostSolid, 5%);
   box-shadow: $textIconMediumShadow;
   border: .5px solid lighten($adwaitaDarkBorder, 10%);
+  color: $textIconColorBrightMedium;
+  text-shadow: $textIconEvenLessShine;
+}
+%pluggedDarkSmooth {
+  @extend %pluggedDark;
+  background-gradient-start: lighten($adwaitaDark2AlmostSolid, 5%);
+  background-gradient-end: lighten($adwaitaDark2AlmostSolid, 0%);
+  background-gradient-direction: vertical;
 }
 %pluggedDarkHover {
   @extend %pluggedDark;
@@ -460,6 +504,18 @@ border: .5px solid rgba(78,78,78,1);
   //border-left: none;
   //border-right: none;
   box-shadow: 0 0 0 .5px rgba(0,0,0,.25);
+}
+%floatinglassShallowSmooth {
+  @extend %transparentglass;
+  border: .5px solid $textIconColorDarkNano;
+  background-gradient-start: lighten($overviewGlass, 5%);
+  background-gradient-end: lighten($overviewGlass, 0%);
+  background-gradient-direction: vertical;
+  //border-top: none;
+  //border-bottom: none !important;
+  //border-left: none;
+  //border-right: none;
+  box-shadow: inset 0 0 1px 0 $textIconColorBrightMedium;
 }
 %floatinglassShallowMedium {
   @extend %transparentglass;
@@ -575,13 +631,13 @@ border: .5px solid rgba(78,78,78,1);
   color: $textIconColorBrightMedium;
   //text-shadow: $textIconLessShine;
   //icon-shadow: $textIconLessShine;
-  text-shadow: $textIconDefaultShadow;
-  icon-shadow: $textIconDefaultShadow;
+  text-shadow: $textIconMediumShadow;
+  icon-shadow: $textIconMediumShadow;
 }
 %searchEntryTextIconDefaultFocus {
   color: $textIconColorBrightStrong;
-  text-shadow: $textIconDefaultShadow;
-  icon-shadow: $textIconDefaultShadow;
+  text-shadow: $textIconMediumShadow;
+  icon-shadow: $textIconMediumShadow;
 }
 %searchResultFlatTransparent {
   @extend %transparentglass;

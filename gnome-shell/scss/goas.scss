@@ -105,6 +105,7 @@ StEntry,
   @extend %sunkinglassShallowContrast;
   color: $textIconColorBrightStrong;
   text-shadow: $textIconDefaultShadow;
+  selection-background-color: $textIconColorBrightWeak;
 }
 StEntry:focus,
 StEntry:active,
