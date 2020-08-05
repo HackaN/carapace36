@@ -393,7 +393,7 @@ border: .5px solid rgba(78,78,78,1);
   background-gradient-start: darken($backgroundAdwaitaBright, 0%);
   background-gradient-end: darken($backgroundAdwaitaBright, 10%);
   background-gradient-direction: vertical;
-  border: .5px solid $textIconColorDarkMicro;
+  border: .5px solid $textIconColorDarkPico;
   box-shadow: outset 0 .5px 3px .5px rgba(0,0,0,.4);
 }
 %pluggedSmoothMediumStrong {
@@ -409,8 +409,8 @@ border: .5px solid rgba(78,78,78,1);
   background-gradient-start: darken($backgroundAdwaitaBrightMedium, 0%);
   background-gradient-end: darken($backgroundAdwaitaBrightMedium, 10%);
   background-gradient-direction: vertical;
-  border: .5px solid $textIconColorDarkMicro;
-  box-shadow: outset 0 .5px 3px .5px rgba(0,0,0,.4);
+  border: .5px solid $textIconColorDarkNano;
+  box-shadow: outset 0 .5px 3px .5px rgba(0,0,0,.2);
 }
 %pluggedSmoothWeak {
   @extend %plugged;

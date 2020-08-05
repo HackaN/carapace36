@@ -245,7 +245,7 @@ StScrollBar StBin#trough {
   background-gradient-start: gainsboro;
   background-gradient-end: #c3c3c3;
   background-gradient-direction: vertical;
-  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
   box-shadow: outset 0 0.5px 3px 0.5px rgba(0, 0, 0, 0.4); }
 
 .search-entry:focus:hover {
@@ -259,8 +259,8 @@ StScrollBar StBin#trough {
   background-gradient-start: rgba(220, 220, 220, 0.7);
   background-gradient-end: rgba(195, 195, 195, 0.7);
   background-gradient-direction: vertical;
-  border: 0.5px solid rgba(0, 0, 0, 0.2);
-  box-shadow: outset 0 0.5px 3px 0.5px rgba(0, 0, 0, 0.4); }
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: outset 0 0.5px 3px 0.5px rgba(0, 0, 0, 0.2); }
 
 StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
   background-color: #e9e9e9; }
